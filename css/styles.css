@@ -129,13 +129,14 @@
   /* ---------- Submenu (O Que Oferecemos) ---------- */
   .nav-dropdown{
     position: relative;
+    padding-bottom: 14px;
+    margin-bottom: -14px;
   }
   .dropdown-menu{
     display:none;
     position:absolute;
     top: 100%;
     left: 0;
-    margin-top: 14px;
     min-width: 260px;
     background: var(--card);
     border: 1px solid var(--line);
