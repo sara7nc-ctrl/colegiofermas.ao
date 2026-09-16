@@ -11,7 +11,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= O QUE OFERECEMOS ================= -->
   <section class="view" data-view="oferecemos">
     <div class="section-head">
-      <h2>O Que Oferecemos</h2>
+      <h2>Projeto Educativo</h2>
       <p>O Complexo escolar privado Fermas desenvolve, em todos os níveis de ensino,
           um Projecto Pedagógico global, integrado e orientado para a excelência, alinhado
           com as orientações e os objectivos gerais definidos pelo Ministério da Educação,
