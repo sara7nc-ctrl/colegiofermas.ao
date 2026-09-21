@@ -11,7 +11,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= O QUE OFERECEMOS ================= -->
   <section class="view" data-view="oferecemos">
     <div class="section-head">
-      <h2>Projeto Educativo</h2>
+      <h2>O Que Oferecemos</h2>
       <p>O Complexo escolar privado Fermas desenvolve, em todos os níveis de ensino,
           um Projecto Pedagógico global, integrado e orientado para a excelência, alinhado
           com as orientações e os objectivos gerais definidos pelo Ministério da Educação,
@@ -41,6 +41,14 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
     </div>
 
     <div class="level-list" id="level-list"></div>
+
+    <div class="cta-banner">
+      <div>
+        <h3>Pronto para dar o próximo passo?</h3>
+        <p>Conheça os requisitos e o processo de matrícula para o nível que procura.</p>
+      </div>
+      <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
+    </div>
   </section>
 
   <!-- ================= DETALHE DE NÍVEL (gerado por JS) ================= -->
