@@ -28,6 +28,11 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       </div>
     </div>
 
+    <div class="section-head" id="diferenca">
+      <h3>O Que Nos Diferencia</h3>
+      <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
+    </div>
+
     <div class="acrostic">
       <div class="acrostic-row">
         <div class="acrostic-item"><span class="big-letter">F</span><span class="word">fazer</span></div>
@@ -40,7 +45,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
     </div>
 
     <div class="values-grid">
-      <div class="value-card">
+      <div class="value-card" id="missao">
         <h3>MISSÃO</h3>
         <p>O Complexo escolar privado Fermas tem como
           missão formar indivíduos preparados para
@@ -48,13 +53,13 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
           de uma educação de qualidade, inovadora e
           orientada para a excelência.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card" id="visao">
         <h3>VISÃO</h3>
         <p>Ser um colégio de referência em Angola,
           reconhecido pela qualidade do ensino, excelência dos serviços e pelos
           resultados dos seus alunos, promovendo conhecimento, inovação e melhoria contínua.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card" id="valores">
         <h3>VALORES</h3>
         <p>A identidade do Complexo escolar privado Fermas assenta em valores que orientam a nossa forma de ensinar, servir e relacionar-nos.</p>
       </div>
