@@ -21,9 +21,26 @@
     <nav>
       <ul>
         <li><a href="#inicio" data-nav="inicio">Início</a></li>
-        <li><a href="#sobre" data-nav="sobre">Sobre Nós</a></li>
-        <li><a href="#administracao" data-nav="administracao">Administração</a></li>
-        <li><a href="#oferecemos" data-nav="oferecemos">O Que Oferecemos</a></li>
+        <li class="nav-dropdown">
+          <a href="#sobre" data-nav="sobre">O Colégio</a>
+          <ul class="dropdown-menu">
+            <li><a href="#sobre-diferenca">O Que Nos Diferencia</a></li>
+            <li><a href="#sobre-missao">Missão</a></li>
+            <li><a href="#sobre-visao">Visão</a></li>
+            <li><a href="#sobre-valores">Valores</a></li>
+            <li><a href="#administracao">Administração</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#oferecemos" data-nav="oferecemos">O Que Oferecemos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#nivel-iniciacao">Iniciação</a></li>
+            <li><a href="#nivel-primario">Ensino Primário</a></li>
+            <li><a href="#nivel-iciclo">I Ciclo do Ensino Secundário</a></li>
+            <li><a href="#nivel-iiciclo">II Ciclo do Ensino Secundário</a></li>
+            <li><a href="#nivel-externato">Externato</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">&#9776;</button>
