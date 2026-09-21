@@ -14,6 +14,7 @@
     let viewName = hash;
     let isNivel = false;
     let isStaff = false;
+    let scrollTarget = null;
 
     if(hash.startsWith('nivel-')){
       isNivel = renderNivel(hash.replace('nivel-',''));
@@ -23,11 +24,20 @@
       isStaff = renderStaff(hash.replace('staff-',''));
       viewName = 'staff-detalhe';
       if(!isStaff){ viewName = 'inicio'; window.location.hash = '#inicio'; }
+    } else if(hash.startsWith('sobre-')){
+      viewName = 'sobre';
+      scrollTarget = hash.replace('sobre-','');
     }
 
     views.forEach(v => v.classList.toggle('active', v.dataset.view === viewName));
     navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === viewName));
-    window.scrollTo({top:0, behavior:'instant'});
+
+    const targetEl = scrollTarget ? document.getElementById(scrollTarget) : null;
+    if(targetEl){
+      requestAnimationFrame(() => targetEl.scrollIntoView({ behavior: 'instant', block: 'start' }));
+    } else {
+      window.scrollTo({top:0, behavior:'instant'});
+    }
     closeMenu();
   }
 
