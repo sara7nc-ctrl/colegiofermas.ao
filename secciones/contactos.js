@@ -13,7 +13,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
   const enderecoCodificado = encodeURIComponent(endereco);
 
   const mapaEmbedSrc = "https://maps.google.com/maps?q=" + enderecoCodificado + "&output=embed";
-  const googleMapsDirLink = "https://www.google.com/maps/dir/?api=1&destination=" + enderecoCodificado;
+  const googleMapsDirLink = "https://maps.app.goo.gl/hPDkZKwuBdN5rpcg8" + enderecoCodificado;
   const wazeLink = "https://waze.com/ul?q=" + enderecoCodificado + "&navigate=yes";
 
   return `
