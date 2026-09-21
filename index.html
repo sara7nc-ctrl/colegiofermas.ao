@@ -18,34 +18,37 @@
      <img class="crest" src="Imagens/logo_fermas.png" alt="Logotipo do Colégio Fermas">
       <span class="brand-name">Colégio Fermas<span>Luanda, Angola</span></span>
     </a>
-    <nav>
-      <ul>
-        <li><a href="#inicio" data-nav="inicio">Início</a></li>
-        <li class="nav-dropdown">
-          <a href="#sobre" data-nav="sobre">O Colégio</a>
-          <ul class="dropdown-menu">
-            <li><a href="#sobre-diferenca">O Que Nos Diferencia</a></li>
-            <li><a href="#sobre-missao">Missão</a></li>
-            <li><a href="#sobre-visao">Visão</a></li>
-            <li><a href="#sobre-valores">Valores</a></li>
-            <li><a href="#administracao">Administração</a></li>
-          </ul>
-        </li>
-        <li class="nav-dropdown">
-          <a href="#oferecemos" data-nav="oferecemos">O Que Oferecemos</a>
-          <ul class="dropdown-menu">
-            <li><a href="#nivel-iniciacao">Iniciação</a></li>
-            <li><a href="#nivel-primario">Ensino Primário</a></li>
-            <li><a href="#nivel-iciclo">I Ciclo do Ensino Secundário</a></li>
-            <li><a href="#nivel-iiciclo">II Ciclo do Ensino Secundário</a></li>
-            <li><a href="#nivel-externato">Externato</a></li>
-          </ul>
-        </li>
-        <li><a href="#vida" data-nav="vida">Vida Fermas</a></li>
-        <li><a href="#contactos" data-nav="contactos">Contactos</a></li>
-      </ul>
-    </nav>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">&#9776;</button>
+    <div class="nav-wrap">
+      <nav>
+        <ul>
+          <li><a href="#inicio" data-nav="inicio">Início</a></li>
+          <li class="nav-dropdown">
+            <a href="#sobre" data-nav="sobre">O Colégio</a>
+            <ul class="dropdown-menu">
+              <li><a href="#sobre-diferenca">O Que Nos Diferencia</a></li>
+              <li><a href="#sobre-missao">Missão</a></li>
+              <li><a href="#sobre-visao">Visão</a></li>
+              <li><a href="#sobre-valores">Valores</a></li>
+              <li><a href="#administracao">Administração</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#oferecemos" data-nav="oferecemos">O Que Oferecemos</a>
+            <ul class="dropdown-menu">
+              <li><a href="#nivel-iniciacao">Iniciação</a></li>
+              <li><a href="#nivel-primario">Ensino Primário</a></li>
+              <li><a href="#nivel-iciclo">I Ciclo do Ensino Secundário</a></li>
+              <li><a href="#nivel-iiciclo">II Ciclo do Ensino Secundário</a></li>
+              <li><a href="#nivel-externato">Externato</a></li>
+            </ul>
+          </li>
+          <li><a href="#vida" data-nav="vida">Vida Fermas</a></li>
+          <li><a href="#contactos" data-nav="contactos">Contactos</a></li>
+        </ul>
+      </nav>
+      <a href="#matricula" class="btn btn-enroll header-cta" onclick="closeMenu()">Quero Matricular</a>
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">&#9776;</button>
+    </div>
   </div>
 </header>
 
@@ -55,6 +58,13 @@
 </main>
 
 <footer>
+  <div class="wrap footer-cta">
+    <div>
+      <h3>Quer conhecer melhor o Colégio Fermas?</h3>
+      <p>Fale connosco e garanta já o lugar do seu educando para o próximo ano lectivo.</p>
+    </div>
+    <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
+  </div>
   <div class="wrap footer-grid">
     <div>
       <h4>Colégio Fermas</h4>
@@ -102,6 +112,7 @@
 <script src="secciones/oferecemos.js"></script>
 <script src="secciones/vida.js"></script>
 <script src="secciones/contactos.js"></script>
+<script src="secciones/matricula.js"></script>
 <script src="js/script.js"></script>
 
 </body>
