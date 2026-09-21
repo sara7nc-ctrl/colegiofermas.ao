@@ -24,6 +24,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <p class="hero-note">O Colégio Fermas acompanha os alunos desde os primeiros passos na iniciação até à conclusão do ensino secundário, com um ensino próximo, disciplinado e atento a cada criança e jovem.</p>
 
       <div class="hero-actions">
+        <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
         <a href="#oferecemos" class="btn btn-primary">Ver os níveis de ensino</a>
         <a href="#sobre" class="btn btn-secondary">Conhecer o colégio</a>
       </div>
