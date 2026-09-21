@@ -163,6 +163,20 @@
     color: var(--maroon);
   }
 
+  .nav-wrap{
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+  }
+
+  .header-cta{
+    padding: 9px 18px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+
   .menu-btn{
     display:none;
     background:none;
@@ -295,6 +309,14 @@
     color: var(--ink);
   }
   .btn-secondary:hover{ border-color: var(--maroon); color: var(--maroon); }
+
+  .btn-enroll{
+    background: var(--gold);
+    color: var(--maroon-dark);
+    border-color: var(--gold);
+    font-weight: 700;
+  }
+  .btn-enroll:hover{ background: #439E98; border-color: #439E98; }
 
   /* ---------- Section headings ---------- */
   .section-head{
@@ -593,6 +615,98 @@
     margin-top: 22px;
   }
 
+  /* ---------- Banner CTA (reutilizável dentro das páginas) ---------- */
+  .cta-banner{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: var(--cream-deep);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px 34px;
+    margin: 12px 0 56px;
+  }
+  .cta-banner h3{
+    font-family:'Fraunces', serif;
+    font-size: 1.2rem;
+    color: var(--maroon-dark);
+    margin-bottom: 4px;
+  }
+  .cta-banner p{ color: var(--ink-soft); }
+
+  /* ---------- Matrícula: passo a passo ---------- */
+  .matricula-steps{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+  .matricula-step{
+    display:flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .step-num{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--maroon);
+    color: var(--cream);
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    flex-shrink:0;
+  }
+  .matricula-step h4{
+    font-size: 1.02rem;
+    color: var(--maroon-dark);
+    margin-bottom: 4px;
+  }
+  .matricula-step p{ font-size: 0.9rem; color: var(--ink-soft); }
+
+  /* ---------- Matrícula: documentos necessários ---------- */
+  .requisitos-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 56px;
+  }
+  .requisito-card{
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 24px 24px 26px;
+  }
+  .requisito-card h4{
+    font-family:'Fraunces', serif;
+    font-size: 1.02rem;
+    color: var(--maroon-dark);
+    margin-bottom: 14px;
+  }
+  .requisito-card ul{ list-style:none; }
+  .requisito-card li{
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    padding-left: 20px;
+    position:relative;
+    margin-bottom: 10px;
+  }
+  .requisito-card li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius:50%;
+    background: var(--gold);
+  }
+
   /* ---------- Instalações ---------- */
   .facilities-block{ margin: 8px 0 52px; }
   .facilities-block h3{ font-size: 1.2rem; margin-bottom: 20px; }
@@ -713,6 +827,24 @@
     padding: 48px 0 30px;
     margin-top: 40px;
   }
+
+  .footer-cta{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid rgba(243,232,210,.22);
+  }
+  .footer-cta h3{
+    font-family:'Fraunces', serif;
+    font-size: 1.3rem;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .footer-cta p{ color: rgba(243,232,210,.75); }
 
   .footer-grid{
     display:grid;
@@ -934,6 +1066,8 @@
     .facility-cards{ grid-template-columns: repeat(2, 1fr); }
     .vida-grid{ grid-template-columns: repeat(2, 1fr); }
     .contact-grid{ grid-template-columns: repeat(2, 1fr); }
+    .matricula-steps{ grid-template-columns: repeat(2, 1fr); }
+    .requisitos-grid{ grid-template-columns: 1fr; }
   }
 
   @media (max-width: 760px){
@@ -986,4 +1120,10 @@
     .vida-grid{ grid-template-columns: 1fr; }
     .contact-grid{ grid-template-columns: 1fr; }
     .map-frame{ aspect-ratio: 4/3; }
+
+    .header-cta{ padding: 7px 14px; font-size: 0.82rem; }
+    .footer-cta{ flex-direction: column; align-items:flex-start; text-align:left; }
+    .cta-banner{ flex-direction: column; align-items:flex-start; text-align:left; padding: 24px 22px; }
+    .matricula-steps{ grid-template-columns: 1fr; gap: 26px; }
+    .requisitos-grid{ grid-template-columns: 1fr; }
   }
