@@ -5,21 +5,19 @@
 document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= INÍCIO ================= -->
   <section class="view" data-view="inicio">
-    <div class="hero">
-      <div class="hero-frame">
-  <div class="hero-carousel" id="hero-carousel">
-    <div class="carousel-track" id="carousel-track"></div>
-    <button class="carousel-arrow prev" onclick="carouselPrev()" aria-label="Imagem anterior">&#8249;</button>
-    <button class="carousel-arrow next" onclick="carouselNext()" aria-label="Imagem seguinte">&#8250;</button>
-    <div class="carousel-dots" id="carousel-dots"></div>
-  </div>
+    <div class="hero-carousel" id="hero-carousel">
+      <div class="carousel-track" id="carousel-track"></div>
+      <button class="carousel-arrow prev" onclick="carouselPrev()" aria-label="Imagem anterior">&#8249;</button>
+      <button class="carousel-arrow next" onclick="carouselNext()" aria-label="Imagem seguinte">&#8250;</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
 
-  <div class="hero-caption">
-    <h1>Colégio Fermas</h1>
-    <p class="tagline">"Educação é a melhor arma que se pode usar para mudar o mundo."</p>
+    <div class="hero">
+      <div class="hero-caption">
+        <h1>Colégio Fermas</h1>
+        <p class="tagline">"Educação é a melhor arma que se pode usar para mudar o mundo."</p>
         <cite>— Nelson Mandela</cite>
-  </div>
-</div>
+      </div>
 
       <p class="hero-note">O Colégio Fermas acompanha os alunos desde os primeiros passos na iniciação até à conclusão do ensino secundário, com um ensino próximo, disciplinado e atento a cada criança e jovem.</p>
 
