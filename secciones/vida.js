@@ -62,8 +62,7 @@ atividades.forEach(a => {
   card.dataset.categoria = a.categoria;
   card.innerHTML = `
     <div class="photo-placeholder">
-      ${vidaIconSvg}
-      <p class="ph-label">Fotografia — ${a.titulo}</p>
+     <img src="${a.foto}" alt="${a.titulo}">
     </div>
     <div class="vida-caption">
       <span class="vida-tag">${a.categoria}</span>
