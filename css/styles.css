@@ -523,40 +523,65 @@
 
   /* ---------- Vida Fermas ---------- */
   .vida-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .vida-card{
-    border-radius: var(--radius);
-    overflow:hidden;
-    border: 1px solid var(--line);
-    background: var(--card);
-    transition: box-shadow .2s ease, transform .2s ease;
-  }
-  .vida-card:hover{
-    box-shadow: 0 10px 24px rgba(61,44,20,.14);
-    transform: translateY(-4px);
-  }
-  .vida-card .photo-placeholder{ aspect-ratio: 4/3; border-radius:0; }
-  .vida-card .photo-placeholder svg{ width: 38px; height: 38px; }
-  .vida-card .ph-label{ font-size: 0.72rem; }
-  .vida-caption{ padding: 14px 16px 18px; }
-  .vida-tag{
-    display:inline-block;
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 6px;
-  }
-  .vida-caption h4{
-    font-family:'Fraunces', serif;
-    font-size: 0.98rem;
-    color: var(--maroon-dark);
-    line-height: 1.3;
-  }
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.vida-card{
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.vida-card:hover{
+  box-shadow: 0 10px 24px rgba(61,44,20,.14);
+  transform: translateY(-4px);
+}
+
+.vida-card .photo-placeholder{
+  aspect-ratio: 4/3;
+  border-radius:0;
+}
+
+.vida-card .photo-placeholder img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vida-card .photo-placeholder svg{
+  width: 38px;
+  height: 38px;
+}
+
+.vida-card .ph-label{
+  font-size: 0.72rem;
+}
+
+.vida-caption{
+  padding: 14px 16px 18px;
+}
+
+.vida-tag{
+  display:inline-block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.vida-caption h4{
+  font-family:'Fraunces', serif;
+  font-size: 0.98rem;
+  color: var(--maroon-dark);
+  line-height: 1.3;
+}
 
   /* ---------- Contactos ---------- */
   .contact-grid{
