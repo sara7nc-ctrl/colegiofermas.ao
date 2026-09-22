@@ -29,7 +29,6 @@ const vidaIconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-d
 const categoriasVida = ["Todas", "Sala de Aula", "Desporto", "Artes e Música", "Visitas de Estudo", "Festas e Celebrações"];
 
 const atividades = [
-  { nome:"Cantina", foto:"Imagens/instalacoes/placeholder.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
   { titulo: "Aula prática de Ciências", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Leitura e escrita na Iniciação", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Feira do livro", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
