@@ -311,12 +311,20 @@
   .btn-secondary:hover{ border-color: var(--maroon); color: var(--maroon); }
 
   .btn-enroll{
-    background: var(--gold);
-    color: var(--maroon-dark);
-    border-color: var(--gold);
+    background: var(--accent-orange);
+    color: #fff;
+    border-color: var(--accent-orange);
+    border-radius: 999px;
     font-weight: 700;
+    box-shadow: 0 6px 18px rgba(231,120,9,.35);
+    transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
   }
-  .btn-enroll:hover{ background: #439E98; border-color: #439E98; }
+  .btn-enroll:hover{
+    background: #C4690B;
+    border-color: #C4690B;
+    box-shadow: 0 8px 22px rgba(231,120,9,.45);
+    transform: translateY(-1px);
+  }
 
   /* ---------- Section headings ---------- */
   .section-head{
@@ -669,43 +677,69 @@
   }
   .matricula-step p{ font-size: 0.9rem; color: var(--ink-soft); }
 
-  /* ---------- Matrícula: documentos necessários ---------- */
-  .requisitos-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-bottom: 56px;
-  }
-  .requisito-card{
+  /* ---------- Matrícula: lista de documentos ---------- */
+  .doc-card{
+    max-width: 720px;
     border-radius: var(--radius);
     border: 1px solid var(--line);
     background: var(--card);
-    padding: 24px 24px 26px;
+    padding: 26px 28px;
+    margin-bottom: 48px;
   }
-  .requisito-card h4{
-    font-family:'Fraunces', serif;
-    font-size: 1.02rem;
-    color: var(--maroon-dark);
-    margin-bottom: 14px;
-  }
-  .requisito-card ul{ list-style:none; }
-  .requisito-card li{
-    font-size: 0.9rem;
+  .doc-card ul{ list-style:none; }
+  .doc-card li{
+    font-size: 0.94rem;
     color: var(--ink-soft);
-    padding-left: 20px;
+    line-height: 1.5;
+    padding-left: 22px;
     position:relative;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-  .requisito-card li::before{
+  .doc-card li:last-child{ margin-bottom:0; }
+  .doc-card li::before{
     content:"";
     position:absolute;
     left:0;
-    top: 7px;
+    top: 8px;
     width: 8px;
     height: 8px;
     border-radius:50%;
     background: var(--gold);
   }
+
+  /* ---------- Matrícula: informações adicionais ---------- */
+  .info-extra{ margin-top: 8px; }
+  .info-extra > h3{
+    font-size: 1.15rem;
+    color: var(--maroon-dark);
+    margin-bottom: 22px;
+  }
+  .info-extra-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .info-extra-card{
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--cream-deep);
+    padding: 22px 24px;
+  }
+  .info-extra-card h4{
+    font-family:'Fraunces', serif;
+    font-size: 0.98rem;
+    color: var(--maroon-dark);
+    margin-bottom: 8px;
+  }
+  .info-extra-card p{ font-size: 0.88rem; color: var(--ink-soft); }
+  .link-more{
+    display:inline-block;
+    margin-top: 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--maroon);
+  }
+  .link-more:hover{ color: var(--maroon-dark); text-decoration: underline; }
 
   /* ---------- Instalações ---------- */
   .facilities-block{ margin: 8px 0 52px; }
@@ -1067,7 +1101,6 @@
     .vida-grid{ grid-template-columns: repeat(2, 1fr); }
     .contact-grid{ grid-template-columns: repeat(2, 1fr); }
     .matricula-steps{ grid-template-columns: repeat(2, 1fr); }
-    .requisitos-grid{ grid-template-columns: 1fr; }
   }
 
   @media (max-width: 760px){
@@ -1124,6 +1157,7 @@
     .header-cta{ padding: 7px 14px; font-size: 0.82rem; }
     .footer-cta{ flex-direction: column; align-items:flex-start; text-align:left; }
     .cta-banner{ flex-direction: column; align-items:flex-start; text-align:left; padding: 24px 22px; }
+    .info-extra-grid{ grid-template-columns: 1fr; }
+    .doc-card{ padding: 22px 20px; }
     .matricula-steps{ grid-template-columns: 1fr; gap: 26px; }
-    .requisitos-grid{ grid-template-columns: 1fr; }
   }
