@@ -37,6 +37,7 @@
     font-size: 17px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, .display{
@@ -51,9 +52,9 @@
   img{ max-width: 100%; display:block; }
 
   .wrap{
-    max-width: 1240px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 clamp(24px, 4vw, 64px);
   }
 
   /* ---------- Header ---------- */
@@ -69,8 +70,8 @@
     display:flex;
     align-items:center;
     justify-content: space-between;
-    padding: 16px 40px;
-    max-width: 1240px;
+    padding: 16px clamp(24px, 4vw, 64px);
+    max-width: 1440px;
     margin: 0 auto;
   }
 
@@ -197,16 +198,7 @@
 
   /* ---------- Hero (Início) ---------- */
   .hero{
-    padding-top: 48px;
-  }
-
-  .hero-frame{
-    position: relative;
-    border: 1px solid var(--line);
-    background: var(--card);
-    border-radius: var(--radius);
-    overflow:hidden;
-    box-shadow: 0 1px 0 var(--line);
+    padding-top: 40px;
   }
 
   .photo-placeholder{
@@ -233,12 +225,12 @@
   }
 
   .hero-caption{
-    padding: 34px 40px 40px;
+    padding: 38px 40px 0;
     text-align:center;
   }
 
   .hero-caption h1{
-    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-size: clamp(1.6rem, 4vw, 2.9rem);
     margin-bottom: 10px;
   }
 
@@ -926,9 +918,12 @@
   /* ---------- Carrossel (Início) ---------- */
   .hero-carousel{
     position: relative;
-    aspect-ratio: 16/8;
+    aspect-ratio: 16/7;
     overflow: hidden;
     background: var(--cream-deep);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
   }
   .carousel-track{
     display:flex;
@@ -1138,10 +1133,21 @@
     .acrostic-item .big-letter{ font-size: 2.1rem; }
     .gallery{ grid-template-columns: repeat(2, 1fr); }
     .footer-grid{ grid-template-columns: 1fr; gap: 26px; }
-    .hero-caption{ padding: 28px 20px 32px; }
+    .wrap{ padding: 0 20px; }
+    .header-inner{ padding: 14px 20px; }
+
+    .hero{ padding-top: 26px; }
+    .hero-carousel{ aspect-ratio: 4/3; }
+    .hero-caption{ padding: 26px 20px 0; }
+    .hero-caption h1{ font-size: 1.5rem; margin-bottom: 6px; }
+    .hero-caption p.tagline{ font-size: 0.98rem; }
+    .hero-note{ margin-top: 22px; font-size: 0.92rem; }
+    .hero-actions{ margin-top: 22px; }
     section{ padding: 48px 0; }
 
     .carousel-arrow{ width: 32px; height: 32px; font-size: 1.2rem; }
+    .slide-caption{ padding: 14px 18px 12px; }
+    .slide-caption p{ font-size: 0.85rem; }
     .staff-grid{ grid-template-columns: repeat(2, 1fr); gap: 26px 16px; }
     .staff-detail{ grid-template-columns: 1fr; gap: 24px; }
     .staff-detail-photo{ max-width: 260px; }
