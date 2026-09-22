@@ -39,7 +39,7 @@ const atividades = [
   { titulo: "Aula de música e instrumentos", categoria: "Artes e Música", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Visita de estudo a uma exposição científica", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto:"Imagens/anfiteatro.jpeg" },
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto:"Imagens/mossas-grad.jpeg" },
   { titulo: "Comemoração do Dia da Criança", categoria: "Festas e Celebrações", foto: "Imagens/vida/placeholder.png" }
 ];
 
