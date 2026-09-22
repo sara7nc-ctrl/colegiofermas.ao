@@ -211,7 +211,7 @@ const instalacoes = [
   { nome:"Cozinhas", foto:"Imagens/instalacoes/placeholder.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
   { nome:"Refeitórios", foto:"Imagens/instalacoes/placeholder.png", desc:"Dois refeitórios amplos e confortáveis." },
   { nome:"Papelaria", foto:"Imagens/instalacoes/placeholder.png", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/instalacoes/placeholder.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
+  { nome:"Piscinas", foto:"Imagens/piscina.jpeg", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
   { nome:"Música e Dança", foto:"Imagens/instalacoes/placeholder.png", desc:"Salas dedicadas às artes performativas." },
   { nome:"Campos Desportivos", foto:"Imagens/instalacoes/placeholder.png", desc:"Três campos para a prática de diferentes desportos." },
   { nome:"Anfiteatro", foto:"Imagens/instalacoes/placeholder.png", desc:"Espaço para eventos, apresentações e celebrações." },
