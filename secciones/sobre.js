@@ -6,7 +6,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= SOBRE NÓS ================= -->
   <section class="view" data-view="sobre">
     <div class="section-head">
-      <h2>Sobre Nós</h2>
+      <h1>Sobre Nós</h1>
       <p>Um colégio que cresce junto com as famílias de Angola.</p>
     </div>
 
