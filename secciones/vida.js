@@ -29,7 +29,7 @@ const vidaIconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-d
 const categoriasVida = ["Todas", "Sala de Aula", "Desporto", "Artes e Música", "Visitas de Estudo", "Festas e Celebrações"];
 
 const atividades = [
-  { titulo: "Aula prática de Ciências", categoria: "Sala de Aula", foto: "Imagens/aula-ciencia.jpeg" },
+  { titulo: "Aula prática de Ciências", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Leitura e escrita na Iniciação", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Feira do livro", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/vida/placeholder.png" },
@@ -39,7 +39,7 @@ const atividades = [
   { titulo: "Aula de música e instrumentos", categoria: "Artes e Música", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Visita de estudo a uma exposição científica", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto:"Imagens/mossas-grad.jpeg" },
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/vida/placeholder.png" },
   { titulo: "Comemoração do Dia da Criança", categoria: "Festas e Celebrações", foto: "Imagens/vida/placeholder.png" }
 ];
 
@@ -62,7 +62,8 @@ atividades.forEach(a => {
   card.dataset.categoria = a.categoria;
   card.innerHTML = `
     <div class="photo-placeholder">
-     <img src="${a.foto}" alt="${a.titulo}">
+      ${vidaIconSvg}
+      <p class="ph-label">Fotografia — ${a.titulo}</p>
     </div>
     <div class="vida-caption">
       <span class="vida-tag">${a.categoria}</span>
@@ -80,4 +81,19 @@ function filtrarVida(categoria){
     const mostrar = categoria === 'Todas' || card.dataset.categoria === categoria;
     card.style.display = mostrar ? '' : 'none';
   });
+}
+
+// ---------- Filtro via menu (ex: #vida-desporto) ----------
+// Usado pelo router (js/script.js) para pré-seleccionar uma categoria
+// quando se chega a esta página a partir do submenu "Vida no Fermas".
+const categoriaPorSlug = {
+  'todas': 'Todas',
+  'sala-de-aula': 'Sala de Aula',
+  'desporto': 'Desporto',
+  'artes-e-musica': 'Artes e Música',
+  'visitas-de-estudo': 'Visitas de Estudo',
+  'festas-e-celebracoes': 'Festas e Celebrações'
+};
+function filtrarVidaPorHash(slug){
+  filtrarVida(categoriaPorSlug[slug] || 'Todas');
 }
