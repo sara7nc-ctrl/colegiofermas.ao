@@ -27,6 +27,15 @@
     } else if(hash.startsWith('sobre-')){
       viewName = 'sobre';
       scrollTarget = hash.replace('sobre-','');
+    } else if(hash.startsWith('contactos-')){
+      viewName = 'contactos';
+      scrollTarget = hash.replace('contactos-','');
+    } else if(hash.startsWith('oferecemos-')){
+      viewName = 'oferecemos';
+      scrollTarget = hash.replace('oferecemos-','');
+    } else if(hash.startsWith('vida-')){
+      viewName = 'vida';
+      if(typeof filtrarVidaPorHash === 'function'){ filtrarVidaPorHash(hash.replace('vida-','')); }
     }
 
     views.forEach(v => v.classList.toggle('active', v.dataset.view === viewName));
