@@ -13,7 +13,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
   const enderecoCodificado = encodeURIComponent(endereco);
 
   const mapaEmbedSrc = "https://maps.google.com/maps?q=" + enderecoCodificado + "&output=embed";
-  const googleMapsDirLink = "https://maps.app.goo.gl/n6EAPjBpwATJYh2u9" + enderecoCodificado;
+  const googleMapsDirLink = "https://www.google.com/maps/dir/?api=1&destination=" + enderecoCodificado;
   const wazeLink = "https://waze.com/ul?q=" + enderecoCodificado + "&navigate=yes";
 
   return `
@@ -25,7 +25,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
     </div>
 
     <div class="contact-grid">
-      <a class="contact-card" href="tel:+244936269025">
+      <a class="contact-card" id="telefone" href="tel:+244936269025">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.72a2 2 0 0 1 2.11-.45c.76.24 1.55.41 2.36.54A2 2 0 0 1 22 16.92z"/>
@@ -47,7 +47,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
         <p>${email}</p>
       </a>
 
-      <div class="contact-card">
+      <div class="contact-card" id="morada">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 10c0 6.5-9 12.5-9 12.5S3 16.5 3 10a9 9 0 0 1 18 0z"/>
@@ -59,7 +59,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
         <p>Município de Talatona, Luanda &mdash; Angola</p>
       </div>
 
-      <div class="contact-card">
+      <div class="contact-card" id="redes">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="18" cy="5" r="3"/>
@@ -90,7 +90,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
       </div>
     </div>
 
-    <div class="map-block">
+    <div class="map-block" id="como-chegar">
       <h3>Como Chegar?</h3>
       <p>Veja no mapa onde ficamos e escolha a melhor rota até ao colégio, com trânsito em tempo real.</p>
       <div class="map-frame">
