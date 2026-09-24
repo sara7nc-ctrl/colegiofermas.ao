@@ -86,7 +86,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
         </div>
       </div>
       <div class="colegio-preview-text">
-        <span class="eyebrow">O Colégio</span>
+       <! -- <span class="eyebrow">O Colégio</span> -->
         <h2>Um colégio que acompanha o aluno em todo o seu percurso.</h2>
         <p>O Colégio Fermas iniciou a sua actividade lectiva a 6 de Fevereiro de 2015, no Lar do Patriota, Talatona. Acreditamos que aprender é também crescer como pessoa — por isso unimos rigor académico e acompanhamento próximo, num ambiente seguro e acolhedor.</p>
         <a href="#sobre" class="btn btn-primary">Sobre o Fermas</a>
