@@ -425,6 +425,50 @@
   .nivel-mini-card svg{ width: 26px; height: 26px; color: var(--maroon); }
   .nivel-mini-card span{ font-size: 0.82rem; font-weight:600; color: var(--maroon-dark); line-height:1.25; }
 
+  /* ---------- Preview: O Que Nos Diferencia (acróstico com ícones) ---------- */
+  .diferenca-preview{
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align:center;
+  }
+  .diferenca-preview .section-head{ margin: 0 auto 40px; }
+  .diferenca-preview .section-head h2{ font-size: 1.5rem; }
+
+  .acrostic-icons{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+    text-align:left;
+  }
+  .acrostic-icon-item{
+    display:flex;
+    flex-direction:column;
+    gap: 12px;
+  }
+  .acrostic-icon-item svg{
+    width: 30px;
+    height: 30px;
+    color: var(--letter-color, var(--maroon));
+  }
+  .acrostic-icon-item h4{
+    font-size: 0.98rem;
+    color: var(--maroon-dark);
+  }
+  .acrostic-icon-item h4 .big-letter{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size: 1.15em;
+    color: var(--letter-color, var(--maroon));
+  }
+  .acrostic-icon-item p{ font-size: 0.84rem; color: var(--ink-soft); }
+  .acrostic-icon-item:nth-child(1){ --letter-color: var(--maroon); }
+  .acrostic-icon-item:nth-child(2){ --letter-color: var(--accent-blue); }
+  .acrostic-icon-item:nth-child(3){ --letter-color: var(--accent-orange); }
+  .acrostic-icon-item:nth-child(4){ --letter-color: var(--green); }
+  .acrostic-icon-item:nth-child(5){ --letter-color: var(--accent-red); }
+  .acrostic-icon-item:nth-child(6){ --letter-color: var(--accent-blue-dark); }
+
   /* ---------- Preview: Vida no Fermas ---------- */
   .vida-preview{
     display:grid;
@@ -1224,6 +1268,7 @@
     .colegio-preview{ grid-template-columns: 1fr; gap: 34px; padding: 44px 0; }
     .colegio-preview-photo .photo-placeholder{ aspect-ratio: 16/8; height:auto; }
     .vida-preview{ grid-template-columns: 1fr; gap: 28px; padding: 12px 0 44px; }
+    .acrostic-icons{ grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
   }
 
   @media (max-width: 760px){
@@ -1307,5 +1352,7 @@
     .vida-preview{ padding: 8px 0 36px; }
     .vida-preview-text h2{ font-size: 1.3rem; }
     .vida-preview-grid{ gap: 12px; }
+    .diferenca-preview{ padding: 40px 0; }
+    .acrostic-icons{ grid-template-columns: repeat(2, 1fr); gap: 26px 18px; }
     .matricula-steps{ grid-template-columns: 1fr; gap: 26px; }
   }
