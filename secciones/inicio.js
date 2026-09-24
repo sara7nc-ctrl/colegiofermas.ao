@@ -100,7 +100,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 
     <div class="diferenca-preview">
       <div class="section-head">
-        <span class="eyebrow">O Que Nos Diferencia</span>
+        <span class="eyebrow"></span>
         <h2>Seis palavras que resumem o que somos.</h2>
       </div>
       <div class="acrostic-icons">
