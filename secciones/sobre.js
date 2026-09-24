@@ -9,7 +9,6 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <h1>Sobre Nós</h1>
       <p>Um colégio que cresce junto com as famílias de Angola.</p>
     </div>
-
     <div class="about-grid">
       <div class="about-text">
         <p>O Colégio Fermas é uma instituição tutelada pelo Ministério da Educação, reconhecida a nível ministerial e municipal.</p>
