@@ -73,7 +73,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
         </div>
       </div>
     </div>
-  <span class="eyebrow"> </span>
+  <span class="eyebrow"> _______________</span>
     <div class="colegio-preview">
       <div class="colegio-preview-photo">
         <div class="photo-placeholder">
