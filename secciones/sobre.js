@@ -9,6 +9,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
      
     </div>
     <div class="about-grid">
+     <h2>Sobre Nós</h2>
       <div class="about-text">
        <h2>Sobre Nós</h2>
        <p>             </p>
