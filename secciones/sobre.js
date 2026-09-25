@@ -26,7 +26,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <div class="about-photo">
         <img src="Imagens/Fermas_fondo2.png" alt="Colégio Fermas">
       </div>
-      <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
+      <h3>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</h3>
     </div>
 
     <div class="section-head" id="diferenca">
