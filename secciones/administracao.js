@@ -35,7 +35,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       bio:["Biografia do Director-Geral. Substitua este texto pela formação, percurso profissional e visão desta pessoa para o Colégio Fermas.", "Pode acrescentar um segundo parágrafo com mais detalhes sobre a sua experiência."] },
     { id:"subdiretor-pedagogico", nome:"Nome do Subdirector Pedagógico", cargo:"Subdirector Pedagógico", foto:"Imagens/icon_administracao.png",
       bio:["Biografia do Subdirector Pedagógico. Substitua este texto pela formação e percurso profissional."] },
-    { id:"subdiretor-administrativo", nome:"Nome do Subdirector Administrativo e Financeiro", cargo:"Subdirector Administrativo e Financeiro", foto:"Imagens/fondo_fermas.png",
+    { id:"subdiretor-administrativo", nome:"Nome do Subdirector Administrativo e Financeiro", cargo:"Subdirector Administrativo e Financeiro", foto:"Imagens/icon_administracao.png",
       bio:["Biografia do Subdirector Administrativo e Financeiro. Substitua este texto pela formação e percurso profissional."] },
     { id:"diretor-pre-escolar", nome:"Nome do Director da Educação Pré-Escolar", cargo:"Director da Educação Pré-Escolar", foto:"Imagens/icon_administracao.png",
       bio:["Biografia do Director da Educação Pré-Escolar. Substitua este texto pela formação e percurso profissional."] },
