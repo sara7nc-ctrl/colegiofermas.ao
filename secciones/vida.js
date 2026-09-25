@@ -16,12 +16,6 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
   </section>
 `);
 
-const vidaIconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-dark)" stroke-width="1.2">
-    <rect x="3" y="5" width="18" height="14" rx="1.5"/>
-    <circle cx="9" cy="10.5" r="1.8"/>
-    <path d="M4 18l5-5 4 4 3-3 4 4" stroke-linejoin="round"/>
-  </svg>`;
-
 // ---------- Dados das actividades ----------
 // Substitua "foto" pelo caminho real de cada fotografia
 // (ex: "Imagens/vida/torneio-futebol.jpg") e ajuste títulos e categorias
@@ -29,18 +23,18 @@ const vidaIconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-d
 const categoriasVida = ["Todas", "Sala de Aula", "Desporto", "Artes e Música", "Visitas de Estudo", "Festas e Celebrações"];
 
 const atividades = [
-  { titulo: "Aula prática de Ciências", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Leitura e escrita na Iniciação", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Feira do livro", categoria: "Sala de Aula", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Torneio de basquetebol", categoria: "Desporto", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Aula de música e instrumentos", categoria: "Artes e Música", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Visita de estudo a uma exposição científica", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Comemoração do Dia da Criança", categoria: "Festas e Celebrações", foto: "Imagens/vida/placeholder.png" }
+  { titulo: "Aula prática de Ciências", categoria: "Sala de Aula", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Leitura e escrita na Iniciação", categoria: "Sala de Aula", foto: "Imagens/Fermas_fondo2.png" },
+  { titulo: "Feira do livro", categoria: "Sala de Aula", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
+  { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Torneio de basquetebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
+  { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Aula de música e instrumentos", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
+  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Visita de estudo a uma exposição científica", categoria: "Visitas de Estudo", foto: "Imagens/Fermas_fondo2.png" },
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Comemoração do Dia da Criança", categoria: "Festas e Celebrações", foto: "Imagens/Fermas_fondo2.png" }
 ];
 
 const vidaFiltrosEl = document.getElementById('vida-filtros');
@@ -61,9 +55,8 @@ atividades.forEach(a => {
   card.className = 'vida-card';
   card.dataset.categoria = a.categoria;
   card.innerHTML = `
-    <div class="photo-placeholder">
-      ${vidaIconSvg}
-      <p class="ph-label">Fotografia — ${a.titulo}</p>
+    <div class="vida-photo">
+      <img src="${a.foto}" alt="${a.titulo}">
     </div>
     <div class="vida-caption">
       <span class="vida-tag">${a.categoria}</span>
