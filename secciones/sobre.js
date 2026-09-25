@@ -6,38 +6,23 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= SOBRE NÓS ================= -->
   <section class="view" data-view="sobre">
     <div class="section-head">
-      
-      
+      <h2>Sobre Nós</h2>
+      <p>Um colégio que cresce junto com as famílias de Angola.</p>
     </div>
+
     <div class="about-grid">
       <div class="about-text">
-      <h1>Sobre Nós</h1>
-      <p></p>
         <p>O Colégio Fermas é uma instituição tutelada pelo Ministério da Educação, reconhecida a nível ministerial e municipal.</p>
         <p>Iniciou a sua actividade lectiva no dia 6 de fevereiro de 2015, com o ensino pré-escolar, o ensino primário e o I ciclo. Está situado no Lar Patriota, comuna do Benfica, pertencente ao município do Talatona.</p>
         <p>Acreditamos que aprender é também crescer como pessoa. Por isso, unimos rigor académico e acompanhamento próximo, num ambiente onde professores, alunos e famílias trabalham lado a lado.</p>
       </div>
       <div class="about-photo">
-        <div class="photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-dark)" stroke-width="1.2">
-            <rect x="3" y="5" width="18" height="14" rx="1.5"/>
-            <circle cx="9" cy="10.5" r="1.8"/>
-            <path d="M4 18l5-5 4 4 3-3 4 4" stroke-linejoin="round"/>
-          </svg>
-          <p class="ph-label">Espaço para uma fotografia do colégio — substitua por &lt;img src="..."&gt;.</p>
-        </div>
+        <img src="Imagens/Fermas_fondo2.png" alt="Colégio Fermas">
       </div>
     </div>
 
     <div class="section-head" id="diferenca">
-      <h2>O Que Nos Diferencia</h2>
-     <p> No FERMAS, formamos muito mais do que alunos.
-
-Formamos pessoas inteligentes, educadas, responsáveis e guiadas por valores, capazes de transformar a sua realidade e contribuir para a construção de um país melhor.
-
-Porque acreditamos que a verdadeira educação não se limita ao conhecimento: molda o carácter, desperta o propósito e prepara o indivíduo para enfrentar os desafios da vida com coragem, sabedoria e integridade.
-
-Colégio FERMAS — Educação que forma pessoas, transforma vidas e constrói o futuro.</p>
+      <h3>O Que Nos Diferencia</h3>
       <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
     </div>
 
