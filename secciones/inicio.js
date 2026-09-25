@@ -75,32 +75,26 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
     </div>
 
     <div class="colegio-preview">
-      <div class="colegio-preview-photo">
-        <div class="photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-dark)" stroke-width="1.2">
-            <rect x="3" y="5" width="18" height="14" rx="1.5"/>
-            <circle cx="9" cy="10.5" r="1.8"/>
-            <path d="M4 18l5-5 4 4 3-3 4 4" stroke-linejoin="round"/>
-          </svg>
-          <p class="ph-label">Fotografia do campus — substitua por &lt;img src="..."&gt;.</p>
-        </div>
+      <div class="colegio-preview-media">
+        <img src="Imagens/fondo_fermas.png" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
       </div>
       <div class="colegio-preview-text">
-      <span class="eyebrow">O Colegio</span>
-        <h2>Um colégio que acompanha o aluno em todo o seu percurso.</h2>
+        <span class="eyebrow">O Colégio</span>
+        <h2>Presente em cada etapa do percurso do aluno.</h2>
         <p>O Colégio Fermas iniciou a sua actividade lectiva a 6 de Fevereiro de 2015, no Lar do Patriota, Talatona. Acreditamos que aprender é também crescer como pessoa — por isso unimos rigor académico e acompanhamento próximo, num ambiente seguro e acolhedor.</p>
         <a href="#sobre" class="btn btn-primary">Sobre o Fermas</a>
       </div>
-      <div class="niveis-preview-card">
-        <h3>Níveis de Ensino</h3>
-        <div class="niveis-mini-grid" id="niveis-mini-grid"></div>
-        <a href="#oferecemos" class="link-more">Ver todos os níveis &#8250;</a>
-      </div>
+    </div>
+
+    <div class="niveis-preview-band">
+      <h3>Níveis de Ensino</h3>
+      <div class="niveis-mini-grid" id="niveis-mini-grid"></div>
+      <a href="#oferecemos" class="link-more">Ver todos os níveis &#8250;</a>
     </div>
 
     <div class="diferenca-preview">
       <div class="section-head">
-        <span class="eyebrow"></span>
+        <span class="eyebrow">O Que Nos Diferencia</span>
         <h2>Seis palavras que resumem o que somos.</h2>
       </div>
       <div class="acrostic-icons">
@@ -263,26 +257,19 @@ niveisMini.forEach(n => {
 // secciones/vida.js). Substitua "foto" pelo caminho real de cada
 // fotografia.
 const vidaPreviewItens = [
-  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/vida/placeholder.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/vida/placeholder.png" }
+  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
+  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/Fermas_fondo2.png" }
 ];
-
-const vidaIconSvgInicio = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-dark)" stroke-width="1.2">
-    <rect x="3" y="5" width="18" height="14" rx="1.5"/>
-    <circle cx="9" cy="10.5" r="1.8"/>
-    <path d="M4 18l5-5 4 4 3-3 4 4" stroke-linejoin="round"/>
-  </svg>`;
 
 const vidaPreviewGridEl = document.getElementById('vida-preview-grid');
 vidaPreviewItens.forEach(a => {
   const card = document.createElement('div');
   card.className = 'vida-card';
   card.innerHTML = `
-    <div class="photo-placeholder">
-      ${vidaIconSvgInicio}
-      <p class="ph-label">Fotografia — ${a.titulo}</p>
+    <div class="vida-photo">
+      <img src="${a.foto}" alt="${a.titulo}">
     </div>
     <div class="vida-caption">
       <span class="vida-tag">${a.categoria}</span>
