@@ -11,6 +11,9 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
     <div class="about-grid">
       <div class="about-text">
        <h2>Sobre Nós</h2>
+       <p>             </p>
+       <p>             </p>
+       <p>             </p>
         <p>O Colégio Fermas é uma instituição tutelada pelo Ministério da Educação, reconhecida a nível ministerial e municipal.</p>
         <p>Iniciou a sua actividade lectiva no dia 6 de fevereiro de 2015, com o ensino pré-escolar, o ensino primário e o I ciclo. Está situado no Lar Patriota, comuna do Benfica, pertencente ao município do Talatona.</p>
         <p>Acreditamos que aprender é também crescer como pessoa. Por isso, unimos rigor académico e acompanhamento próximo, num ambiente onde professores, alunos e famílias trabalham lado a lado.</p>
