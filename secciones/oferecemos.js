@@ -211,11 +211,11 @@ const instalacoes = [
   { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
   { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
   { nome:"Papelaria", foto:"Imagens/Fermas_fondo2.png", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/fondo_fermas.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
-  { nome:"Música e Dança", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
-  { nome:"Campos Desportivos", foto:"Imagens/fondo_fermas.png", desc:"Três campos para a prática de diferentes desportos." },
-  { nome:"Anfiteatro", foto:"Imagens/Fermas_fondo2.png", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/fondo_fermas.png", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Piscinas", foto:"Imagens/piscina.jpeg", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
+  { nome:"Artes Marciais", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
+  { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
+  { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
+  { nome:"Laboratórios", foto:"Imagens/lab-ciencia.png", desc:"Laboratórios de química, física e biologia." },
   { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
   { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
 ];
