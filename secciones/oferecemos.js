@@ -215,7 +215,7 @@ const instalacoes = [
   { nome:"Artes Marciais", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
   { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
   { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/lab-ciencia.png", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Laboratórios", foto:"Imagens/lab-ciencia.jpeg", desc:"Laboratórios de química, física e biologia." },
   { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
   { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
 ];
