@@ -23,7 +23,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 const categoriasVida = ["Todas", "Sala de Aula", "Desporto", "Artes e Música", "Visitas de Estudo", "Festas e Celebrações"];
 
 const atividades = [
-  { titulo: "Aula prática de Ciências", categoria: "Sala de Aula", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Aula prática de Hortaliças", categoria: "Sala de Aula", foto: "Imagens/meninos-terra.jpeg" },
   { titulo: "Leitura e escrita na Iniciação", categoria: "Sala de Aula", foto: "Imagens/Fermas_fondo2.png" },
   { titulo: "Feira do livro", categoria: "Sala de Aula", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
@@ -33,7 +33,7 @@ const atividades = [
   { titulo: "Aula de música e instrumentos", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
   { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Visita de estudo a uma exposição científica", categoria: "Visitas de Estudo", foto: "Imagens/Fermas_fondo2.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/mossas-grad.jpeg" },
   { titulo: "Comemoração do Dia da Criança", categoria: "Festas e Celebrações", foto: "Imagens/Fermas_fondo2.png" }
 ];
 
