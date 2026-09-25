@@ -379,51 +379,56 @@
   /* ---------- Preview: O Colégio ---------- */
   .colegio-preview{
     display:grid;
-    grid-template-columns: 1fr 1.1fr 0.9fr;
-    gap: 30px;
-    align-items:stretch;
-    padding: 56px 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items:center;
+    padding: 56px 0 44px;
   }
-  .colegio-preview-photo .photo-placeholder{
-    height:100%;
+  .colegio-preview-media{
+    aspect-ratio: 4/3;
     border-radius: var(--radius);
+    overflow:hidden;
     border: 1px solid var(--line);
   }
-  .colegio-preview-text{ display:flex; flex-direction:column; justify-content:center; }
-  .colegio-preview-text h2{ font-size: 1.5rem; margin-bottom: 14px; line-height:1.25; }
-  .colegio-preview-text p{ color: var(--ink-soft); margin-bottom: 22px; }
-  .colegio-preview-text .btn{ align-self:flex-start; }
+  .colegio-preview-media img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-  .niveis-preview-card{
-    background: var(--cream-deep);
-    border-radius: var(--radius);
-    padding: 26px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+  .colegio-preview-text{ max-width: 460px; }
+  .colegio-preview-text .eyebrow{ display:inline-block; margin-bottom: 16px; }
+  .colegio-preview-text h2{ font-size: 1.7rem; margin-bottom: 16px; line-height:1.3; }
+  .colegio-preview-text p{ color: var(--ink-soft); margin-bottom: 24px; }
+
+  .niveis-preview-band{
+    padding: 24px 0 56px;
+    border-top: 1px solid var(--line);
   }
-  .niveis-preview-card h3{ font-size: 1.02rem; margin-bottom: 18px; }
+  .niveis-preview-band > h3{ font-size: 1.05rem; color: var(--maroon-dark); margin-bottom: 22px; }
   .niveis-mini-grid{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-bottom: 16px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
   }
   .nivel-mini-card{
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap: 8px;
+    gap: 10px;
     text-align:center;
     background: var(--card);
     border: 1px solid var(--line);
+    border-top: 3px solid var(--letter-color, var(--gold));
     border-radius: var(--radius);
-    padding: 16px 10px;
-    transition: border-color .2s ease, transform .2s ease;
+    padding: 20px 10px;
+    transition: box-shadow .2s ease, transform .2s ease;
   }
-  .nivel-mini-card:hover{ border-color: var(--gold); transform: translateY(-2px); }
-  .nivel-mini-card svg{ width: 26px; height: 26px; color: var(--maroon); }
-  .nivel-mini-card span{ font-size: 0.82rem; font-weight:600; color: var(--maroon-dark); line-height:1.25; }
+  .nivel-mini-card:hover{ box-shadow: 0 8px 20px rgba(61,44,20,.12); transform: translateY(-3px); }
+  .nivel-mini-card svg{ width: 26px; height: 26px; color: var(--letter-color, var(--maroon)); }
+  .nivel-mini-card span{ font-size: 0.84rem; font-weight:600; color: var(--maroon-dark); line-height:1.25; }
+  .nivel-mini-card:nth-child(1){ --letter-color: var(--maroon); }
+  .nivel-mini-card:nth-child(2){ --letter-color: var(--accent-blue); }
+  .nivel-mini-card:nth-child(3){ --letter-color: var(--accent-orange); }
+  .nivel-mini-card:nth-child(4){ --letter-color: var(--green); }
+  .nivel-mini-card:nth-child(5){ --letter-color: var(--accent-red); }
 
   /* ---------- Preview: O Que Nos Diferencia (acróstico com ícones) ---------- */
   .diferenca-preview{
@@ -472,32 +477,37 @@
   /* ---------- Preview: Vida no Fermas ---------- */
   .vida-preview{
     display:grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 40px;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
     align-items:center;
     padding: 20px 0 56px;
   }
-  .vida-preview-text h2{ font-size: 1.5rem; margin-bottom: 14px; line-height:1.25; }
-  .vida-preview-text p{ color: var(--ink-soft); margin-bottom: 22px; }
+  .vida-preview-text{ max-width: 440px; }
+  .vida-preview-text h2{ font-size: 1.7rem; margin-bottom: 16px; line-height:1.3; }
+  .vida-preview-text p{ color: var(--ink-soft); margin-bottom: 24px; }
   .vida-preview-grid{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 14px;
+    max-width: 380px;
+    margin-left: auto;
   }
-  .vida-preview-grid .vida-card .photo-placeholder{ aspect-ratio: 1/1; }
+  .vida-preview-grid .vida-card{ border-top: 3px solid var(--letter-color, var(--gold)); }
+  .vida-preview-grid .vida-photo{ aspect-ratio: 1/1; }
+  .vida-preview-grid .vida-card:nth-child(1){ --letter-color: var(--maroon); }
+  .vida-preview-grid .vida-card:nth-child(2){ --letter-color: var(--accent-blue); }
+  .vida-preview-grid .vida-card:nth-child(3){ --letter-color: var(--accent-orange); }
+  .vida-preview-grid .vida-card:nth-child(4){ --letter-color: var(--green); }
 
   /* ---------- Section headings ---------- */
   .section-head{
     max-width: 900px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .section-head h2{
     font-size: clamp(1.6rem, 3vw, 2.1rem);
     margin-bottom: 14px;
   }
-  .section-head h1 {
-  margin: 0;
-}
   .section-head p{ color: var(--ink-soft); }
 
   /* ---------- Sobre Nós ---------- */
@@ -532,13 +542,13 @@
     justify-self: end;
     width: 100%;
   }
-  .about-photo .photo-placeholder{
+  .about-photo img{
     aspect-ratio: 4/5;
+    width:100%;
+    object-fit:cover;
     border-radius: var(--radius);
     border: 1px solid var(--line);
   }
-  .about-photo .photo-placeholder svg{ width: 44px; height: 44px; }
-  .about-photo .ph-label{ font-size: 0.75rem; }
 
   /* ---------- Acróstico FERMAS ---------- */
   .acrostic{
@@ -709,9 +719,8 @@
     box-shadow: 0 10px 24px rgba(61,44,20,.14);
     transform: translateY(-4px);
   }
-  .vida-card .photo-placeholder{ aspect-ratio: 4/3; border-radius:0; }
-  .vida-card .photo-placeholder svg{ width: 38px; height: 38px; }
-  .vida-card .ph-label{ font-size: 0.72rem; }
+  .vida-photo{ aspect-ratio: 4/3; background: var(--cream-deep); }
+  .vida-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .vida-caption{ padding: 14px 16px 18px; }
   .vida-tag{
     display:inline-block;
@@ -1017,6 +1026,14 @@
   .gallery .photo-placeholder svg{ width: 46px; height: 46px; }
   .gallery .ph-label{ font-size: 0.75rem; }
 
+  .gallery-photo{
+    aspect-ratio: 4/3;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    overflow:hidden;
+  }
+  .gallery-photo img{ width:100%; height:100%; object-fit:cover; }
+
   /* ---------- Footer ---------- */
   footer{
     background: var(--maroon-dark);
@@ -1268,9 +1285,13 @@
     .contact-grid{ grid-template-columns: repeat(2, 1fr); }
     .matricula-steps{ grid-template-columns: repeat(2, 1fr); }
     .features-strip{ grid-template-columns: repeat(2, 1fr); gap: 26px 20px; }
-    .colegio-preview{ grid-template-columns: 1fr; gap: 34px; padding: 44px 0; }
-    .colegio-preview-photo .photo-placeholder{ aspect-ratio: 16/8; height:auto; }
+    .colegio-preview{ grid-template-columns: 1fr; gap: 28px; padding: 44px 0; }
+    .colegio-preview-media{ aspect-ratio: 16/8; }
+    .colegio-preview-text{ max-width: none; }
+    .niveis-mini-grid{ grid-template-columns: repeat(3, 1fr); }
     .vida-preview{ grid-template-columns: 1fr; gap: 28px; padding: 12px 0 44px; }
+    .vida-preview-text{ max-width: none; }
+    .vida-preview-grid{ max-width: 420px; margin-left: 0; }
     .acrostic-icons{ grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
   }
 
@@ -1349,9 +1370,10 @@
     .doc-card{ padding: 22px 20px; }
 
     .features-strip{ grid-template-columns: 1fr; gap: 22px; padding: 32px 0; }
-    .colegio-preview{ padding: 36px 0; gap: 28px; }
-    .colegio-preview-text h2{ font-size: 1.3rem; }
-    .niveis-preview-card{ padding: 22px 18px; }
+    .colegio-preview{ padding: 36px 0; gap: 24px; }
+    .colegio-preview-text h2{ font-size: 1.35rem; }
+    .niveis-preview-band{ padding: 20px 0 40px; }
+    .niveis-mini-grid{ grid-template-columns: repeat(2, 1fr); }
     .vida-preview{ padding: 8px 0 36px; }
     .vida-preview-text h2{ font-size: 1.3rem; }
     .vida-preview-grid{ gap: 12px; }
