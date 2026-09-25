@@ -207,17 +207,17 @@ renderDay(niveis[0].id);
 // ---------- Dados das Instalações ----------
 // Substitua "foto" pelo caminho real de cada fotografia.
 const instalacoes = [
-  { nome:"Cantina", foto:"Imagens/instalacoes/placeholder.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
-  { nome:"Cozinhas", foto:"Imagens/instalacoes/placeholder.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
-  { nome:"Refeitórios", foto:"Imagens/instalacoes/placeholder.png", desc:"Dois refeitórios amplos e confortáveis." },
-  { nome:"Papelaria", foto:"Imagens/instalacoes/placeholder.png", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/instalacoes/placeholder.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
-  { nome:"Música e Dança", foto:"Imagens/instalacoes/placeholder.png", desc:"Salas dedicadas às artes performativas." },
-  { nome:"Campos Desportivos", foto:"Imagens/instalacoes/placeholder.png", desc:"Três campos para a prática de diferentes desportos." },
-  { nome:"Anfiteatro", foto:"Imagens/instalacoes/placeholder.png", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/instalacoes/placeholder.png", desc:"Laboratórios de química, física e biologia." },
-  { nome:"Informática e Artes", foto:"Imagens/instalacoes/placeholder.png", desc:"Salas equipadas para tecnologia e expressão artística." },
-  { nome:"Biblioteca", foto:"Imagens/instalacoes/placeholder.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
+  { nome:"Cantina", foto:"Imagens/fondo_fermas.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
+  { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
+  { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
+  { nome:"Papelaria", foto:"Imagens/Fermas_fondo2.png", desc:"Material escolar disponível dentro do colégio." },
+  { nome:"Piscinas", foto:"Imagens/fondo_fermas.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
+  { nome:"Música e Dança", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
+  { nome:"Campos Desportivos", foto:"Imagens/fondo_fermas.png", desc:"Três campos para a prática de diferentes desportos." },
+  { nome:"Anfiteatro", foto:"Imagens/Fermas_fondo2.png", desc:"Espaço para eventos, apresentações e celebrações." },
+  { nome:"Laboratórios", foto:"Imagens/fondo_fermas.png", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
+  { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
 ];
 
 const facilityCardsEl = document.getElementById('facility-cards');
@@ -265,11 +265,12 @@ function renderNivel(id){
   document.getElementById('nivel-texto').innerHTML = n.texto.map(p => `<p>${p}</p>`).join('');
   const gal = document.getElementById('nivel-galeria');
   gal.innerHTML = '';
-  for(let i=0;i<3;i++){
-    const ph = document.createElement('div');
-    ph.className = 'photo-placeholder';
-    ph.innerHTML = iconSvg + `<p class="ph-label">Fotografia — ${n.nome}</p>`;
-    gal.appendChild(ph);
-  }
+  const fotosGaleria = ["Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png"];
+  fotosGaleria.forEach(src => {
+    const fig = document.createElement('div');
+    fig.className = 'gallery-photo';
+    fig.innerHTML = `<img src="${src}" alt="Fotografia — ${n.nome}">`;
+    gal.appendChild(fig);
+  });
   return true;
 }
