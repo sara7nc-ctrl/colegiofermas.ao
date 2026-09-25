@@ -476,24 +476,18 @@
 
   /* ---------- Preview: Vida no Fermas ---------- */
   .vida-preview{
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
-    align-items:center;
     padding: 20px 0 56px;
   }
-  .vida-preview-text{ max-width: 440px; }
+  .vida-preview-text{ max-width: 640px; margin-bottom: 32px; }
   .vida-preview-text h2{ font-size: 1.7rem; margin-bottom: 16px; line-height:1.3; }
   .vida-preview-text p{ color: var(--ink-soft); margin-bottom: 24px; }
   .vida-preview-grid{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    max-width: 380px;
-    margin-left: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
   .vida-preview-grid .vida-card{ border-top: 3px solid var(--letter-color, var(--gold)); }
-  .vida-preview-grid .vida-photo{ aspect-ratio: 1/1; }
+  .vida-preview-grid .vida-photo{ aspect-ratio: 3/4; }
   .vida-preview-grid .vida-card:nth-child(1){ --letter-color: var(--maroon); }
   .vida-preview-grid .vida-card:nth-child(2){ --letter-color: var(--accent-blue); }
   .vida-preview-grid .vida-card:nth-child(3){ --letter-color: var(--accent-orange); }
@@ -1289,9 +1283,8 @@
     .colegio-preview-media{ aspect-ratio: 16/8; }
     .colegio-preview-text{ max-width: none; }
     .niveis-mini-grid{ grid-template-columns: repeat(3, 1fr); }
-    .vida-preview{ grid-template-columns: 1fr; gap: 28px; padding: 12px 0 44px; }
+    .vida-preview{ padding: 12px 0 44px; }
     .vida-preview-text{ max-width: none; }
-    .vida-preview-grid{ max-width: 420px; margin-left: 0; }
     .acrostic-icons{ grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
   }
 
@@ -1376,7 +1369,7 @@
     .niveis-mini-grid{ grid-template-columns: repeat(2, 1fr); }
     .vida-preview{ padding: 8px 0 36px; }
     .vida-preview-text h2{ font-size: 1.3rem; }
-    .vida-preview-grid{ gap: 12px; }
+    .vida-preview-grid{ grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .diferenca-preview{ padding: 40px 0; }
     .acrostic-icons{ grid-template-columns: repeat(2, 1fr); gap: 26px 18px; }
     .matricula-steps{ grid-template-columns: 1fr; gap: 26px; }
