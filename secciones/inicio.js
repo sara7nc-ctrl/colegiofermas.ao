@@ -260,7 +260,7 @@ const vidaPreviewItens = [
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
   { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/mossas-grad.png" }
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/mossas-grad.jpeg" }
 ];
 
 const vidaPreviewGridEl = document.getElementById('vida-preview-grid');
