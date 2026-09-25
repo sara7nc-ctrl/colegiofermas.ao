@@ -28,9 +28,8 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       </div>
     </div>
     <div class="section-head" id="diferenca">
-     <h3>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</h3>
     </div>
-
+<h3>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</h3>
     <div class="acrostic">
       <div class="acrostic-row">
         <div class="acrostic-item"><span class="big-letter">F</span><span class="word">fazer</span></div>
