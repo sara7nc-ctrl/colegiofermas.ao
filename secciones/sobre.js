@@ -24,7 +24,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       
       </div>
       <div class="about-photo">
-        <img src="Imagens/Fermas_fondo2.png" alt="Colégio Fermas">
+        <img src="Imagens/meninos-profs.jpeg" alt="Colégio Fermas">
       </div>
     </div>
     <div class="section-head" id="diferenca">
