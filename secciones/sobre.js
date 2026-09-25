@@ -6,12 +6,12 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= SOBRE NÓS ================= -->
   <section class="view" data-view="sobre">
     <div class="section-head">
-     
+     <h2>Sobre Nós</h2>
     </div>
     <div class="about-grid">
-     <h2>Sobre Nós</h2>
+  
       <div class="about-text">
-       <h2>Sobre Nós</h2>
+      
        <p>             </p>
        <p>             </p>
        <p>             </p>
