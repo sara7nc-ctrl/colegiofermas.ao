@@ -21,11 +21,12 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
           Porque acreditamos que a verdadeira educação não se limita ao conhecimento: molda o carácter, desperta o propósito e prepara o indivíduo para enfrentar os desafios da vida com coragem, sabedoria e integridade.
          </p>
          <p> Colégio FERMAS — Educação que forma pessoas, transforma vidas e constrói o futuro.</p>
-      <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
+      
       </div>
       <div class="about-photo">
         <img src="Imagens/Fermas_fondo2.png" alt="Colégio Fermas">
       </div>
+      <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
     </div>
 
     <div class="section-head" id="diferenca">
