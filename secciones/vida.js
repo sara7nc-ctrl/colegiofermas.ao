@@ -7,7 +7,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 <!-- ================= VIDA FERMAS ================= -->
   <section class="view" data-view="vida">
     <div class="section-head">
-      <h2>Vida Fermas</h2>
+      <h2>Vida no Fermas</h2>
       <p>Um olhar sobre os momentos, actividades e celebrações que fazem parte do dia a dia do colégio. Escolha uma categoria para ver essas fotografias.</p>
     </div>
 
@@ -24,8 +24,8 @@ const categoriasVida = ["Todas", "Sala de Aula", "Desporto", "Artes e Música", 
 
 const atividades = [
   { titulo: "Aula prática de Hortaliças", categoria: "Sala de Aula", foto: "Imagens/meninos-terra.jpeg" },
-  { titulo: "Leitura e escrita na Iniciação", categoria: "Sala de Aula", foto: "Imagens/Fermas_fondo2.png" },
-  { titulo: "Formação de Sinalizção de Trânsito", categoria: "Sala de Aula", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Aula de natação", categoria: "Sala de Aula", foto: "Imagens/piscina.jpeg" },
+  { titulo: "Formação de Sinalizção de Trânsito", categoria: "Sala de Aula", foto: "Imagens/meninos-poli.jpeg" },
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/meninos-desporto.jpeg" },
   { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Torneio de basquetebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
