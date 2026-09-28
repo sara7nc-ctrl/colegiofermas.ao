@@ -147,22 +147,25 @@
   .nav-dropdown:hover > a::after{ transform: rotate(225deg) translate(-1px, -1px); }
 
   .dropdown-menu{
-    position:absolute;
-    top: 100%;
-    left: -14px;
-    min-width: 280px;
-    background: #fff;
-    border: 1px solid rgba(216,201,168,.7);
-    border-radius: 20px;
-    box-shadow: 0 22px 48px rgba(58,36,12,.18), 0 3px 8px rgba(58,36,12,.06);
-    padding: 10px;
-    z-index: 60;
-    list-style:none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
-  }
+  position:absolute;
+  top: 100%;
+  left: -14px;
+  min-width: 280px;
+  background: #fff;
+  border: 1px solid rgba(216,201,168,.7);
+  border-radius: 20px;
+  box-shadow: 0 22px 48px rgba(58,36,12,.18), 0 3px 8px rgba(58,36,12,.06);
+  padding: 10px;
+  z-index: 60;
+  list-style:none;
+  display: flex;           /* nuevo */
+  flex-direction: column;  /* nuevo */
+  gap: 2px;                /* nuevo */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
+} 
   .dropdown-menu::before{
     content:"";
     position:absolute;
