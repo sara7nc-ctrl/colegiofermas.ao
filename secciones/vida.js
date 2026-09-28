@@ -25,7 +25,7 @@ const categoriasVida = ["Todas", "Sala de Aula", "Desporto", "Artes e Música", 
 const atividades = [
   { titulo: "Aula prática de Hortaliças", categoria: "Sala de Aula", foto: "Imagens/meninos-terra.jpeg" },
   { titulo: "Aula de natação", categoria: "Sala de Aula", foto: "Imagens/piscina.jpeg" },
-  { titulo: "Formação de Sinalizção de Trânsito", categoria: "Sala de Aula", foto: "Imagens/meninos-poli.jpeg" },
+  { titulo: "Formação de Sinalizção de Trânsito", categoria: "Sala de Aula", foto: "Imagens/poli-e-meninos.jpeg" },
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/meninos-desporto.jpeg" },
   { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Torneio de basquetebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
