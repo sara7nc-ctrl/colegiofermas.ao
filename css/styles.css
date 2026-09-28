@@ -195,6 +195,7 @@
   .view.active{ display:block; }
 
   section{ padding: 64px 0; }
+  .view[data-view="inicio"]{ padding-top: 0; }
 
   /* ---------- Hero (Início) ---------- */
   .hero-carousel::before{
@@ -1100,7 +1101,7 @@
   /* ---------- Carrossel (Início) ---------- */
   .hero-carousel{
     position: relative;
-    aspect-ratio: 16/7;
+    height: clamp(340px, 36vw, 480px);
     overflow: hidden;
     background: var(--cream-deep);
     width: 100vw;
@@ -1326,7 +1327,7 @@
     .wrap{ padding: 0 20px; }
     .header-inner{ padding: 14px 20px; }
 
-    .hero-carousel{ aspect-ratio: 4/3; }
+    .hero-carousel{ height: auto; aspect-ratio: 4/3; }
     .hero-carousel::before{ display:none; }
     .hero-overlay{
       position: static;
