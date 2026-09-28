@@ -62,3 +62,17 @@
   function closeMenu(){
     document.getElementById('site-header').classList.remove('open');
   }
+
+  // ---------- Fechar o submenu ao escolher uma opção ----------
+  // Depois de clicar num link do submenu, este fecha-se logo (mesmo com o
+  // rato ainda por cima) e volta a abrir na próxima vez que se passar o rato.
+  document.querySelectorAll('.nav-dropdown').forEach(dd => {
+    dd.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(document.activeElement) document.activeElement.blur();
+        dd.classList.add('force-close');
+      });
+    });
+    dd.addEventListener('mouseleave', () => dd.classList.remove('force-close'));
+    dd.addEventListener('mouseenter', () => dd.classList.remove('force-close'));
+  });
