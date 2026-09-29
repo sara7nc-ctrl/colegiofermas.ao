@@ -1199,7 +1199,7 @@
   /* ---------- Carrossel (Início) ---------- */
   .hero-carousel{
     position: relative;
-    height: clamp(340px, 36vw, 480px);
+    height: clamp(600px, 36vw, 740px);
     overflow: hidden;
     background: var(--cream-deep);
     width: 100vw;
