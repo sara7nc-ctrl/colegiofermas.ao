@@ -12,7 +12,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
   const email = "geral@colegiofermas.co.ao";
   const enderecoCodificado = encodeURIComponent(endereco);
 
-  const mapaEmbedSrc = "https://maps.google.com/maps?q=" + enderecoCodificado + "&output=embed";
+  const mapaEmbedSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.272350919637!2d13.194279111291392!3d-8.94703219191987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f50047b7e4af%3A0x1e5373480efdeea3!2sCol%C3%A9gio%20Fermas!5e0!3m2!1ses-419!2sao!4v1790753852188!5m2!1ses-419!2sao";
   const googleMapsDirLink = "https://www.google.com/maps/dir/?api=1&destination=" + enderecoCodificado;
   const wazeLink = "https://waze.com/ul?q=" + enderecoCodificado + "&navigate=yes";
 
@@ -97,8 +97,9 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
         <iframe
           src="${mapaEmbedSrc}"
           width="100%" height="100%" style="border:0;"
+          allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerpolicy="strict-origin-when-cross-origin"
           title="Localização do Colégio Fermas">
         </iframe>
       </div>
