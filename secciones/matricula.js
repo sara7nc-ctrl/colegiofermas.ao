@@ -6,15 +6,13 @@
 //
 // O botão "Quero Matricular" no cabeçalho, no Início, no rodapé e no
 // fim de "O Que Oferecemos" leva sempre a esta página. O botão "Falar
-// com a Secretaria" desta página abre uma conversa directa no
-// WhatsApp — substitua o número pelo que preferir usar para
-// matrículas, se for diferente dos contactos gerais.
+// com a Secretaria" desta página liga directamente para o colégio —
+// substitua o número pelo que preferir usar para matrículas, se for
+// diferente dos contactos gerais.
 
 document.getElementById('app-sections').insertAdjacentHTML('beforeend', (function(){
 
-  const numeroWhatsapp = "244936269025";
-  const mensagem = "Olá! Gostaria de saber mais sobre a matrícula no Colégio Fermas.";
-  const linkWhatsapp = "https://wa.me/" + numeroWhatsapp + "?text=" + encodeURIComponent(mensagem);
+  const linkTelefone = "tel:+244936269025";
 
   return `
 <!-- ================= MATRÍCULA ================= -->
@@ -80,7 +78,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
         <span class="step-num">4</span>
         <div>
           <h4>Matrícula concluída</h4>
-          <p>Entregues os documentos e paga a taxa, o processo fica concluído — não é emitido nenhum comprovativo no momento. O calendário escolar fica disponível para levantamento na secretaria no dia seguinte ou alguns dias depois.</p>
+          <p>Entregues os documentos e paga a taxa, a matrícula está feita. O calendário escolar é levantado na secretaria alguns dias depois.</p>
         </div>
       </div>
     </div>
@@ -90,7 +88,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
         <h3>3. Valores</h3>
         <p>Para informações sobre os valores de matrícula, mensalidades, uniformes e outros serviços, contacte a Secretaria do Colégio Fermas.</p>
       </div>
-      <a href="${linkWhatsapp}" target="_blank" rel="noopener noreferrer" class="btn btn-enroll">Falar com a Secretaria</a>
+      <a href="${linkTelefone}" class="btn btn-enroll">Falar com a Secretaria</a>
     </div>
 
     <div class="info-extra">
