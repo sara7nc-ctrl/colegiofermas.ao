@@ -22,10 +22,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
       <p>Quer matricular o seu educando no Colégio Fermas? Veja abaixo os documentos necessários e as informações importantes para realizar a matrícula.</p>
     </div>
 
-    <div class="docs-columns">
-      <div class="docs-column">
-
- <div class="section-head">
+    <div class="section-head">
       <h3>Como Matricular — Passo a Passo</h3>
     </div>
     <div class="matricula-steps">
@@ -40,7 +37,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
         <span class="step-num">2</span>
         <div>
           <h4>Entrega de documentos</h4>
-          <p>Reúna e entregue os documentos necessários na secretaria do colégio, conforme a lista embaixo.</p>
+          <p>Reúna e entregue os documentos necessários na secretaria do colégio, conforme a lista abaixo.</p>
         </div>
       </div>
       <div class="matricula-step">
@@ -59,8 +56,8 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
       </div>
     </div>
 
-
-
+    <div class="docs-columns">
+      <div class="docs-column">
         <div class="section-head">
           <h3>1. Matrícula para Novos Alunos</h3>
           <p>Documentos necessários:</p>
@@ -77,8 +74,8 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
           </ul>
         </div>
       </div>
-    </div>
-<div class="docs-column">
+
+      <div class="docs-column">
         <div class="section-head">
           <h3>2. Confirmação de Matrícula</h3>
           <p>Para alunos que já frequentam o Colégio Fermas:</p>
@@ -90,7 +87,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
           </ul>
         </div>
       </div>
-   
+    </div>
 
     <div class="cta-banner">
       <div>
