@@ -22,31 +22,37 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
       <p>Quer matricular o seu educando no Colégio Fermas? Veja abaixo os documentos necessários e as informações importantes para realizar a matrícula.</p>
     </div>
 
-    <div class="section-head">
-      <h3>1. Matrícula para Novos Alunos</h3>
-      <p>Documentos necessários:</p>
-    </div>
-    <div class="doc-card">
-      <ul>
-        <li>Atestado médico</li>
-        <li>4 fotografias tipo passe</li>
-        <li>Fotocópia do cartão de vacinas actualizado — para alunos da Iniciação e 1.ª classe</li>
-        <li>Fotocópia do Bilhete de Identidade do aluno, dos pais e do encarregado de educação</li>
-        <li>Para alunos provenientes de outras instituições, processo individual de transferência completo</li>
-        <li>Para alunos provenientes de outros sistemas de ensino, certificado de equivalência solicitado ao Ministério da Educação</li>
-        <li>Declaração de não devedor</li>
-      </ul>
-    </div>
+    <div class="docs-columns">
+      <div class="docs-column">
+        <div class="section-head">
+          <h3>1. Matrícula para Novos Alunos</h3>
+          <p>Documentos necessários:</p>
+        </div>
+        <div class="doc-card">
+          <ul>
+            <li>Atestado médico</li>
+            <li>4 fotografias tipo passe</li>
+            <li>Fotocópia do cartão de vacinas actualizado — para alunos da Iniciação e 1.ª classe</li>
+            <li>Fotocópia do Bilhete de Identidade do aluno, dos pais e do encarregado de educação</li>
+            <li>Para alunos provenientes de outras instituições, processo individual de transferência completo</li>
+            <li>Para alunos provenientes de outros sistemas de ensino, certificado de equivalência solicitado ao Ministério da Educação</li>
+            <li>Declaração de não devedor</li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="section-head">
-      <h3>2. Confirmação de Matrícula</h3>
-      <p>Para alunos que já frequentam o Colégio Fermas:</p>
-    </div>
-    <div class="doc-card">
-      <ul>
-        <li>1 fotografia tipo passe</li>
-        <li>Fotocópia actualizada do Bilhete de Identidade do aluno, dos pais e do encarregado de educação</li>
-      </ul>
+      <div class="docs-column">
+        <div class="section-head">
+          <h3>2. Confirmação de Matrícula</h3>
+          <p>Para alunos que já frequentam o Colégio Fermas:</p>
+        </div>
+        <div class="doc-card">
+          <ul>
+            <li>1 fotografia tipo passe</li>
+            <li>Fotocópia actualizada do Bilhete de Identidade do aluno, dos pais e do encarregado de educação</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="section-head">
