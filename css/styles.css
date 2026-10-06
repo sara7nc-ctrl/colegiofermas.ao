@@ -935,6 +935,15 @@
   .matricula-step p{ font-size: 0.9rem; color: var(--ink-soft); }
 
   /* ---------- Matrícula: lista de documentos ---------- */
+  .docs-columns{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+    align-items:start;
+  }
+  .docs-column .doc-card{ margin-bottom: 0; }
+
   .doc-card{
     max-width: 720px;
     border-radius: 14px;
@@ -1512,6 +1521,7 @@
     .cta-banner{ flex-direction: column; align-items:flex-start; text-align:left; padding: 24px 22px; }
     .info-extra-grid{ grid-template-columns: 1fr; }
     .doc-card{ padding: 22px 20px; }
+    .docs-columns{ grid-template-columns: 1fr; gap: 28px; }
 
     .features-strip{ grid-template-columns: 1fr; gap: 22px; padding: 32px 0; }
     .colegio-preview{ padding: 36px 0; gap: 24px; }
