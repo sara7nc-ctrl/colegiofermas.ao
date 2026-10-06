@@ -77,8 +77,8 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
           </ul>
         </div>
       </div>
-
-      <div class="docs-column">
+    </div>
+<div class="docs-column">
         <div class="section-head">
           <h3>2. Confirmação de Matrícula</h3>
           <p>Para alunos que já frequentam o Colégio Fermas:</p>
@@ -90,8 +90,6 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
           </ul>
         </div>
       </div>
-    </div>
-
    
 
     <div class="cta-banner">
