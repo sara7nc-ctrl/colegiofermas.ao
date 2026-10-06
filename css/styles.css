@@ -587,13 +587,13 @@
 
   .about-grid{
     display:grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 24px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 34px;
     align-items:center;
   }
   .about-text p + p{ margin-top: 16px; }
   .about-photo{
-    max-width: 380px;
+    max-width: 310px;
     justify-self: end;
     width: 100%;
   }
@@ -664,42 +664,54 @@
     margin-top: 56px;
   }
   .profile-card{
-    background: var(--card);
+    background: linear-gradient(160deg, var(--card) 0%, var(--cream-deep) 145%);
     border: 1px solid rgba(216,201,168,.6);
     border-top: 3px solid var(--gold);
-    border-radius: 14px;
-    padding: 26px 30px;
-    box-shadow: 0 8px 26px rgba(61,44,20,.06);
+    border-radius: 18px;
+    padding: 30px 30px 32px;
+    box-shadow: 0 10px 30px rgba(61,44,20,.08);
   }
   .profile-card.docente{ border-top-color: var(--accent-blue); }
-  .profile-card h3{
-    font-size: 1.15rem;
-    margin-bottom: 14px;
-  }
-  .profile-card ul{ list-style:none; }
-  .profile-card li{
-    padding: 11px 4px 11px 22px;
-    border-bottom: 1px solid rgba(216,201,168,.45);
-    font-size: 0.96rem;
-    color: var(--ink-soft);
-    position:relative;
-    border-radius: 8px;
-    transition: background .15s ease, padding-left .15s ease;
-  }
-  .profile-card li::before{
-    content:"";
-    position:absolute;
-    left: 2px;
-    top: 50%;
-    width: 7px;
-    height: 7px;
-    margin-top: -3.5px;
-    border-radius:50%;
+  .profile-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     background: var(--gold);
+    color: #fff;
+    margin-bottom: 18px;
   }
-  .profile-card.docente li::before{ background: var(--accent-blue); }
-  .profile-card li:hover{ background: rgba(83,187,180,.1); padding-left: 26px; }
-  .profile-card li:last-child{ border-bottom:none; }
+  .profile-card.docente .profile-icon{ background: var(--accent-blue); }
+  .profile-icon svg{ width: 26px; height: 26px; }
+  .profile-card h3{
+    font-size: 1.18rem;
+    margin-bottom: 18px;
+  }
+  .profile-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+  }
+  .profile-tags span{
+    display:inline-flex;
+    align-items:center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    background: rgba(83,187,180,.15);
+    color: var(--maroon-dark);
+    border: 1px solid rgba(83,187,180,.32);
+    transition: background .2s ease, transform .2s ease;
+  }
+  .profile-tags span:hover{ background: rgba(83,187,180,.28); transform: translateY(-2px); }
+  .profile-card.docente .profile-tags span{
+    background: rgba(33,151,214,.12);
+    border-color: rgba(33,151,214,.3);
+  }
+  .profile-card.docente .profile-tags span:hover{ background: rgba(33,151,214,.22); }
 
   /* ---------- Um Dia no Fermas ---------- */
   .day-block{
@@ -1133,6 +1145,7 @@
     color: var(--cream);
     padding: 48px 0 30px;
     margin-top: 40px;
+    border-top: 3px solid var(--gold);
   }
 
   .footer-cta{
@@ -1155,7 +1168,7 @@
 
   .footer-grid{
     display:grid;
-    grid-template-columns: 1.1fr 1fr 0.8fr;
+    grid-template-columns: 1.2fr 1.1fr 0.9fr 0.8fr;
     gap: 30px;
     padding-bottom: 26px;
     border-bottom: 1px solid rgba(243,232,210,.22);
@@ -1164,8 +1177,9 @@
   footer h4{
     font-family:'Fraunces', serif;
     font-weight:600;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-size: 1.05rem;
+    color: var(--gold);
   }
 
   footer p, footer a{
@@ -1173,6 +1187,29 @@
     font-size: 0.94rem;
   }
   footer p + p{ margin-top: 6px; }
+
+  .footer-crest{
+    width: 46px;
+    height: 46px;
+    object-fit:contain;
+    margin-bottom: 14px;
+  }
+  .footer-brand h4{ color: var(--cream); }
+
+  .footer-line{
+    display:flex;
+    align-items:flex-start;
+    gap: 10px;
+    line-height: 1.5;
+  }
+  .footer-line + .footer-line{ margin-top: 12px; }
+  .footer-line svg{ width: 17px; height: 17px; flex-shrink:0; margin-top: 3px; color: var(--gold); }
+  a.footer-line:hover{ color: var(--gold); }
+
+  .footer-links{ list-style:none; }
+  .footer-links li + li{ margin-top: 10px; }
+  .footer-links a{ transition: color .2s ease, padding-left .2s ease; }
+  .footer-links a:hover{ color: var(--gold); padding-left: 4px; }
 
   .social-links{
     display:flex;
