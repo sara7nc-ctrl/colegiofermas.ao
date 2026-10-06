@@ -24,6 +24,43 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
 
     <div class="docs-columns">
       <div class="docs-column">
+
+ <div class="section-head">
+      <h3>Como Matricular — Passo a Passo</h3>
+    </div>
+    <div class="matricula-steps">
+      <div class="matricula-step">
+        <span class="step-num">1</span>
+        <div>
+          <h4>Contacto inicial</h4>
+          <p>Fale connosco por telefone, e-mail ou WhatsApp para confirmar a disponibilidade de vagas no nível pretendido.</p>
+        </div>
+      </div>
+      <div class="matricula-step">
+        <span class="step-num">2</span>
+        <div>
+          <h4>Entrega de documentos</h4>
+          <p>Reúna e entregue os documentos necessários na secretaria do colégio, conforme a lista embaixo.</p>
+        </div>
+      </div>
+      <div class="matricula-step">
+        <span class="step-num">3</span>
+        <div>
+          <h4>Pagamento da matrícula</h4>
+          <p>Efectue o pagamento da taxa de matrícula na secretaria. O pagamento da primeira mensalidade não é obrigatório nesta fase.</p>
+        </div>
+      </div>
+      <div class="matricula-step">
+        <span class="step-num">4</span>
+        <div>
+          <h4>Matrícula concluída</h4>
+          <p>Entregues os documentos e paga a taxa, a matrícula está feita. O calendário escolar é levantado na secretaria alguns dias depois.</p>
+        </div>
+      </div>
+    </div>
+
+
+
         <div class="section-head">
           <h3>1. Matrícula para Novos Alunos</h3>
           <p>Documentos necessários:</p>
@@ -55,39 +92,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', (functio
       </div>
     </div>
 
-    <div class="section-head">
-      <h3>Como Matricular — Passo a Passo</h3>
-    </div>
-    <div class="matricula-steps">
-      <div class="matricula-step">
-        <span class="step-num">1</span>
-        <div>
-          <h4>Contacto inicial</h4>
-          <p>Fale connosco por telefone, e-mail ou WhatsApp para confirmar a disponibilidade de vagas no nível pretendido.</p>
-        </div>
-      </div>
-      <div class="matricula-step">
-        <span class="step-num">2</span>
-        <div>
-          <h4>Entrega de documentos</h4>
-          <p>Reúna e entregue os documentos necessários na secretaria do colégio, conforme a lista acima.</p>
-        </div>
-      </div>
-      <div class="matricula-step">
-        <span class="step-num">3</span>
-        <div>
-          <h4>Pagamento da matrícula</h4>
-          <p>Efectue o pagamento da taxa de matrícula na secretaria. O pagamento da primeira mensalidade não é obrigatório nesta fase.</p>
-        </div>
-      </div>
-      <div class="matricula-step">
-        <span class="step-num">4</span>
-        <div>
-          <h4>Matrícula concluída</h4>
-          <p>Entregues os documentos e paga a taxa, a matrícula está feita. O calendário escolar é levantado na secretaria alguns dias depois.</p>
-        </div>
-      </div>
-    </div>
+   
 
     <div class="cta-banner">
       <div>
