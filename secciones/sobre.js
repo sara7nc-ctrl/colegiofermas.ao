@@ -27,8 +27,8 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
           Porque acreditamos que a verdadeira educação não se limita ao conhecimento: molda o carácter, desperta o propósito e prepara o indivíduo para enfrentar os desafios da vida com coragem, sabedoria e integridade.
           Colégio FERMAS — Educação que forma pessoas, transforma vidas e constrói o futuro.</p>
     </div>
+     <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
     <div class="acrostic">
-    <p>Seis palavras que resumem o que somos e como trabalhamos, todos os dias, com os nossos alunos.</p>
       <div class="acrostic-row">
         <div class="acrostic-item"><span class="big-letter">F</span><span class="word">fazer</span></div>
         <div class="acrostic-item"><span class="big-letter">E</span><span class="word">ensinar</span></div>
