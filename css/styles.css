@@ -1595,7 +1595,7 @@
     content:""; position:absolute; z-index:-1; pointer-events:none;
     width: 280px; height: 250px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
     left: -60px; top: -70px;
-    background: rgba(83,187,180,.13);
+    background: rgba(83,187,180,.06);
     animation: floaty 11s ease-in-out infinite alternate;
   }
   .features-strip::after, .niveis-preview-band::after, .diferenca-preview::after,
@@ -1604,7 +1604,7 @@
     content:""; position:absolute; z-index:-1; pointer-events:none;
     width: 220px; height: 195px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
     right: -40px; bottom: -60px; rotate: 180deg;
-    background: rgba(77,50,17,.05);
+    background: rgba(77,50,17,.025);
     animation: floaty 14s ease-in-out infinite alternate-reverse;
   }
 
