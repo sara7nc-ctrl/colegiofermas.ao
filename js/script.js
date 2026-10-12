@@ -93,6 +93,8 @@
     ['.acrostic-icon-item', ''],
     ['.vida-preview-text', ''],
     ['.vida-preview-grid .vida-card', 'zoom'],
+    ['.paises-band > *:not(.paises-grid)', ''],
+    ['.pais-item', 'zoom'],
     ['.quote-block', ''],
     ['.section-head', ''],
     ['.about-text', 'left'],
