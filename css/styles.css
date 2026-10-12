@@ -1517,15 +1517,9 @@
   }
 
   /* ---------- Países representados ---------- */
-  .paises-band{
-    margin-top: 64px;
-    padding: 48px 28px;
-    border-radius: var(--radius);
-    background: var(--cream-deep);
-    text-align: center;
-  }
+  .paises-band{ text-align: center; }
   .paises-band h2{ margin: 6px 0 10px; }
-  .paises-band > p{ max-width: 620px; margin: 0 auto 32px; color: var(--ink-soft); }
+  .paises-band > p{ max-width: 620px; margin: 0 auto 32px; }
   .paises-grid{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -1549,7 +1543,125 @@
   }
   .pais-item span{ font-weight: 600; color: var(--maroon-dark); }
   @media (max-width: 980px){ .paises-grid{ grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 520px){ .paises-grid{ grid-template-columns: repeat(2, 1fr); } .paises-band{ padding: 36px 16px; } }
+  @media (max-width: 520px){ .paises-grid{ grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- FUNDOS COLORIDOS (faixas a toda a largura) ---------- */
+  :root{
+    --tint-teal:  #E3F4F1;
+    --tint-blue:  #E6F1FB;
+    --tint-sand:  #FFF1D6;
+    --tint-green: #EAF4DF;
+    --tint-rose:  #FDE9EB;
+    --deep-blue:  #2754A2;
+  }
+  @keyframes floaty{
+    from{ transform: translate(0,0) scale(1); }
+    to  { transform: translate(26px,-22px) scale(1.08); }
+  }
+
+  /* Técnica: a cor do bloco estende-se até às margens do ecrã */
+  .features-strip, .niveis-preview-band, .diferenca-preview, .vida-preview,
+  .paises-band, .quote-block,
+  .view:not([data-view="inicio"]) > .section-head:first-child,
+  .acrostic, .values-grid, .docs-columns, .info-extra{
+    position: relative;
+    isolation: isolate;
+    border: 0;
+    border-radius: 0;
+    clip-path: inset(0 -100vmax);
+  }
+  .features-strip{ background: var(--tint-teal);  box-shadow: 0 0 0 100vmax var(--tint-teal); }
+  .niveis-preview-band{ background: var(--tint-sand);  box-shadow: 0 0 0 100vmax var(--tint-sand);  padding: 52px 0 60px; }
+  .diferenca-preview{ background: var(--tint-blue);  box-shadow: 0 0 0 100vmax var(--tint-blue);  padding: 64px 0; }
+  .vida-preview{ background: var(--tint-green); box-shadow: 0 0 0 100vmax var(--tint-green); padding: 64px 0; }
+  .paises-band{
+    background: var(--deep-blue); box-shadow: 0 0 0 100vmax var(--deep-blue);
+    margin: 0; padding: 72px 0 76px; color: #fff;
+  }
+  .paises-band h2{ color: #fff; }
+  .paises-band > p{ color: rgba(255,255,255,.86); }
+  .paises-band .eyebrow{ color: #BFEBE6; background: rgba(255,255,255,.12); }
+  .paises-band .pais-item{ background: #fff; }
+  .quote-block{
+    max-width: none; margin: 0; padding: 64px 0;
+    background: var(--tint-rose); box-shadow: 0 0 0 100vmax var(--tint-rose);
+  }
+  .quote-block p, .quote-block cite{ max-width: 620px; margin-left: auto; margin-right: auto; }
+
+  /* círculos decorativos que flutuam devagar */
+  .features-strip::before, .niveis-preview-band::before, .diferenca-preview::before,
+  .vida-preview::before, .paises-band::before, .quote-block::before,
+  .view:not([data-view="inicio"]) > .section-head:first-child::before{
+    content:""; position:absolute; z-index:-1; pointer-events:none;
+    width: 280px; height: 280px; border-radius: 50%;
+    left: -90px; top: -110px;
+    background: rgba(255,255,255,.6);
+    animation: floaty 11s ease-in-out infinite alternate;
+  }
+  .features-strip::after, .niveis-preview-band::after, .diferenca-preview::after,
+  .vida-preview::after, .paises-band::after, .quote-block::after,
+  .view:not([data-view="inicio"]) > .section-head:first-child::after{
+    content:""; position:absolute; z-index:-1; pointer-events:none;
+    width: 220px; height: 220px; border-radius: 50%;
+    right: -70px; bottom: -90px;
+    background: rgba(83,187,180,.22);
+    animation: floaty 14s ease-in-out infinite alternate-reverse;
+  }
+  .paises-band::before{ background: rgba(255,255,255,.08); }
+  .paises-band::after{ background: rgba(83,187,180,.30); }
+
+  /* cartões brancos em cima das faixas coloridas */
+  .nivel-mini-card, .acrostic-icon-item{ background: #fff; }
+  .acrostic-icon-item{
+    padding: 22px 18px; border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(39,84,162,.07);
+    transition: box-shadow .5s var(--ease-soft), transform .5s var(--ease-soft);
+  }
+  .acrostic-icon-item:hover{ box-shadow: 0 16px 32px rgba(39,84,162,.15); }
+  .vida-preview .vida-card, .features-strip .feature-item{ background: transparent; }
+
+  /* ---- Páginas interiores: título em faixa + fundo suave ---- */
+  .view[data-view="sobre"], .view[data-view="oferecemos"], .view[data-view="vida"],
+  .view[data-view="contactos"], .view[data-view="matricula"], .view[data-view="administracao"]{
+    padding-top: 0;
+    clip-path: inset(0 -100vmax);
+    background: var(--page-tint);
+    box-shadow: 0 0 0 100vmax var(--page-tint);
+  }
+  .view[data-view="sobre"]{ --page-tint: #F3F9F8; }
+  .view[data-view="oferecemos"]{ --page-tint: #F4F7FC; }
+  .view[data-view="vida"]{ --page-tint: #F3F8FD; }
+  .view[data-view="contactos"]{ --page-tint: #F5F9F2; }
+  .view[data-view="matricula"]{ --page-tint: #F3F9F8; }
+  .view[data-view="administracao"]{ --page-tint: #F4F7FC; }
+
+  .view:not([data-view="inicio"]) > .section-head:first-child{
+    max-width: none;
+    margin-bottom: 52px;
+    padding: 56px 0 48px;
+    background: linear-gradient(90deg, var(--tint-teal), var(--tint-teal));
+    box-shadow: 0 0 0 100vmax var(--tint-teal);
+    opacity: 1; translate: none; scale: 1;
+  }
+  .view:not([data-view="inicio"]) > .section-head:first-child p{ max-width: 760px; }
+  .view.active:not([data-view="inicio"]) > .section-head:first-child > *{
+    animation: riseIn 1.1s var(--ease-soft) backwards;
+  }
+  .view.active:not([data-view="inicio"]) > .section-head:first-child > p{ animation-delay: .2s; }
+
+  /* faixas dentro das páginas interiores */
+  .acrostic{ background: var(--tint-sand); box-shadow: 0 0 0 100vmax var(--tint-sand); padding: 44px 0; margin: 48px 0; }
+  .values-grid{ background: var(--tint-blue); box-shadow: 0 0 0 100vmax var(--tint-blue); padding: 52px 0; margin: 48px 0; }
+  .docs-columns{ background: var(--tint-green); box-shadow: 0 0 0 100vmax var(--tint-green); padding: 52px 0; margin: 52px 0; }
+  .info-extra{ background: var(--tint-sand); box-shadow: 0 0 0 100vmax var(--tint-sand); padding: 52px 0 60px; margin: 52px 0 0; }
+  .value-card, .doc-card, .info-extra-card, .contact-card, .profile-card{ background: #fff; }
+
+  .acrostic.reveal, .docs-columns.reveal, .info-extra.reveal{ translate: none; scale: 1; }
+  .value-card{ padding: 28px 26px; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(39,84,162,.08); }
+  .values-grid{ gap: 24px; }
+  footer{ margin-top: 0; }
+  section.view:not([data-view="inicio"]){ padding-bottom: 72px; }
+  .view[data-view="inicio"]{ padding-bottom: 0; }
 
   /* ---------- Responsive ---------- */
   @media (max-width: 980px){
