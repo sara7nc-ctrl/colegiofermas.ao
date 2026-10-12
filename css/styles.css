@@ -1516,6 +1516,41 @@
     .carousel-slide img{ transform:none; }
   }
 
+  /* ---------- Países representados ---------- */
+  .paises-band{
+    margin-top: 64px;
+    padding: 48px 28px;
+    border-radius: var(--radius);
+    background: var(--cream-deep);
+    text-align: center;
+  }
+  .paises-band h2{ margin: 6px 0 10px; }
+  .paises-band > p{ max-width: 620px; margin: 0 auto 32px; color: var(--ink-soft); }
+  .paises-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+  .pais-item{
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 22px 12px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .pais-item:hover{ transform: translateY(-8px); box-shadow: 0 16px 32px rgba(0,0,0,.08); }
+  .pais-item img{
+    width: 76px; height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  }
+  .pais-item span{ font-weight: 600; color: var(--maroon-dark); }
+  @media (max-width: 980px){ .paises-grid{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 520px){ .paises-grid{ grid-template-columns: repeat(2, 1fr); } .paises-band{ padding: 36px 16px; } }
+
   /* ---------- Responsive ---------- */
   @media (max-width: 980px){
     .staff-grid{ grid-template-columns: repeat(2, 1fr); }
