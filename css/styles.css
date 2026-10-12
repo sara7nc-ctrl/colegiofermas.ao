@@ -1547,16 +1547,16 @@
 
   /* ---------- FUNDOS COLORIDOS (faixas a toda a largura) ---------- */
   :root{
-    --tint-teal:  #E3F4F1;
-    --tint-blue:  #E6F1FB;
-    --tint-sand:  #FFF1D6;
-    --tint-green: #EAF4DF;
-    --tint-rose:  #FDE9EB;
-    --deep-blue:  #2754A2;
+    --tint-teal:  #D6F1EA;
+    --tint-blue:  #D9E8FA;
+    --tint-sand:  #FFE6C7;
+    --tint-green: #E0F1CE;
+    --tint-rose:  #FFDDE4;
+    --deep-blue:  #C9D9F7;
   }
   @keyframes floaty{
     from{ transform: translate(0,0) scale(1); }
-    to  { transform: translate(26px,-22px) scale(1.08); }
+    to  { transform: translate(26px,-22px) scale(1.08) rotate(14deg); }
   }
 
   /* Técnica: a cor do bloco estende-se até às margens do ecrã */
@@ -1576,11 +1576,11 @@
   .vida-preview{ background: var(--tint-green); box-shadow: 0 0 0 100vmax var(--tint-green); padding: 64px 0; }
   .paises-band{
     background: var(--deep-blue); box-shadow: 0 0 0 100vmax var(--deep-blue);
-    margin: 0; padding: 72px 0 76px; color: #fff;
+    margin: 0; padding: 72px 0 76px;
   }
-  .paises-band h2{ color: #fff; }
-  .paises-band > p{ color: rgba(255,255,255,.86); }
-  .paises-band .eyebrow{ color: #BFEBE6; background: rgba(255,255,255,.12); }
+  .paises-band h2{ color: var(--maroon-dark); }
+  .paises-band > p{ color: var(--ink-soft); }
+  .paises-band .eyebrow{ color: var(--maroon-dark); background: rgba(255,255,255,.55); }
   .paises-band .pais-item{ background: #fff; }
   .quote-block{
     max-width: none; margin: 0; padding: 64px 0;
@@ -1593,8 +1593,8 @@
   .vida-preview::before, .paises-band::before, .quote-block::before,
   .view:not([data-view="inicio"]) > .section-head:first-child::before{
     content:""; position:absolute; z-index:-1; pointer-events:none;
-    width: 280px; height: 280px; border-radius: 50%;
-    left: -90px; top: -110px;
+    width: 280px; height: 250px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    left: -60px; top: -70px;
     background: rgba(255,255,255,.6);
     animation: floaty 11s ease-in-out infinite alternate;
   }
@@ -1602,19 +1602,19 @@
   .vida-preview::after, .paises-band::after, .quote-block::after,
   .view:not([data-view="inicio"]) > .section-head:first-child::after{
     content:""; position:absolute; z-index:-1; pointer-events:none;
-    width: 220px; height: 220px; border-radius: 50%;
-    right: -70px; bottom: -90px;
-    background: rgba(83,187,180,.22);
+    width: 220px; height: 195px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    right: -40px; bottom: -60px; rotate: 180deg;
+    background: rgba(255,255,255,.55);
     animation: floaty 14s ease-in-out infinite alternate-reverse;
   }
-  .paises-band::before{ background: rgba(255,255,255,.08); }
-  .paises-band::after{ background: rgba(83,187,180,.30); }
+  .paises-band::before{ background: rgba(255,255,255,.5); }
+  .paises-band::after{ background: rgba(255,200,215,.55); }
 
   /* cartões brancos em cima das faixas coloridas */
   .nivel-mini-card, .acrostic-icon-item{ background: #fff; }
   .acrostic-icon-item{
     padding: 22px 18px; border-radius: var(--radius);
-    box-shadow: 0 6px 18px rgba(39,84,162,.07);
+    box-shadow: 0 6px 18px rgba(80,110,170,.10);
     transition: box-shadow .5s var(--ease-soft), transform .5s var(--ease-soft);
   }
   .acrostic-icon-item:hover{ box-shadow: 0 16px 32px rgba(39,84,162,.15); }
@@ -1628,12 +1628,12 @@
     background: var(--page-tint);
     box-shadow: 0 0 0 100vmax var(--page-tint);
   }
-  .view[data-view="sobre"]{ --page-tint: #F3F9F8; }
-  .view[data-view="oferecemos"]{ --page-tint: #F4F7FC; }
-  .view[data-view="vida"]{ --page-tint: #F3F8FD; }
-  .view[data-view="contactos"]{ --page-tint: #F5F9F2; }
-  .view[data-view="matricula"]{ --page-tint: #F3F9F8; }
-  .view[data-view="administracao"]{ --page-tint: #F4F7FC; }
+  .view[data-view="sobre"]{ --page-tint: #EAF7F3; }
+  .view[data-view="oferecemos"]{ --page-tint: #EDF3FC; }
+  .view[data-view="vida"]{ --page-tint: #EBF4FD; }
+  .view[data-view="contactos"]{ --page-tint: #F0F8E8; }
+  .view[data-view="matricula"]{ --page-tint: #EAF7F3; }
+  .view[data-view="administracao"]{ --page-tint: #EDF3FC; }
 
   .view:not([data-view="inicio"]) > .section-head:first-child{
     max-width: none;
