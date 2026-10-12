@@ -1547,12 +1547,12 @@
 
   /* ---------- FUNDOS COLORIDOS (faixas a toda a largura) ---------- */
   :root{
-    --tint-teal:  #D6F1EA;
-    --tint-blue:  #D9E8FA;
-    --tint-sand:  #FFE6C7;
-    --tint-green: #E0F1CE;
-    --tint-rose:  #FFDDE4;
-    --deep-blue:  #C9D9F7;
+    --tint-teal:  #E8F5F3;   /* menta muito clara */
+    --tint-blue:  #FFFFFF;   /* branco */
+    --tint-sand:  #FAF5EA;   /* marfim quente */
+    --tint-green: #E8F5F3;   /* menta muito clara */
+    --tint-rose:  #FFFFFF;   /* branco */
+    --deep-blue:  #FAF5EA;
   }
   @keyframes floaty{
     from{ transform: translate(0,0) scale(1); }
@@ -1580,7 +1580,7 @@
   }
   .paises-band h2{ color: var(--maroon-dark); }
   .paises-band > p{ color: var(--ink-soft); }
-  .paises-band .eyebrow{ color: var(--maroon-dark); background: rgba(255,255,255,.55); }
+  .paises-band .eyebrow{ color: var(--maroon-dark); }
   .paises-band .pais-item{ background: #fff; }
   .quote-block{
     max-width: none; margin: 0; padding: 64px 0;
@@ -1595,7 +1595,7 @@
     content:""; position:absolute; z-index:-1; pointer-events:none;
     width: 280px; height: 250px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
     left: -60px; top: -70px;
-    background: rgba(255,255,255,.6);
+    background: rgba(83,187,180,.13);
     animation: floaty 11s ease-in-out infinite alternate;
   }
   .features-strip::after, .niveis-preview-band::after, .diferenca-preview::after,
@@ -1604,20 +1604,18 @@
     content:""; position:absolute; z-index:-1; pointer-events:none;
     width: 220px; height: 195px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
     right: -40px; bottom: -60px; rotate: 180deg;
-    background: rgba(255,255,255,.55);
+    background: rgba(77,50,17,.05);
     animation: floaty 14s ease-in-out infinite alternate-reverse;
   }
-  .paises-band::before{ background: rgba(255,255,255,.5); }
-  .paises-band::after{ background: rgba(255,200,215,.55); }
 
   /* cartões brancos em cima das faixas coloridas */
   .nivel-mini-card, .acrostic-icon-item{ background: #fff; }
   .acrostic-icon-item{
     padding: 22px 18px; border-radius: var(--radius);
-    box-shadow: 0 6px 18px rgba(80,110,170,.10);
+    box-shadow: 0 6px 18px rgba(77,50,17,.08);
     transition: box-shadow .5s var(--ease-soft), transform .5s var(--ease-soft);
   }
-  .acrostic-icon-item:hover{ box-shadow: 0 16px 32px rgba(39,84,162,.15); }
+  .acrostic-icon-item:hover{ box-shadow: 0 16px 32px rgba(77,50,17,.14); }
   .vida-preview .vida-card, .features-strip .feature-item{ background: transparent; }
 
   /* ---- Páginas interiores: título em faixa + fundo suave ---- */
@@ -1628,18 +1626,18 @@
     background: var(--page-tint);
     box-shadow: 0 0 0 100vmax var(--page-tint);
   }
-  .view[data-view="sobre"]{ --page-tint: #EAF7F3; }
-  .view[data-view="oferecemos"]{ --page-tint: #EDF3FC; }
-  .view[data-view="vida"]{ --page-tint: #EBF4FD; }
-  .view[data-view="contactos"]{ --page-tint: #F0F8E8; }
-  .view[data-view="matricula"]{ --page-tint: #EAF7F3; }
-  .view[data-view="administracao"]{ --page-tint: #EDF3FC; }
+  .view[data-view="sobre"]{ --page-tint: #FFFFFF; }
+  .view[data-view="oferecemos"]{ --page-tint: #FFFFFF; }
+  .view[data-view="vida"]{ --page-tint: #FFFFFF; }
+  .view[data-view="contactos"]{ --page-tint: #FFFFFF; }
+  .view[data-view="matricula"]{ --page-tint: #FFFFFF; }
+  .view[data-view="administracao"]{ --page-tint: #FFFFFF; }
 
   .view:not([data-view="inicio"]) > .section-head:first-child{
     max-width: none;
     margin-bottom: 52px;
     padding: 56px 0 48px;
-    background: linear-gradient(90deg, var(--tint-teal), var(--tint-teal));
+    background: var(--tint-teal);
     box-shadow: 0 0 0 100vmax var(--tint-teal);
     opacity: 1; translate: none; scale: 1;
   }
@@ -1657,7 +1655,7 @@
   .value-card, .doc-card, .info-extra-card, .contact-card, .profile-card{ background: #fff; }
 
   .acrostic.reveal, .docs-columns.reveal, .info-extra.reveal{ translate: none; scale: 1; }
-  .value-card{ padding: 28px 26px; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(39,84,162,.08); }
+  .value-card{ padding: 28px 26px; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(77,50,17,.08); }
   .values-grid{ gap: 24px; }
   footer{ margin-top: 0; }
   section.view:not([data-view="inicio"]){ padding-bottom: 72px; }
