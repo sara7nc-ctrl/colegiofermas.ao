@@ -94,7 +94,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 
     <div class="diferenca-preview">
       <div class="section-head">
-        <span class="eyebrow"></span>
+        <span class="eyebrow">O Que Nos Diferencia</span>
         <h2>Seis palavras que resumem o que somos.</h2>
       </div>
       <div class="acrostic-icons">
@@ -157,6 +157,20 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <div class="vida-preview-grid" id="vida-preview-grid"></div>
     </div>
 
+    <div class="paises-band">
+      <span class="eyebrow">Um colégio internacional</span>
+      <h2>Várias nações, uma só família.</h2>
+      <p>No Fermas aprendem lado a lado alunos e famílias de diferentes países, numa comunidade que une culturas e línguas.</p>
+      <div class="paises-grid">
+        <div class="pais-item"><img src="https://flagcdn.com/w160/ao.png" alt="Bandeira de Angola"><span>Angola</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/cu.png" alt="Bandeira de Cuba"><span>Cuba</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/cn.png" alt="Bandeira da China"><span>China</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/pe.png" alt="Bandeira do Peru"><span>Perú</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/pt.png" alt="Bandeira de Portugal"><span>Portugal</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/br.png" alt="Bandeira do Brasil"><span>Brasil</span></div>
+      </div>
+    </div>
+
     <div class="quote-block">
       <p>"Educação é a melhor arma que se pode usar para mudar o mundo."</p>
       <cite>— Nelson Mandela</cite>
@@ -180,7 +194,7 @@ let carouselTimer = null;
 
 heroSlides.forEach((s, i) => {
   const slide = document.createElement('div');
-  slide.className = 'carousel-slide';
+  slide.className = 'carousel-slide' + (i === 0 ? ' is-active' : '');
   slide.innerHTML = `<img src="${s.img}" alt="${s.legenda}">`;
   trackEl.appendChild(slide);
 
@@ -195,6 +209,9 @@ function updateCarousel(){
   trackEl.style.transform = `translateX(-${slideIndex * 100}%)`;
   document.querySelectorAll('.carousel-dots .dot').forEach((d, i) => {
     d.classList.toggle('active', i === slideIndex);
+  });
+  document.querySelectorAll('.carousel-slide').forEach((sl, i) => {
+    sl.classList.toggle('is-active', i === slideIndex);
   });
 }
 function goToSlide(i){
@@ -260,7 +277,7 @@ const vidaPreviewItens = [
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
   { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/mossas-grad.jpeg" }
+  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/Fermas_fondo2.png" }
 ];
 
 const vidaPreviewGridEl = document.getElementById('vida-preview-grid');
