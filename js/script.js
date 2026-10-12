@@ -9,6 +9,8 @@
   const views = document.querySelectorAll('.view');
   const navLinks = document.querySelectorAll('nav a');
 
+  let lastView = null;
+
   function route(){
     let hash = window.location.hash.replace('#','') || 'inicio';
     let viewName = hash;
@@ -40,6 +42,7 @@
 
     views.forEach(v => v.classList.toggle('active', v.dataset.view === viewName));
     navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === viewName));
+    if(viewName !== lastView){ resetReveal(viewName); lastView = viewName; }
 
     const targetEl = scrollTarget ? document.getElementById(scrollTarget) : null;
     if(targetEl){
@@ -51,7 +54,6 @@
   }
 
   window.addEventListener('hashchange', route);
-  route();
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -76,3 +78,91 @@
     dd.addEventListener('mouseleave', () => dd.classList.remove('force-close'));
     dd.addEventListener('mouseenter', () => dd.classList.remove('force-close'));
   });
+
+  // ---------- Animações ao fazer scroll ----------
+  // Cada elemento listado abaixo aparece com um movimento suave quando entra
+  // no ecrã. [selector, variante]  —  variantes: '' (sobe), 'left', 'right', 'zoom'.
+  // Os elementos do mesmo grupo entram um após o outro (efeito cascata).
+  const revealTargets = [
+    ['.features-strip .feature-item', ''],
+    ['.colegio-preview-media', 'left'],
+    ['.colegio-preview-text', 'right'],
+    ['.niveis-preview-band > h3', ''],
+    ['.nivel-mini-card', 'zoom'],
+    ['.diferenca-preview .section-head', ''],
+    ['.acrostic-icon-item', ''],
+    ['.vida-preview-text', ''],
+    ['.vida-preview-grid .vida-card', 'zoom'],
+    ['.quote-block', ''],
+    ['.section-head', ''],
+    ['.about-text', 'left'],
+    ['.about-photo', 'right'],
+    ['.acrostic', ''],
+    ['.value-card', ''],
+    ['.profile-card', 'zoom'],
+    ['.staff-card', 'zoom'],
+    ['.day-block', ''],
+    ['.facility-card', 'zoom'],
+    ['.level-row', ''],
+    ['.cta-banner', 'zoom'],
+    ['.contact-card', 'zoom'],
+    ['.map-block', ''],
+    ['.matricula-step', ''],
+    ['.docs-column', ''],
+    ['.info-extra-card', 'zoom'],
+    ['.staff-detail-photo', 'left'],
+    ['.staff-detail-info', 'right'],
+    ['.level-detail-head', ''],
+    ['.level-detail-text', ''],
+    ['.gallery-photo', 'zoom'],
+    ['footer .footer-cta', ''],
+    ['footer .footer-grid > div', '']
+  ];
+
+  const revealObserver = ('IntersectionObserver' in window)
+    ? new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if(en.isIntersecting){
+            en.target.classList.add('in');
+            revealObserver.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+    : null;
+
+  const revealEls = [];
+  revealTargets.forEach(([sel, variant]) => {
+    document.querySelectorAll(sel).forEach(el => {
+      if(el.classList.contains('reveal')) return;
+      el.classList.add('reveal');
+      if(variant) el.classList.add('reveal-' + variant);
+      // atraso em cascata entre irmãos do mesmo tipo
+      const siblings = Array.from(el.parentElement.children).filter(x => x.matches(sel));
+      const idx = siblings.indexOf(el);
+      el.style.setProperty('--reveal-delay', (Math.min(idx, 6) * 0.14).toFixed(2) + 's');
+      revealEls.push(el);
+    });
+  });
+
+  function observeReveal(el){
+    if(revealObserver) revealObserver.observe(el);
+    else el.classList.add('in');
+  }
+
+  // Ao mudar de página, os elementos dessa página voltam a animar.
+  function resetReveal(viewName){
+    const view = document.querySelector('.view[data-view="' + viewName + '"]');
+    if(!view) return;
+    revealEls.forEach(el => {
+      if(view.contains(el)){
+        el.classList.remove('in');
+        observeReveal(el);
+      }
+    });
+  }
+
+  // Rodapé (fora das páginas) e primeira página
+  revealEls.forEach(el => { if(!el.closest('.view')) observeReveal(el); });
+
+  // Arranca o site (tem de ser depois de definir as animações)
+  route();
