@@ -208,17 +208,17 @@ renderDay(niveis[0].id);
 // Substitua "foto" pelo caminho real de cada fotografia.
 const instalacoes = [
   { nome:"Cantina", foto:"Imagens/Cantina.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
-  { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
-  { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
+  { nome:"Cozinhas", foto:"Imagens/Cozinha.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
+  { nome:"Refeitórios", foto:"Imagens/Refeitorio.png", desc:"Dois refeitórios amplos e confortáveis." },
   { nome:"Papelaria", foto:"Imagens/Papelaria.jpeg", desc:"Material escolar disponível dentro do colégio." },
   { nome:"Piscinas", foto:"Imagens/piscina.jpeg", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
-  { nome:"Artes Marciais", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
+  { nome:"Artes Marciais", foto:"Imagens/Marciais.png", desc:"Salas dedicadas às artes performativas." },
   { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
   { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/lab-ciencia.jpeg", desc:"Laboratórios de química, física e biologia." },
-  { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
-  { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
-  { nome:"Pronto Socorro", foto:"Imagens/fondo_fermas.png", desc:"Primeiros cuidados em situações de mal-estar ou emergência." }
+  { nome:"Laboratórios", foto:"Imagens/Lab_Quimica.jpeg", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Informática", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
+  { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
+  { nome:"Pronto Socorro", foto:"Imagens/Socorro.png", desc:"Primeiros cuidados em situações de mal-estar ou emergência." }
 
 ];
 
