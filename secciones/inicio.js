@@ -182,7 +182,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 // Substitua "img" pelo caminho real de cada fotografia (ex: "Imagens/hero-2.jpg").
 const heroSlides = [
   { img: "Imagens/Fermas_fondo2.png", legenda: "O nosso campus, no Lar do Patriota, Talatona." },
-  { img: "Imagens/Fermas_fondo3.png", legenda: "Formatura dos alunos de iniciação." },
+ // { img: "Imagens/Fermas_fondo3.png", legenda: "Formatura dos alunos de iniciação." },
  // { img: "Imagens/fondo_fermas.jpeg", legenda: "Espaços desportivos para o desenvolvimento físico." },
   //{ img: "Imagens/Fermas_fondo2.png", legenda: "Laboratórios equipados para a aprendizagem prática." }
 ];
