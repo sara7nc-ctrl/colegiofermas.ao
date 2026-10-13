@@ -26,13 +26,13 @@ const atividades = [
   { titulo: "Aula prática de Hortaliças", categoria: "Sala de Aula", foto: "Imagens/meninos-terra.jpeg" },
   { titulo: "Aula de natação", categoria: "Sala de Aula", foto: "Imagens/piscina.jpeg" },
   { titulo: "Formação de Sinalizção de Trânsito", categoria: "Sala de Aula", foto: "Imagens/poli-e-meninos.jpeg" },
-  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/Tutbol.png" },
+  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/Futbol.png" },
   { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/Aula_desporto.png" },
   { titulo: "Torneio de basquetebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
   { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Programa Dia dos Idosos", categoria: "Festas e Celebrações", foto: "Imagens/Dia_avos.png" },
   { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
-  { titulo: "Visita de estudo", categoria: "Visitas de Estudo", foto: "Imagens/Visita_estudo.png" },
+  { titulo: "Visita de estudo", categoria: "Visitas de Estudo", foto: "Imagens/Visita_estudo.jpeg" },
   { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/mossas-grad.jpeg" },
   { titulo: "Décimo primeiro aniversário do colégio", categoria: "Festas e Celebrações", foto: "Imagens/aniversario11.jpeg" }
 ];
