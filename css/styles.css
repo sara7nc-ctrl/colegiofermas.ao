@@ -1188,10 +1188,10 @@
   footer p + p{ margin-top: 6px; }
 
   .footer-crest{
-    width: 46px;
-    height: 46px;
+    width: 150px;
+    height: auto;
     object-fit:contain;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .footer-brand h4{ color: var(--cream); }
 
