@@ -27,7 +27,7 @@ const atividades = [
   { titulo: "Aula de natação", categoria: "Sala de Aula", foto: "Imagens/piscina.jpeg" },
   { titulo: "Formação de Sinalizção de Trânsito", categoria: "Sala de Aula", foto: "Imagens/poli-e-meninos.jpeg" },
   { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/meninos-desporto.jpeg" },
-  { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Aula de Educação Física", categoria: "Desporto", foto: "Imagens/Aula_desporto.png" },
   { titulo: "Torneio de basquetebol", categoria: "Desporto", foto: "Imagens/Fermas_fondo2.png" },
   { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Aula de música e instrumentos", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
