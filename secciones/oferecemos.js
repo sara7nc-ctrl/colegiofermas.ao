@@ -207,10 +207,10 @@ renderDay(niveis[0].id);
 // ---------- Dados das Instalações ----------
 // Substitua "foto" pelo caminho real de cada fotografia.
 const instalacoes = [
-  { nome:"Cantina", foto:"Imagens/fondo_fermas.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
+  { nome:"Cantina", foto:"Imagens/Cantina.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
   { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
   { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
-  { nome:"Papelaria", foto:"Imagens/Fermas_fondo2.png", desc:"Material escolar disponível dentro do colégio." },
+  { nome:"Papelaria", foto:"Imagens/Papelaria.jpeg", desc:"Material escolar disponível dentro do colégio." },
   { nome:"Piscinas", foto:"Imagens/piscina.jpeg", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
   { nome:"Artes Marciais", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
   { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
