@@ -211,11 +211,11 @@ const instalacoes = [
   { nome:"Cozinhas", foto:"Imagens/Cozinha.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
   { nome:"Refeitórios", foto:"Imagens/Refeitorio.png", desc:"Dois refeitórios amplos e confortáveis." },
   { nome:"Papelaria", foto:"Imagens/Papelaria.jpeg", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/piscina.jpeg", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
+  { nome:"Piscinas", foto:"Imagens/Piscina.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
   { nome:"Artes Marciais", foto:"Imagens/Marciais.png", desc:"Salas dedicadas às artes performativas." },
   { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
   { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/Lab_Quimica.jpeg", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Laboratórios", foto:"Imagens/Lab_Quimica.png", desc:"Laboratórios de química, física e biologia." },
   { nome:"Informática", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
   { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
   { nome:"Pronto Socorro", foto:"Imagens/Socorro.png", desc:"Primeiros cuidados em situações de mal-estar ou emergência." }
