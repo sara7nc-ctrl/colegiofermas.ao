@@ -32,7 +32,7 @@ const atividades = [
   { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/fondo_fermas.png" },
   { titulo: "Programa Dia dos Idosos", categoria: "Festas e Celebrações", foto: "Imagens/Dia_avos.png" },
   { titulo: "Baptismo dos Caloiros", categoria: "Festas e Celebrações", foto: "Imagens/Batismo.jpeg" },
-  { titulo: "Visita de estudo", categoria: "Visitas de Estudo", foto: "Imagens/Visita_estudo.jpeg" },
+  { titulo: "Visita de estudo a Imprensa Nacional de Angola", categoria: "Visitas de Estudo", foto: "Imagens/Visita_estudo.jpeg" },
   { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/mossas-grad.jpeg" },
   { titulo: "Décimo primeiro aniversário do colégio", categoria: "Festas e Celebrações", foto: "Imagens/aniversario11.jpeg" }
 ];
