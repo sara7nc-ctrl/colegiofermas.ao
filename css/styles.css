@@ -1595,7 +1595,7 @@
     content:""; position:absolute; z-index:-1; pointer-events:none;
     width: 280px; height: 250px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
     left: -60px; top: -70px;
-    background: rgba(83,187,180,.06);
+    background: var(--tri-a, rgba(83,187,180,.06));
     animation: floaty 11s ease-in-out infinite alternate;
   }
   .features-strip::after, .niveis-preview-band::after, .diferenca-preview::after,
@@ -1604,7 +1604,7 @@
     content:""; position:absolute; z-index:-1; pointer-events:none;
     width: 220px; height: 195px; clip-path: polygon(50% 0, 100% 100%, 0 100%);
     right: -40px; bottom: -60px; rotate: 180deg;
-    background: rgba(77,50,17,.025);
+    background: var(--tri-b, rgba(77,50,17,.025));
     animation: floaty 14s ease-in-out infinite alternate-reverse;
   }
 
@@ -1657,9 +1657,57 @@
   .acrostic.reveal, .docs-columns.reveal, .info-extra.reveal{ translate: none; scale: 1; }
   .value-card{ padding: 28px 26px; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(77,50,17,.08); }
   .values-grid{ gap: 24px; }
+  .cta-banner{ background: var(--tint-sand); border: 0; box-shadow: inset 6px 0 0 var(--logo-orange); }
   footer{ margin-top: 0; }
   section.view:not([data-view="inicio"]){ padding-bottom: 72px; }
   .view[data-view="inicio"]{ padding-bottom: 0; }
+
+  /* ---------- Identidade: cores e formas do logótipo (embondeiro de triângulos) ---------- */
+  :root{
+    --logo-orange:#F47B0B; --logo-yellow:#DCD800; --logo-lime:#9FCB22;
+    --logo-green:#4A9511;  --logo-teal:#2AACAA;   --logo-blue:#0A9BE0;
+    --logo-red:#D8203E;
+    --logo-stripe: linear-gradient(90deg,
+      var(--logo-orange) 0 14.28%, var(--logo-yellow) 0 28.56%, var(--logo-lime) 0 42.84%,
+      var(--logo-green) 0 57.12%, var(--logo-teal) 0 71.4%, var(--logo-blue) 0 85.68%, var(--logo-red) 0);
+  }
+  /* triângulos de cada faixa nas cores do logótipo (muito suaves) */
+  .features-strip{ --tri-a: rgba(42,172,170,.09);  --tri-b: rgba(244,123,11,.07); }
+  .niveis-preview-band{ --tri-a: rgba(244,123,11,.08); --tri-b: rgba(220,216,0,.10); }
+  .diferenca-preview{ --tri-a: rgba(10,155,224,.07);  --tri-b: rgba(159,203,34,.09); }
+  .vida-preview{ --tri-a: rgba(42,172,170,.09);  --tri-b: rgba(10,155,224,.07); }
+  .paises-band{ --tri-a: rgba(244,123,11,.07);  --tri-b: rgba(216,32,62,.05); }
+  .quote-block{ --tri-a: rgba(74,149,17,.07);   --tri-b: rgba(220,216,0,.11); }
+  .view:not([data-view="inicio"]) > .section-head:first-child{ --tri-a: rgba(42,172,170,.10); }
+
+  /* faixa multicolor (as cores do logótipo) no fundo do cabeçalho e no topo do rodapé */
+  header{ border-bottom: 0; position: sticky; }
+  header::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
+    background: var(--logo-stripe);
+  }
+  footer{ border-top: 5px solid transparent; border-image: var(--logo-stripe) 1; }
+
+  /* barrinha com as cores do logótipo por baixo dos títulos de secção */
+  .section-head h2::after, .paises-band h2::after{
+    content:""; display:block; width:72px; height:4px; border-radius:4px;
+    margin-top: 14px; background: var(--logo-stripe);
+  }
+  .diferenca-preview .section-head h2::after, .paises-band h2::after{ margin-left:auto; margin-right:auto; }
+
+  /* marca de água: o embondeiro do logótipo nos títulos das páginas e na citação */
+  .view:not([data-view="inicio"]) > .section-head:first-child::after,
+  .quote-block::after{
+    background: url("../Imagens/baobab.png") center/contain no-repeat;
+    clip-path: none; rotate: 0deg;
+    width: 230px; height: 230px; right: 6%; bottom: -10px; top: auto; left: auto;
+    opacity: .13; animation: none;
+  }
+  .quote-block::after{ opacity: .10; bottom: 50%; transform: translateY(50%); height: 200px; width: 200px; }
+  @media (max-width: 760px){
+    .view:not([data-view="inicio"]) > .section-head:first-child::after{ width: 140px; height: 140px; right: 2%; }
+    .quote-block::after{ display:none; }
+  }
 
   /* ---------- Responsive ---------- */
   @media (max-width: 980px){
