@@ -76,7 +76,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 
     <div class="colegio-preview">
       <div class="colegio-preview-media">
-        <img src="Imagens/fondo_fermas.png" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
+        <img src="Imagens/fondo_fermas.jpeg" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
       </div>
       <div class="colegio-preview-text">
         <span class="eyebrow">O Colégio</span>
@@ -181,9 +181,9 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 // ---------- Carrossel do Início ----------
 // Substitua "img" pelo caminho real de cada fotografia (ex: "Imagens/hero-2.jpg").
 const heroSlides = [
-  { img: "Imagens/fondo_fermas.png", legenda: "O nosso campus, no Lar do Patriota, Talatona." },
+  { img: "Imagens/fondo_fermas.jpeg", legenda: "O nosso campus, no Lar do Patriota, Talatona." },
   { img: "Imagens/Fermas_fondo2.png", legenda: "Formatura dos alunos de iniciação." },
-  { img: "Imagens/fondo_fermas.png", legenda: "Espaços desportivos para o desenvolvimento físico." },
+  { img: "Imagens/fondo_fermas.jpeg", legenda: "Espaços desportivos para o desenvolvimento físico." },
   { img: "Imagens/Fermas_fondo2.png", legenda: "Laboratórios equipados para a aprendizagem prática." }
 ];
 
@@ -274,9 +274,9 @@ niveisMini.forEach(n => {
 // secciones/vida.js). Substitua "foto" pelo caminho real de cada
 // fotografia.
 const vidaPreviewItens = [
-  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/fondo_fermas.jpeg" },
   { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
-  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.png" },
+  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.jpeg" },
   { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/Fermas_fondo2.png" }
 ];
 
