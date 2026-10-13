@@ -218,7 +218,7 @@ const instalacoes = [
   { nome:"Laboratórios", foto:"Imagens/lab-ciencia.jpeg", desc:"Laboratórios de química, física e biologia." },
   { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
   { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
-  { nome:"Pronto Socorro", foto:"Imagens/fondo_fermas.png", desc:"Primeiros cuidados em situações de mal-estar ou emergência." }
+
 ];
 
 const facilityCardsEl = document.getElementById('facility-cards');
