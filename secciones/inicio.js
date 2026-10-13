@@ -274,10 +274,10 @@ niveisMini.forEach(n => {
 // secciones/vida.js). Substitua "foto" pelo caminho real de cada
 // fotografia.
 const vidaPreviewItens = [
-  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/fondo_fermas.jpeg" },
-  { titulo: "Apresentação de dança", categoria: "Artes e Música", foto: "Imagens/Fermas_fondo2.png" },
-  { titulo: "Visita de estudo ao Museu Nacional de Antropologia", categoria: "Visitas de Estudo", foto: "Imagens/fondo_fermas.jpeg" },
-  { titulo: "Festa de encerramento do ano lectivo", categoria: "Festas e Celebrações", foto: "Imagens/Fermas_fondo2.png" }
+  { titulo: "Torneio interturmas de futebol", categoria: "Desporto", foto: "Imagens/Futbol.jpeg" },
+  { titulo: "Aula prática de Hortaliças", categoria: "Sala de Aula", foto: "Imagens/meninos-terra.jpeg" },
+  { titulo: "Visita de estudo a Imprensa Nacional de Angola", categoria: "Visitas de Estudo", foto: "Imagens/Visita_estudo.jpeg" },
+  { titulo: "Programa Dia dos Idosos", categoria: "Festas e Celebrações", foto: "Imagens/Dia_avos.png" }
 ];
 
 const vidaPreviewGridEl = document.getElementById('vida-preview-grid');
