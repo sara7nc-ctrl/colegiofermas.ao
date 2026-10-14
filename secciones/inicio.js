@@ -168,6 +168,9 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
         <div class="pais-item"><img src="https://flagcdn.com/w160/pe.png" alt="Bandeira do Peru"><span>Perú</span></div>
         <div class="pais-item"><img src="https://flagcdn.com/w160/pt.png" alt="Bandeira de Portugal"><span>Portugal</span></div>
         <div class="pais-item"><img src="https://flagcdn.com/w160/br.png" alt="Bandeira do Brasil"><span>Brasil</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/za.png" alt="Bandeira da África do Sul"><span>África do Sul</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/cv.png" alt="Bandeira do Cabo Verde"><span>Cabo Verde</span></div>
+        <div class="pais-item"><img src="https://flagcdn.com/w160/gb.png" alt="Bandeira do Reino Unido"><span>Reino Unido</span></div>
       </div>
     </div>
 
