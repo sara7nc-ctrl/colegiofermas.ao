@@ -1906,3 +1906,12 @@
     .hero-overlay{ padding: 0 20px 40px; }
     .hero-overlay h1{ font-size: 1.6rem; margin-bottom: 0; }
   }
+  /* ===== Telemóvel: título + botão "Conheça o Fermas" sobre a foto ===== */
+  @media (max-width: 760px){
+    .hero-carousel{ height: 400px; }
+    .hero-eyebrow, .hero-overlay p, .hero-actions .btn-enroll{ display: none; }
+    .hero-overlay{ padding: 0 20px 46px; }
+    .hero-overlay h1{ font-size: 1.6rem; margin-bottom: 16px; }
+    .hero-actions{ margin-top: 0; }
+    .hero-actions .btn{ padding: 10px 20px; font-size: 0.9rem; }
+  }
