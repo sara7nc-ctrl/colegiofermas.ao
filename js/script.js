@@ -59,7 +59,10 @@
 
   // ---------- Menu mobile ----------
   function toggleMenu(){
-    document.getElementById('site-header').classList.toggle('open');
+    const h = document.getElementById('site-header');
+    h.classList.toggle('open');
+    // altura real do cabeçalho: o menu aberto rola por dentro se não couber no ecrã
+    document.documentElement.style.setProperty('--hdr-h', h.offsetHeight + 'px');
   }
   function closeMenu(){
     document.getElementById('site-header').classList.remove('open');
