@@ -1870,3 +1870,32 @@
     .header-cta{ padding: 7px 11px; font-size: 0.74rem; }
     .header-inner{ padding: 10px 10px; }
   }
+  /* ===== Telemóvel: texto sobre a foto do carrossel, com degradê em baixo ===== */
+  @media (max-width: 760px){
+    .hero-carousel{ height: 450px; aspect-ratio: auto; }
+    .hero-carousel::before{
+      display: block;
+      background: linear-gradient(to top, rgba(20,12,4,.92) 0%, rgba(20,12,4,.72) 38%, rgba(20,12,4,.18) 70%, rgba(20,12,4,0) 100%);
+    }
+    .hero-overlay{
+      position: absolute;
+      inset: 0;
+      max-width: none;
+      padding: 0 20px 48px;
+      background: none;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    .hero-eyebrow{ margin-bottom: 8px; font-size: 0.74rem; }
+    .hero-overlay h1{ font-size: 1.45rem; margin-bottom: 8px; }
+    .hero-overlay p{
+      font-size: 0.9rem; margin-bottom: 14px;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .hero-actions{ margin-top: 0; gap: 10px; flex-wrap: wrap; }
+    .hero-actions .btn{ padding: 10px 16px; font-size: 0.88rem; }
+    .carousel-arrow{ top: 26%; }
+  }
+  @media (max-width: 760px){
+    .hero-actions .btn-enroll{ display: none; }
+  }
