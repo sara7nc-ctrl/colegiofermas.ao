@@ -1899,3 +1899,10 @@
   @media (max-width: 760px){
     .hero-actions .btn-enroll{ display: none; }
   }
+  /* ===== Telemóvel: só o título sobre a foto do carrossel ===== */
+  @media (max-width: 760px){
+    .hero-carousel{ height: 360px; }
+    .hero-eyebrow, .hero-overlay p, .hero-overlay .hero-actions{ display: none; }
+    .hero-overlay{ padding: 0 20px 40px; }
+    .hero-overlay h1{ font-size: 1.6rem; margin-bottom: 0; }
+  }
