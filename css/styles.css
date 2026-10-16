@@ -1906,13 +1906,28 @@
   /* ===== Página do Externato ===== */
   /* Externato: apresentação dentro da página de nível */
   .nivel-lead{ display:block; font-family:'Fraunces', serif; font-size: clamp(1.3rem, 2.6vw, 1.8rem); line-height:1.25; color: var(--maroon-dark); margin-bottom: 14px; }
-  .ext-lead-actions{ display:flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
   #nivel-blocos:empty{ display:none; }
 
   /* o que é */
   .ext-oque{ margin-top: 72px; }
   .ext-oque h3{ font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin-bottom: 16px; }
   .ext-oque .eyebrow{ margin-bottom: 10px; }
+
+  /* fotografias do Externato */
+  .ext-fotos{ padding: 8px 0 72px; text-align: center; }
+  .ext-fotos .section-head{ margin: 0 auto 36px; }
+  .ext-fotos-grid{
+    display: grid; gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ext-foto{
+    aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius);
+    background: var(--cream-deep);
+    box-shadow: 0 10px 26px rgba(77,50,17,.10);
+  }
+  .ext-foto img{ width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease-soft); }
+  .ext-foto:hover img{ transform: scale(1.06); }
+  @media (max-width: 760px){ .ext-fotos-grid{ grid-template-columns: repeat(2, 1fr); gap: 12px; } }
 
   /* benefícios: 4 colunas */
   .ext-beneficios .acrostic-icons{ grid-template-columns: repeat(4, 1fr); gap: 24px; }
