@@ -1737,9 +1737,16 @@
       top: 100%; left:0; right:0;
       background: var(--cream);
       border-bottom: 1px solid var(--line);
-      padding: 10px 28px 20px;
+      padding: 10px 28px 24px;
+      /* o menu rola por dentro quando não cabe no ecrã */
+      max-height: calc(100vh - var(--hdr-h, 112px) - 8px);
+      max-height: calc(100dvh - var(--hdr-h, 112px) - 8px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: 0 18px 30px rgba(61,44,20,.14);
     }
-    header.open nav ul{ flex-direction:column; gap: 16px; }
+    header.open nav ul{ flex-direction:column; gap: 12px; }
 
     .nav-dropdown > a::after{ display:none; }
     .nav-dropdown .dropdown-menu{
@@ -1808,6 +1815,15 @@
     .map-frame{ aspect-ratio: 4/3; }
 
     .header-cta{ padding: 7px 14px; font-size: 0.82rem; }
+
+    /* cabeçalho do telemóvel: tudo numa só linha */
+    .header-inner{ padding: 10px 14px; gap: 8px; }
+    .crest{ width: 40px; height: 40px; }
+    .brand{ gap: 9px; min-width: 0; }
+    .brand-name{ font-size: 1rem; white-space: nowrap; line-height: 1.15; }
+    .brand-name span{ font-size: 0.66rem; }
+    .nav-wrap{ flex-wrap: nowrap; gap: 8px; flex-shrink: 0; }
+    .menu-btn{ padding: 6px 10px; line-height: 1; }
     .footer-cta{ flex-direction: column; align-items:flex-start; text-align:left; }
     .cta-banner{ flex-direction: column; align-items:flex-start; text-align:left; padding: 24px 22px; }
     .info-extra-grid{ grid-template-columns: 1fr; }
@@ -1826,36 +1842,23 @@
     .acrostic-icons{ grid-template-columns: repeat(2, 1fr); gap: 26px 18px; }
     .matricula-steps{ grid-template-columns: 1fr; gap: 26px; }
   }
-  /* ===== Telemóvel: menu com scroll, cabeçalho numa linha, sem overflow ===== */
+
+  @media (max-width: 400px){
+    .brand-name span{ display: none; }
+    .brand-name{ font-size: 0.95rem; }
+    .header-cta{ padding: 7px 11px; font-size: 0.74rem; }
+    .header-inner{ padding: 10px 10px; }
+  }
+
+  /* no telemóvel as animações laterais passam a subir, para a página não alargar */
   @media (max-width: 760px){
-    /* menu aberto rola por dentro se não cabe no ecrã */
-    header.open nav{
-      padding: 10px 28px 24px;
-      max-height: calc(100vh - var(--hdr-h, 112px) - 8px);
-      max-height: calc(100dvh - var(--hdr-h, 112px) - 8px);
-      overflow-y: auto;
-      overscroll-behavior: contain;
-      -webkit-overflow-scrolling: touch;
-      box-shadow: 0 18px 30px rgba(61,44,20,.14);
-    }
-    header.open nav ul{ gap: 12px; }
-
-    /* cabeçalho numa só linha */
-    .header-inner{ padding: 10px 14px; gap: 8px; }
-    .crest{ width: 40px; height: 40px; }
-    .brand{ gap: 9px; min-width: 0; }
-    .brand-name{ font-size: 1rem; white-space: nowrap; line-height: 1.15; }
-    .brand-name span{ font-size: 0.66rem; }
-    .nav-wrap{ flex-wrap: nowrap; gap: 8px; flex-shrink: 0; }
-    .menu-btn{ padding: 6px 10px; line-height: 1; }
-
-    /* evita que a página alargue para o lado */
     .reveal.reveal-left:not(.in), .reveal.reveal-right:not(.in){ translate: 0 36px; }
     .features-strip::before, .niveis-preview-band::before, .diferenca-preview::before,
     .vida-preview::before, .paises-band::before, .quote-block::before,
     .view:not([data-view="inicio"]) > .section-head:first-child::before{ left: -20px; }
     .features-strip::after, .niveis-preview-band::after, .diferenca-preview::after,
     .vida-preview::after, .paises-band::after, .quote-block::after{ right: -20px; }
+    /* sem movimento nos triângulos no telemóvel (evita alargar a página) */
     .features-strip::before, .niveis-preview-band::before, .diferenca-preview::before,
     .vida-preview::before, .paises-band::before, .quote-block::before,
     .features-strip::after, .niveis-preview-band::after, .diferenca-preview::after,
@@ -1863,13 +1866,6 @@
     .view:not([data-view="inicio"]) > .section-head:first-child::before{ animation: none; }
   }
 
-  /* celulares muito estreitos */
-  @media (max-width: 400px){
-    .brand-name span{ display: none; }
-    .brand-name{ font-size: 0.95rem; }
-    .header-cta{ padding: 7px 11px; font-size: 0.74rem; }
-    .header-inner{ padding: 10px 10px; }
-  }
   /* ===== Telemóvel: texto sobre a foto do carrossel, com degradê em baixo ===== */
   @media (max-width: 760px){
     .hero-carousel{ height: 450px; aspect-ratio: auto; }
@@ -1896,16 +1892,7 @@
     .hero-actions .btn{ padding: 10px 16px; font-size: 0.88rem; }
     .carousel-arrow{ top: 26%; }
   }
-  @media (max-width: 760px){
-    .hero-actions .btn-enroll{ display: none; }
-  }
-  /* ===== Telemóvel: só o título sobre a foto do carrossel ===== */
-  @media (max-width: 760px){
-    .hero-carousel{ height: 360px; }
-    .hero-eyebrow, .hero-overlay p, .hero-overlay .hero-actions{ display: none; }
-    .hero-overlay{ padding: 0 20px 40px; }
-    .hero-overlay h1{ font-size: 1.6rem; margin-bottom: 0; }
-  }
+
   /* ===== Telemóvel: título + botão "Conheça o Fermas" sobre a foto ===== */
   @media (max-width: 760px){
     .hero-carousel{ height: 400px; }
@@ -1914,4 +1901,68 @@
     .hero-overlay h1{ font-size: 1.6rem; margin-bottom: 16px; }
     .hero-actions{ margin-top: 0; }
     .hero-actions .btn{ padding: 10px 20px; font-size: 0.9rem; }
+  }
+
+  /* ===== Página do Externato ===== */
+  /* Externato: apresentação dentro da página de nível */
+  .nivel-lead{ display:block; font-family:'Fraunces', serif; font-size: clamp(1.3rem, 2.6vw, 1.8rem); line-height:1.25; color: var(--maroon-dark); margin-bottom: 14px; }
+  .ext-lead-actions{ display:flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+  #nivel-blocos:empty{ display:none; }
+
+  /* o que é */
+  .ext-oque{ margin-top: 72px; }
+  .ext-oque h3{ font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin-bottom: 16px; }
+  .ext-oque .eyebrow{ margin-bottom: 10px; }
+
+  /* benefícios: 4 colunas */
+  .ext-beneficios .acrostic-icons{ grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+  /* blocos de texto com ícone */
+  .ext-band{
+    position: relative; isolation: isolate;
+    clip-path: inset(0 -100vmax);
+    padding: 68px 0;
+  }
+  .ext-band-sand { background: var(--tint-sand);  box-shadow: 0 0 0 100vmax var(--tint-sand); }
+  .ext-band-white{ background: #fff;              box-shadow: 0 0 0 100vmax #fff; }
+  .ext-band-teal { background: var(--tint-teal);  box-shadow: 0 0 0 100vmax var(--tint-teal); }
+  .ext-band::before{
+    content:""; position:absolute; z-index:-1; pointer-events:none;
+    width: 220px; height: 195px; right: -40px; bottom: -60px; rotate: 180deg;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: rgba(244,123,11,.07);
+  }
+  .ext-band-teal::before{ background: rgba(10,155,224,.07); }
+  .ext-band-white::before{ background: rgba(159,203,34,.12); }
+
+  .ext-split{
+    display: grid; grid-template-columns: 1fr 1.35fr; gap: 64px; align-items: center;
+  }
+  .ext-split-title h3{ font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin-top: 6px; }
+  .ext-split-text{ font-size: 1.1rem; }
+  .ext-split-text p + p{ margin-top: 16px; }
+  .ext-icon{
+    display:flex; align-items:center; justify-content:center;
+    width: 60px; height: 60px; border-radius: 50%; margin-bottom: 18px;
+    background: #fff; color: var(--logo-orange);
+    box-shadow: 0 8px 20px rgba(77,50,17,.10);
+  }
+  .ext-icon svg{ width: 28px; height: 28px; }
+  .ext-band-white .ext-icon{ background: var(--tint-teal); color: var(--logo-teal); box-shadow: none; }
+  .ext-band-teal .ext-icon{ color: var(--logo-blue); }
+
+  .ext-cta{ margin-top: 72px; }
+
+  @media (max-width: 980px){
+    .ext-beneficios .acrostic-icons{ grid-template-columns: repeat(2, 1fr); }
+    .ext-split{ grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 760px){
+    .ext-oque{ margin-top: 48px; }
+    .ext-band{ padding: 48px 0; }
+    .ext-band::before{ right: -20px; }
+    .ext-cta{ margin-top: 48px; }
+  }
+  @media (max-width: 520px){
+    .ext-beneficios .acrostic-icons{ grid-template-columns: 1fr; }
   }
