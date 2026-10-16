@@ -100,6 +100,7 @@
     ['.pais-item', 'zoom'],
     ['.ext-split-title', 'left'],
     ['.ext-split-text', 'right'],
+    ['.ext-foto', 'zoom'],
     ['.quote-block', ''],
     ['.section-head', ''],
     ['.about-text', 'left'],
