@@ -60,6 +60,9 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
     </div>
     <div class="level-detail-text" id="nivel-texto"></div>
     <div class="gallery" id="nivel-galeria"></div>
+
+    <!-- Informação extra de cada nível (o Externato usa este espaço) -->
+    <div id="nivel-blocos"></div>
   </section>
 `);
 
@@ -113,14 +116,149 @@ const niveis = [
     id: "externato",
     numero: "05",
     nome: "Externato",
+    titulo: "Externato FERMAS",
     resumo: "Apoio ao estudo e acompanhamento para além do horário lectivo.",
     tag: "Regime de Externato",
     texto: [
-      "O Externato é um serviço complementar para os alunos que permanecem no colégio para além do horário normal de aulas, com apoio ao estudo, realização de trabalhos de casa e acompanhamento próximo.",
-      "É uma opção pensada para as famílias que precisam de mais flexibilidade no horário, sem abdicar da qualidade do acompanhamento educativo."
+      '<strong class="nivel-lead">Aprender, crescer e descobrir o próprio potencial!</strong>',
+      "Um ambiente educativo que combina aprendizagem, acompanhamento e actividades complementares para promover o desenvolvimento integral dos nossos alunos."
     ]
   }
 ];
+
+
+// ---------- Externato: botões e blocos de informação ----------
+// Aparecem na página do nível "Externato" (#nivel-externato), por baixo
+// do texto de apresentação. Edite aqui os textos.
+const externatoAcoes = `
+  <div class="ext-lead-actions">
+    <a href="#nivel-externato" class="btn btn-secondary" onclick="document.getElementById('ext-oque').scrollIntoView({behavior:'smooth'}); return false;">Quero saber mais</a>
+    <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
+  </div>`;
+
+const externatoBlocos = `
+    <!-- 2 · O que é -->
+    <div class="about-grid ext-oque" id="ext-oque">
+      <div class="about-text">
+        <span class="eyebrow">O Externato</span>
+        <h3>O que é o Externato?</h3>
+        <p>O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.</p>
+        <p>A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno.</p>
+      </div>
+      <div class="about-photo">
+        <img src="Imagens/fondo_fermas.png" alt="Alunos do Externato do Colégio Fermas">
+      </div>
+    </div>
+
+    <!-- 3 · Benefícios -->
+    <div class="diferenca-preview ext-beneficios">
+      <div class="section-head">
+        <span class="eyebrow">Benefícios</span>
+        <h2>O que o seu educando encontra no Externato?</h2>
+      </div>
+      <div class="acrostic-icons">
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 2 8l10 5 10-5-10-5z"/>
+            <path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/>
+          </svg>
+          <h4>Ensino de qualidade</h4>
+          <p>Aprendizagem centrada no aluno e nas suas necessidades.</p>
+        </div>
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="2"/>
+            <path d="M2 20h20M9 20l.7-4M15 20l-.7-4"/>
+          </svg>
+          <h4>Tecnologia e inovação</h4>
+          <p>Recursos que estimulam a pesquisa e a descoberta.</p>
+        </div>
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>
+          </svg>
+          <h4>Actividades complementares</h4>
+          <p>Desporto, cultura, arte e projectos educativos.</p>
+        </div>
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-4.5-9.5-9C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4 19.5 4 21 8 21 12c-2.5 4.5-9.5 9-9.5 9z"/>
+          </svg>
+          <h4>Valores e cidadania</h4>
+          <p>Respeito, inclusão, solidariedade e responsabilidade.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 · Metodologia -->
+    <div class="ext-band ext-band-sand">
+      <div class="ext-split">
+        <div class="ext-split-title">
+          <span class="ext-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>
+            </svg>
+          </span>
+          <span class="eyebrow">Metodologia</span>
+          <h3>Aprender fazendo, crescer com confiança</h3>
+        </div>
+        <div class="ext-split-text">
+          <p>No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 · Formação integral -->
+    <div class="ext-band ext-band-white">
+      <div class="ext-split">
+        <div class="ext-split-title">
+          <span class="ext-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17l6-6 4 4 8-8"/>
+              <path d="M15 6h6v6"/>
+            </svg>
+          </span>
+          <span class="eyebrow">Formação integral</span>
+          <h3>Preparados para os desafios do futuro</h3>
+        </div>
+        <div class="ext-split-text">
+          <p>Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.</p>
+          <p>A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 · Família -->
+    <div class="ext-band ext-band-teal">
+      <div class="ext-split">
+        <div class="ext-split-title">
+          <span class="ext-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="3.2"/>
+              <path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/>
+              <circle cx="17.5" cy="9.5" r="2.5"/>
+              <path d="M17 14.2c2.6.1 4.5 1.9 4.5 4.8"/>
+            </svg>
+          </span>
+          <span class="eyebrow">Família</span>
+          <h3>Escola e família: uma parceria essencial</h3>
+        </div>
+        <div class="ext-split-text">
+          <p>Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 · Fecho -->
+    <div class="cta-banner ext-cta">
+      <div>
+        <h3>O futuro do seu educando começa aqui!</h3>
+        <p>Descubra a proposta educativa do Externato FERMAS e conheça as oportunidades que temos para o desenvolvimento do seu educando.</p>
+      </div>
+      <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
+    </div>
+`;
 
 // ---------- Dados de "Um Dia no Fermas" ----------
 // Um horário-tipo por nível. Substitua os horários e as descrições
@@ -207,19 +345,17 @@ renderDay(niveis[0].id);
 // ---------- Dados das Instalações ----------
 // Substitua "foto" pelo caminho real de cada fotografia.
 const instalacoes = [
-  { nome:"Cantina", foto:"Imagens/Cantina.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
-  { nome:"Cozinhas", foto:"Imagens/Cozinha.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
-  { nome:"Refeitórios", foto:"Imagens/Refeitorio.png", desc:"Dois refeitórios amplos e confortáveis." },
-  { nome:"Papelaria", foto:"Imagens/Papelaria.jpeg", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/Piscina.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
-  { nome:"Artes Marciais", foto:"Imagens/Marciais.png", desc:"Salas dedicadas às artes performativas." },
-  { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
-  { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/Lab_Quimica.png", desc:"Laboratórios de química, física e biologia." },
-  { nome:"Informática", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
-  { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
-  { nome:"Pronto Socorro", foto:"Imagens/Socorro.png", desc:"Primeiros cuidados em situações de mal-estar ou emergência." }
-
+  { nome:"Cantina", foto:"Imagens/fondo_fermas.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
+  { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
+  { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
+  { nome:"Papelaria", foto:"Imagens/Fermas_fondo2.png", desc:"Material escolar disponível dentro do colégio." },
+  { nome:"Piscinas", foto:"Imagens/fondo_fermas.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
+  { nome:"Música e Dança", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
+  { nome:"Campos Desportivos", foto:"Imagens/fondo_fermas.png", desc:"Três campos para a prática de diferentes desportos." },
+  { nome:"Anfiteatro", foto:"Imagens/Fermas_fondo2.png", desc:"Espaço para eventos, apresentações e celebrações." },
+  { nome:"Laboratórios", foto:"Imagens/fondo_fermas.png", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
+  { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
 ];
 
 const facilityCardsEl = document.getElementById('facility-cards');
@@ -262,17 +398,23 @@ const iconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--maroon-dark)
 function renderNivel(id){
   const n = niveis.find(x => x.id === id);
   if(!n) return false;
+  const ehExternato = (n.id === 'externato');
   document.getElementById('nivel-tag').textContent = n.tag;
-  document.getElementById('nivel-titulo').textContent = n.nome;
-  document.getElementById('nivel-texto').innerHTML = n.texto.map(p => `<p>${p}</p>`).join('');
+  document.getElementById('nivel-titulo').textContent = n.titulo || n.nome;
+  document.getElementById('nivel-texto').innerHTML =
+    n.texto.map(p => `<p>${p}</p>`).join('') + (ehExternato ? externatoAcoes : '');
   const gal = document.getElementById('nivel-galeria');
   gal.innerHTML = '';
+  gal.style.display = ehExternato ? 'none' : '';
   const fotosGaleria = ["Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png"];
-  fotosGaleria.forEach(src => {
+  if(!ehExternato) fotosGaleria.forEach(src => {
     const fig = document.createElement('div');
     fig.className = 'gallery-photo';
     fig.innerHTML = `<img src="${src}" alt="Fotografia — ${n.nome}">`;
     gal.appendChild(fig);
   });
+  const blocos = document.getElementById('nivel-blocos');
+  blocos.innerHTML = ehExternato ? externatoBlocos : '';
+  if(window.registerReveals) registerReveals(blocos);
   return true;
 }
