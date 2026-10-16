@@ -368,7 +368,8 @@ const instalacoes = [
   { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
   { nome:"Laboratórios", foto:"Imagens/Lab_Biologia.png", desc:"Laboratórios de química, física e biologia." },
   { nome:"Informática", foto:"Imagens/Lab_Informatica.png", desc:"Salas equipadas para tecnologia e robótica" },
-  { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
+  { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
+  { nome:"Pronto Socorro", foto:"Imagens/Socorro.png", desc:"Sala destinada ao atendimento imediato em situações de urgência." }
 ];
 
 const facilityCardsEl = document.getElementById('facility-cards');
