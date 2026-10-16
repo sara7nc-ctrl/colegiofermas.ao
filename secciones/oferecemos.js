@@ -151,9 +151,6 @@ const externatoBlocos = `
         <p>O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.</p>
         <p>A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno.</p>
       </div>
-      <div class="about-photo">
-        <img src="Imagens/fondo_fermas.png" alt="Alunos do Externato do Colégio Fermas">
-      </div>
     </div>
 
     <!-- Fotografias do Externato -->
