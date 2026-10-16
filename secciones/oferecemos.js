@@ -127,14 +127,20 @@ const niveis = [
 ];
 
 
-// ---------- Externato: botões e blocos de informação ----------
+// ---------- Externato: fotografias e blocos de informação ----------
 // Aparecem na página do nível "Externato" (#nivel-externato), por baixo
 // do texto de apresentação. Edite aqui os textos.
-const externatoAcoes = `
-  <div class="ext-lead-actions">
-    <a href="#nivel-externato" class="btn btn-secondary" onclick="document.getElementById('ext-oque').scrollIntoView({behavior:'smooth'}); return false;">Quero saber mais</a>
-    <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
-  </div>`;
+
+// Fotografias do Externato: acrescente ou apague linhas à vontade
+// (ex: "Imagens/externato-1.jpg"). A grelha adapta-se ao número de fotos.
+const externatoFotos = [
+  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 1" },
+  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 2" },
+  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 3" },
+  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 4" },
+  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 5" },
+  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 6" }
+];
 
 const externatoBlocos = `
     <!-- 2 · O que é -->
@@ -147,6 +153,17 @@ const externatoBlocos = `
       </div>
       <div class="about-photo">
         <img src="Imagens/fondo_fermas.png" alt="Alunos do Externato do Colégio Fermas">
+      </div>
+    </div>
+
+    <!-- Fotografias do Externato -->
+    <div class="ext-fotos">
+      <div class="section-head">
+        <span class="eyebrow">Momentos</span>
+        <h2>O dia a dia no Externato</h2>
+      </div>
+      <div class="ext-fotos-grid">
+        ${externatoFotos.map(f => `<div class="ext-foto"><img src="${f.src}" alt="${f.alt}"></div>`).join('')}
       </div>
     </div>
 
@@ -402,7 +419,7 @@ function renderNivel(id){
   document.getElementById('nivel-tag').textContent = n.tag;
   document.getElementById('nivel-titulo').textContent = n.titulo || n.nome;
   document.getElementById('nivel-texto').innerHTML =
-    n.texto.map(p => `<p>${p}</p>`).join('') + (ehExternato ? externatoAcoes : '');
+    n.texto.map(p => `<p>${p}</p>`).join('');
   const gal = document.getElementById('nivel-galeria');
   gal.innerHTML = '';
   gal.style.display = ehExternato ? 'none' : '';
