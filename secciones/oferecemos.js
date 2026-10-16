@@ -157,7 +157,6 @@ const externatoBlocos = `
     <div class="ext-fotos">
       <div class="section-head">
         <span class="eyebrow">Momentos</span>
-        <h2>O dia a dia no Externato</h2>
       </div>
       <div class="ext-fotos-grid">
         ${externatoFotos.map(f => `<div class="ext-foto"><img src="${f.src}" alt="${f.alt}"></div>`).join('')}
