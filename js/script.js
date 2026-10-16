@@ -42,7 +42,7 @@
 
     views.forEach(v => v.classList.toggle('active', v.dataset.view === viewName));
     navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === viewName));
-    if(viewName !== lastView){ resetReveal(viewName); lastView = viewName; }
+    if(viewName !== lastView || viewName === 'nivel'){ resetReveal(viewName); lastView = viewName; }
 
     const targetEl = scrollTarget ? document.getElementById(scrollTarget) : null;
     if(targetEl){
@@ -98,6 +98,8 @@
     ['.vida-preview-grid .vida-card', 'zoom'],
     ['.paises-band > *:not(.paises-grid)', ''],
     ['.pais-item', 'zoom'],
+    ['.ext-split-title', 'left'],
+    ['.ext-split-text', 'right'],
     ['.quote-block', ''],
     ['.section-head', ''],
     ['.about-text', 'left'],
@@ -136,18 +138,24 @@
     : null;
 
   const revealEls = [];
-  revealTargets.forEach(([sel, variant]) => {
-    document.querySelectorAll(sel).forEach(el => {
-      if(el.classList.contains('reveal')) return;
-      el.classList.add('reveal');
-      if(variant) el.classList.add('reveal-' + variant);
-      // atraso em cascata entre irmãos do mesmo tipo
-      const siblings = Array.from(el.parentElement.children).filter(x => x.matches(sel));
-      const idx = siblings.indexOf(el);
-      el.style.setProperty('--reveal-delay', (Math.min(idx, 6) * 0.14).toFixed(2) + 's');
-      revealEls.push(el);
+  // Marca como "a animar" os elementos listados (dentro de root). Também é
+  // usada para conteúdo gerado depois (por exemplo, a página do Externato).
+  function registerReveals(root){
+    revealTargets.forEach(([sel, variant]) => {
+      root.querySelectorAll(sel).forEach(el => {
+        if(el.classList.contains('reveal')) return;
+        el.classList.add('reveal');
+        if(variant) el.classList.add('reveal-' + variant);
+        // atraso em cascata entre irmãos do mesmo tipo
+        const siblings = Array.from(el.parentElement.children).filter(x => x.matches(sel));
+        const idx = siblings.indexOf(el);
+        el.style.setProperty('--reveal-delay', (Math.min(idx, 6) * 0.14).toFixed(2) + 's');
+        revealEls.push(el);
+      });
     });
-  });
+  }
+  window.registerReveals = registerReveals;
+  registerReveals(document);
 
   function observeReveal(el){
     if(revealObserver) revealObserver.observe(el);
