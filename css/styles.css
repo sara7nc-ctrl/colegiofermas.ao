@@ -1998,3 +1998,14 @@
 .level-detail-text p{ font-size: 1.08rem; }
 .gallery .gallery-photo:first-child{ grid-column: 1 / -1; aspect-ratio: 21/9; }
 @media (max-width: 760px){ .gallery .gallery-photo:first-child{ aspect-ratio: 16/9; } }
+/* ---------- Níveis: texto à esquerda, foto ao lado ---------- */
+.level-top{ display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; margin-bottom: 56px; }
+.level-top.so-texto{ grid-template-columns: 1fr; }
+.level-top .level-detail-text{ margin: 0; }
+.level-top .level-detail-text p{ font-size: 1.15rem; line-height: 1.7; }
+.level-top .gallery{ display: block; }
+.level-top .gallery .gallery-photo:first-child{ grid-column: auto; aspect-ratio: 4/3; border-radius: var(--radius); box-shadow: 0 14px 34px rgba(77,50,17,.12); }
+@media (max-width: 860px){ .level-top{ grid-template-columns: 1fr; gap: 24px; } }
+
+/* linha de cores centrada nos títulos das fotos */
+.ext-fotos .section-head h2::after{ margin-left: auto; margin-right: auto; }
