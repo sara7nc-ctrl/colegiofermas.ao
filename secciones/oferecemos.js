@@ -281,7 +281,7 @@ function blocosNivel(c){
 
     <!-- Plano de estudos (só aparece se o nível tiver "plano") -->
     ${c.plano ? `
-    <div class="ext-band ext-band-white">
+      <div class="ext-band ${c.plano ? 'ext-band-sand' : 'ext-band-white'}">
       <div class="ext-split">
         <div class="ext-split-title">
           <span class="ext-icon">
