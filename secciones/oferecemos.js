@@ -154,48 +154,212 @@ const formacaoPadrao = [
 const familiaPadrao = ["Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso."];
 
 const conteudoNiveis = {
+  // ======= Cada nível tem a sua própria informação. Edite à vontade =======
+  // Campos: oque (parágrafos), fotos (caminhos), beneficios ([título, texto] x4),
+  // metodologia, plano (lista de disciplinas; apague a linha "plano" para esconder o bloco),
+  // formacao, familia (parágrafos), fecho (frase do banner final).
+  // ---------- Iniciação ----------
   iniciacao: {
-    nome: "Iniciação", oqueEyebrow: "A Iniciação", oqueTitulo: "O que é a Iniciação?",
-    oque: ["No Colégio FERMAS, a Iniciação acontece num espaço seguro, acolhedor e cheio de descobertas, pensado para o ritmo de cada criança.", "Através do brincar, da música, da arte e das histórias, desenvolvemos a linguagem, a motricidade, a autonomia e a confiança em si próprias."],
-    fotosTitulo: "O dia a dia na Iniciação", beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
+    nome: "Iniciação",
+    oqueEyebrow: "A Iniciação",
+    oqueTitulo: "O que é a Iniciação?",
+    oque: [
+      "No Colégio FERMAS, a Iniciação acontece num espaço seguro, acolhedor e cheio de descobertas, pensado para o ritmo de cada criança.",
+      "Através do brincar, da música, da arte e das histórias, desenvolvemos a linguagem, a motricidade, a autonomia e a confiança em si próprias."
+    ],
+    fotosTitulo: "O dia a dia na Iniciação",
+    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
+    beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
+    beneficios: [
+      ["Ambiente acolhedor", "Um espaço seguro e afectuoso, pensado para os primeiros passos."],
+      ["Aprender a brincar", "Jogos, música e histórias que estimulam a linguagem e a imaginação."],
+      ["Desenvolvimento motor", "Actividades que trabalham a coordenação e a autonomia."],
+      ["Valores desde cedo", "Partilha, respeito e boas maneiras no dia a dia."]
+    ],
     metodologiaTitulo: "Aprender a brincar, brincar para aprender",
+    metodologia: [
+      "Na Iniciação, a criança aprende a brincar e brinca para aprender. As actividades respeitam o ritmo de cada uma e promovem a descoberta, a linguagem e a confiança."
+    ],
     planoTitulo: "As áreas que exploramos",
-    plano: ["Linguagem e comunicação", "Descoberta de números e formas", "Expressão plástica e musical", "Motricidade e educação física", "Formação pessoal e social"],
+    plano: [
+      "Linguagem e comunicação",
+      "Descoberta de números e formas",
+      "Expressão plástica e musical",
+      "Motricidade e educação física",
+      "Formação pessoal e social"
+    ],
+    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacao: [
+      "Queremos crianças felizes, seguras e curiosas, capazes de se expressar, partilhar e conviver com os outros.",
+      "Valorizamos o bem-estar, as relações afectivas e os hábitos de vida saudáveis desde os primeiros anos."
+    ],
+    familiaTitulo: "Escola e família: uma parceria essencial",
+    familia: [
+      "Os primeiros anos são vividos em conjunto com a família. Mantemos um diálogo próximo e diário com os encarregados de educação."
+    ],
     fecho: "Conheça a Iniciação do Colégio FERMAS e os primeiros passos do seu educando."
   },
+  // ---------- Ensino Primário ----------
   primario: {
-    nome: "Ensino Primário", oqueEyebrow: "O Ensino Primário", oqueTitulo: "O que é o Ensino Primário?",
-    oque: ["O Ensino Primário do Colégio FERMAS articula o currículo com actividades complementares, promovendo o sucesso académico e o crescimento pessoal e social dos alunos.", "A nossa proposta valoriza a curiosidade, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."],
-    fotosTitulo: "O dia a dia no Ensino Primário", beneficiosTitulo: "O que o seu educando encontra no Ensino Primário?",
+    nome: "Ensino Primário",
+    oqueEyebrow: "O Ensino Primário",
+    oqueTitulo: "O que é o Ensino Primário?",
+    oque: [
+      "O Ensino Primário do Colégio FERMAS articula o currículo com actividades complementares, promovendo o sucesso académico e o crescimento pessoal e social dos alunos.",
+      "A nossa proposta valoriza a curiosidade, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."
+    ],
+    fotosTitulo: "O dia a dia no Ensino Primário",
+    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
+    beneficiosTitulo: "O que o seu educando encontra no Ensino Primário?",
+    beneficios: [
+      ["Bases sólidas", "Leitura, escrita e cálculo consolidados com acompanhamento próximo."],
+      ["Descoberta do mundo", "Ciências, história e geografia explicadas de forma prática."],
+      ["Hábitos de estudo", "Organização, responsabilidade e gosto por aprender."],
+      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
+    ],
     metodologiaTitulo: "Aprender fazendo, crescer com confiança",
+    metodologia: [
+      "No Ensino Primário, o aluno participa activamente na aprendizagem, com actividades práticas, leitura orientada e acompanhamento pedagógico próximo."
+    ],
     planoTitulo: "Disciplinas do Ensino Primário",
-    plano: ["Língua Portuguesa", "Matemática", "Estudo do Meio", "Educação Moral e Cívica", "Educação Visual e Plástica", "Educação Física", "Inglês"],
+    plano: [
+      "Língua Portuguesa",
+      "Matemática",
+      "Estudo do Meio",
+      "Educação Moral e Cívica",
+      "Educação Visual e Plástica",
+      "Educação Física",
+      "Inglês"
+    ],
+    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacao: [
+      "Queremos formar alunos capazes de comunicar, pensar e respeitar as diferenças, com gosto pelo conhecimento.",
+      "Valorizamos tanto os conhecimentos académicos como o bem-estar e as relações humanas."
+    ],
+    familiaTitulo: "Escola e família: uma parceria essencial",
+    familia: [
+      "O sucesso educativo constrói-se em conjunto. Acompanhamos o percurso de cada aluno em diálogo com os encarregados de educação."
+    ],
     fecho: "Conheça o Ensino Primário do Colégio FERMAS e as oportunidades que temos para o seu educando."
   },
+  // ---------- I Ciclo do Ensino Secundário ----------
   iciclo: {
-    nome: "I Ciclo do Ensino Secundário", oqueEyebrow: "O I Ciclo", oqueTitulo: "O que é o I Ciclo do Ensino Secundário?",
-    oque: ["No I Ciclo, os alunos ganham autonomia, aprendem a organizar o estudo e desenvolvem o pensamento crítico, num ambiente de exigência e acompanhamento.", "Projectos, trabalhos em grupo e actividades extracurriculares ajudam-nos a descobrir interesses e talentos."],
-    fotosTitulo: "O dia a dia no I Ciclo", beneficiosTitulo: "O que o seu educando encontra no I Ciclo?",
+    nome: "I Ciclo do Ensino Secundário",
+    oqueEyebrow: "O I Ciclo",
+    oqueTitulo: "O que é o I Ciclo do Ensino Secundário?",
+    oque: [
+      "No I Ciclo, os alunos ganham autonomia, aprendem a organizar o estudo e desenvolvem o pensamento crítico, num ambiente de exigência e acompanhamento.",
+      "Projectos, trabalhos em grupo e actividades extracurriculares ajudam-nos a descobrir interesses e talentos."
+    ],
+    fotosTitulo: "O dia a dia no I Ciclo",
+    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
+    beneficiosTitulo: "O que o seu educando encontra no I Ciclo?",
+    beneficios: [
+      ["Estudo mais exigente", "Disciplinas fundamentais aprofundadas com rigor."],
+      ["Orientação vocacional", "Apoio para descobrir interesses, talentos e caminhos."],
+      ["Pensamento crítico", "Projectos, debates e trabalho em equipa."],
+      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
+    ],
     metodologiaTitulo: "Pensar, investigar e participar",
+    metodologia: [
+      "No I Ciclo, o aluno aprende a investigar, argumentar e trabalhar em equipa, com projectos e acompanhamento que desenvolvem o pensamento crítico."
+    ],
     planoTitulo: "Disciplinas do I Ciclo",
-    plano: ["Língua Portuguesa", "Matemática", "Inglês", "Física e Química", "Biologia", "História e Geografia", "Educação Física"],
+    plano: [
+      "Língua Portuguesa",
+      "Matemática",
+      "Inglês",
+      "Física e Química",
+      "Biologia",
+      "História e Geografia",
+      "Educação Física"
+    ],
+    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacao: [
+      "Queremos formar alunos capazes de comunicar, pensar de forma crítica e utilizar a tecnologia com responsabilidade.",
+      "Valorizamos tanto os conhecimentos académicos como o bem-estar e os hábitos de vida saudáveis."
+    ],
+    familiaTitulo: "Escola e família: uma parceria essencial",
+    familia: [
+      "Nesta fase, a parceria com a família é essencial. Acompanhamos o percurso escolar com reuniões e comunicação regular."
+    ],
     fecho: "Conheça o I Ciclo do Colégio FERMAS e prepare o futuro do seu educando."
   },
+  // ---------- II Ciclo do Ensino Secundário ----------
   iiciclo: {
-    nome: "II Ciclo do Ensino Secundário", oqueEyebrow: "O II Ciclo", oqueTitulo: "O que é o II Ciclo do Ensino Secundário?",
-    oque: ["O II Ciclo consolida os conhecimentos e desenvolve competências de investigação, comunicação e trabalho em equipa, essenciais para o futuro académico e profissional.", "Com preparação para os exames e orientação para o ensino superior, acompanhamos cada aluno até à conclusão do percurso."],
-    fotosTitulo: "O dia a dia no II Ciclo", beneficiosTitulo: "O que o seu educando encontra no II Ciclo?",
+    nome: "II Ciclo do Ensino Secundário",
+    oqueEyebrow: "O II Ciclo",
+    oqueTitulo: "O que é o II Ciclo do Ensino Secundário?",
+    oque: [
+      "O II Ciclo consolida os conhecimentos e desenvolve competências de investigação, comunicação e trabalho em equipa, essenciais para o futuro académico e profissional.",
+      "Com preparação para os exames e orientação para o ensino superior, acompanhamos cada aluno até à conclusão do percurso."
+    ],
+    fotosTitulo: "O dia a dia no II Ciclo",
+    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
+    beneficiosTitulo: "O que o seu educando encontra no II Ciclo?",
+    beneficios: [
+      ["Preparação para exames", "Revisões e acompanhamento para as provas finais."],
+      ["Rumo ao superior", "Orientação para a escolha do curso e da universidade."],
+      ["Autonomia e investigação", "Pesquisa, comunicação e trabalho de projecto."],
+      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
+    ],
     metodologiaTitulo: "Rumo ao ensino superior",
+    metodologia: [
+      "No II Ciclo, a metodologia combina estudo aprofundado, trabalho de projecto e preparação para exames, para que o aluno chegue ao ensino superior com confiança."
+    ],
     planoTitulo: "Disciplinas do II Ciclo",
-    plano: ["Língua Portuguesa", "Matemática", "Inglês", "Física", "Química", "Biologia", "História e Geografia", "Filosofia"],
+    plano: [
+      "Língua Portuguesa",
+      "Matemática",
+      "Inglês",
+      "Física",
+      "Química",
+      "Biologia",
+      "História e Geografia",
+      "Filosofia"
+    ],
+    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacao: [
+      "Queremos formar jovens preparados para o ensino superior e para a vida profissional, com sentido crítico e responsabilidade.",
+      "Valorizamos a ética, a cidadania e o contributo positivo de cada aluno para a sociedade."
+    ],
+    familiaTitulo: "Escola e família: uma parceria essencial",
+    familia: [
+      "Família e colégio caminham juntos até à conclusão do ciclo, apoiando as decisões importantes de cada aluno."
+    ],
     fecho: "Conheça o II Ciclo do Colégio FERMAS e o caminho do seu educando até ao ensino superior."
   },
+  // ---------- Externato ----------
   externato: {
-    nome: "Externato", oqueEyebrow: "O Externato", oqueTitulo: "O que é o Externato?",
-    oque: ["O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.", "A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."],
-    fotosTitulo: "O dia a dia no Externato", beneficiosTitulo: "O que o seu educando encontra no Externato?",
+    nome: "Externato",
+    oqueEyebrow: "O Externato",
+    oqueTitulo: "O que é o Externato?",
+    oque: [
+      "O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.",
+      "A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."
+    ],
+    fotosTitulo: "O dia a dia no Externato",
+    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
+    beneficiosTitulo: "O que o seu educando encontra no Externato?",
+    beneficios: [
+      ["Ensino de qualidade", "Aprendizagem centrada no aluno e nas suas necessidades."],
+      ["Tecnologia e inovação", "Recursos que estimulam a pesquisa e a descoberta."],
+      ["Actividades complementares", "Desporto, cultura, arte e projectos educativos."],
+      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
+    ],
     metodologiaTitulo: "Aprender fazendo, crescer com confiança",
-    formacaoTitulo: "Preparados para os desafios do futuro", familiaTitulo: "Escola e família: uma parceria essencial",
+    metodologia: [
+      "No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia."
+    ],
+    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacao: [
+      "Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.",
+      "A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis."
+    ],
+    familiaTitulo: "Escola e família: uma parceria essencial",
+    familia: [
+      "Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso."
+    ],
     fecho: "Descubra a proposta educativa do Externato FERMAS e conheça as oportunidades que temos para o desenvolvimento do seu educando."
   }
 };
@@ -434,17 +598,18 @@ renderDay(niveis[0].id);
 // ---------- Dados das Instalações ----------
 // Substitua "foto" pelo caminho real de cada fotografia.
 const instalacoes = [
-  { nome:"Cantina", foto:"Imagens/fondo_fermas.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
-  { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
-  { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
-  { nome:"Papelaria", foto:"Imagens/Fermas_fondo2.png", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/fondo_fermas.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
-  { nome:"Música e Dança", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
-  { nome:"Campos Desportivos", foto:"Imagens/fondo_fermas.png", desc:"Três campos para a prática de diferentes desportos." },
-  { nome:"Anfiteatro", foto:"Imagens/Fermas_fondo2.png", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/fondo_fermas.png", desc:"Laboratórios de química, física e biologia." },
-  { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
-  { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
+  { nome:"Cantina", foto:"Imagens/Cantina.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
+  { nome:"Cozinhas", foto:"Imagens/Cozinha.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
+  { nome:"Refeitórios", foto:"Imagens/Refeitorio.png", desc:"Dois refeitórios amplos e confortáveis." },
+  { nome:"Papelaria", foto:"Imagens/Papelaria.jpeg", desc:"Material escolar disponível dentro do colégio." },
+  { nome:"Piscinas", foto:"Imagens/Piscina.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
+  { nome:"Artes Marciais", foto:"Imagens/Marciais.png", desc:"Sala destinada à prática de artes marciais." },
+  { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
+  { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
+  { nome:"Laboratórios", foto:"Imagens/Lab_Biologia.png", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Informática e Artes", foto:"Imagens/Lab_Informatica.png", desc:"Salas equipadas para tecnologia e robótica" },
+  { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
+  { nome:"Pronto Socorro", foto:"Imagens/Socorro.png", desc:"Sala destinada ao atendimento imediato em situações de urgência." }
 ];
 
 const facilityCardsEl = document.getElementById('facility-cards');
