@@ -2009,3 +2009,7 @@
 
 /* linha de cores centrada nos títulos das fotos */
 .ext-fotos .section-head h2::after{ margin-left: auto; margin-right: auto; }
+/* novo fundo: pêssego suave (inspirado no laranja do logótipo) */
+.ext-band-peach{ background: #FFF0E2; box-shadow: 0 0 0 100vmax #FFF0E2; }
+.ext-band-peach::before{ background: rgba(244,123,11,.08); }
+.ext-band-peach .ext-icon{ color: var(--logo-orange); }
