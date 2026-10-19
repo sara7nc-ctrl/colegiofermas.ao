@@ -494,8 +494,8 @@ function renderNivel(id){
     n.texto.map(p => `<p>${p}</p>`).join('');
   const gal = document.getElementById('nivel-galeria');
   gal.innerHTML = '';
-  gal.style.display = ehExternato ? 'none' : '';
-  document.getElementById('nivel-topo').classList.toggle('so-texto', ehExternato);
+  gal.style.display = 'none';
+  document.getElementById('nivel-topo').classList.add('so-texto');
   // Foto grande (horizontal) do topo de cada nível. Troque o caminho pela sua foto.
   const fotosGaleria = ["Imagens/fondo_fermas.png"];
   if(!ehExternato) fotosGaleria.forEach(src => {
