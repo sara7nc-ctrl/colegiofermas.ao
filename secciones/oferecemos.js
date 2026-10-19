@@ -299,7 +299,7 @@ function blocosNivel(c){
     </div>` : ''}
 
     <!-- 5 · Formação integral -->
-        <div class="ext-band ${c.plano ? 'ext-band-sand' : 'ext-band-white'}">
+    <div class="ext-band ${c.plano ? 'ext-band-peach' : 'ext-band-white'}">
       <div class="ext-split">
         <div class="ext-split-title">
           <span class="ext-icon">
