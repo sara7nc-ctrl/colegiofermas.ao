@@ -131,25 +131,108 @@ const niveis = [
 // Aparecem na página do nível "Externato" (#nivel-externato), por baixo
 // do texto de apresentação. Edite aqui os textos.
 
-// Fotografias do Externato: acrescente ou apague linhas à vontade
-// (ex: "Imagens/externato-1.jpg"). A grelha adapta-se ao número de fotos.
-const externatoFotos = [
-  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 1" },
-  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 2" },
-  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 3" },
-  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 4" },
-  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 5" },
-  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 6" }
+// ---------- Conteúdo de cada nível (por baixo da galeria) ----------
+// Edite aqui os textos, os benefícios, o plano de estudos e as fotografias.
+// "fotos": acrescente ou apague linhas (ex: "Imagens/primario-1.jpg").
+const fotosPadrao = [
+  "Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png",
+  "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png"
+];
+const beneficiosPadrao = [
+  ["Ensino de qualidade", "Aprendizagem centrada no aluno e nas suas necessidades."],
+  ["Tecnologia e inovação", "Recursos que estimulam a pesquisa e a descoberta."],
+  ["Actividades complementares", "Desporto, cultura, arte e projectos educativos."],
+  ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
+];
+const metodologiaPadrao = ["No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia."];
+const formacaoPadrao = [
+  "Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.",
+  "A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis."
+];
+const familiaPadrao = ["Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso."];
+
+const conteudoNiveis = {
+  iniciacao: {
+    nome: "Iniciação", oqueEyebrow: "A Iniciação", oqueTitulo: "O que é a Iniciação?",
+    oque: ["No Colégio FERMAS, a Iniciação acontece num espaço seguro, acolhedor e cheio de descobertas, pensado para o ritmo de cada criança.", "Através do brincar, da música, da arte e das histórias, desenvolvemos a linguagem, a motricidade, a autonomia e a confiança em si próprias."],
+    fotosTitulo: "O dia a dia na Iniciação", beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
+    metodologiaTitulo: "Aprender a brincar, brincar para aprender",
+    planoTitulo: "As áreas que exploramos",
+    plano: ["Linguagem e comunicação", "Descoberta de números e formas", "Expressão plástica e musical", "Motricidade e educação física", "Formação pessoal e social"],
+    fecho: "Conheça a Iniciação do Colégio FERMAS e os primeiros passos do seu educando."
+  },
+  primario: {
+    nome: "Ensino Primário", oqueEyebrow: "O Ensino Primário", oqueTitulo: "O que é o Ensino Primário?",
+    oque: ["O Ensino Primário do Colégio FERMAS articula o currículo com actividades complementares, promovendo o sucesso académico e o crescimento pessoal e social dos alunos.", "A nossa proposta valoriza a curiosidade, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."],
+    fotosTitulo: "O dia a dia no Ensino Primário", beneficiosTitulo: "O que o seu educando encontra no Ensino Primário?",
+    metodologiaTitulo: "Aprender fazendo, crescer com confiança",
+    planoTitulo: "Disciplinas do Ensino Primário",
+    plano: ["Língua Portuguesa", "Matemática", "Estudo do Meio", "Educação Moral e Cívica", "Educação Visual e Plástica", "Educação Física", "Inglês"],
+    fecho: "Conheça o Ensino Primário do Colégio FERMAS e as oportunidades que temos para o seu educando."
+  },
+  iciclo: {
+    nome: "I Ciclo do Ensino Secundário", oqueEyebrow: "O I Ciclo", oqueTitulo: "O que é o I Ciclo do Ensino Secundário?",
+    oque: ["No I Ciclo, os alunos ganham autonomia, aprendem a organizar o estudo e desenvolvem o pensamento crítico, num ambiente de exigência e acompanhamento.", "Projectos, trabalhos em grupo e actividades extracurriculares ajudam-nos a descobrir interesses e talentos."],
+    fotosTitulo: "O dia a dia no I Ciclo", beneficiosTitulo: "O que o seu educando encontra no I Ciclo?",
+    metodologiaTitulo: "Pensar, investigar e participar",
+    planoTitulo: "Disciplinas do I Ciclo",
+    plano: ["Língua Portuguesa", "Matemática", "Inglês", "Física e Química", "Biologia", "História e Geografia", "Educação Física"],
+    fecho: "Conheça o I Ciclo do Colégio FERMAS e prepare o futuro do seu educando."
+  },
+  iiciclo: {
+    nome: "II Ciclo do Ensino Secundário", oqueEyebrow: "O II Ciclo", oqueTitulo: "O que é o II Ciclo do Ensino Secundário?",
+    oque: ["O II Ciclo consolida os conhecimentos e desenvolve competências de investigação, comunicação e trabalho em equipa, essenciais para o futuro académico e profissional.", "Com preparação para os exames e orientação para o ensino superior, acompanhamos cada aluno até à conclusão do percurso."],
+    fotosTitulo: "O dia a dia no II Ciclo", beneficiosTitulo: "O que o seu educando encontra no II Ciclo?",
+    metodologiaTitulo: "Rumo ao ensino superior",
+    planoTitulo: "Disciplinas do II Ciclo",
+    plano: ["Língua Portuguesa", "Matemática", "Inglês", "Física", "Química", "Biologia", "História e Geografia", "Filosofia"],
+    fecho: "Conheça o II Ciclo do Colégio FERMAS e o caminho do seu educando até ao ensino superior."
+  },
+  externato: {
+    nome: "Externato", oqueEyebrow: "O Externato", oqueTitulo: "O que é o Externato?",
+    oque: ["O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.", "A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."],
+    fotosTitulo: "O dia a dia no Externato", beneficiosTitulo: "O que o seu educando encontra no Externato?",
+    metodologiaTitulo: "Aprender fazendo, crescer com confiança",
+    formacaoTitulo: "Preparados para os desafios do futuro", familiaTitulo: "Escola e família: uma parceria essencial",
+    fecho: "Descubra a proposta educativa do Externato FERMAS e conheça as oportunidades que temos para o desenvolvimento do seu educando."
+  }
+};
+// valores por omissão (o que não estiver acima usa estes)
+Object.values(conteudoNiveis).forEach(c => {
+  c.fotos = c.fotos || fotosPadrao;
+  c.beneficios = c.beneficios || beneficiosPadrao;
+  c.metodologia = c.metodologia || metodologiaPadrao;
+  c.formacao = c.formacao || formacaoPadrao;
+  c.familia = c.familia || familiaPadrao;
+  c.formacaoTitulo = c.formacaoTitulo || "Preparados para os desafios do futuro";
+  c.familiaTitulo = c.familiaTitulo || "Escola e família: uma parceria essencial";
+});
+
+const icones = [
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 2 8l10 5 10-5-10-5z"/>
+            <path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/>
+          </svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="2"/>
+            <path d="M2 20h20M9 20l.7-4M15 20l-.7-4"/>
+          </svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>
+          </svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-4.5-9.5-9C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4 19.5 4 21 8 21 12c-2.5 4.5-9.5 9-9.5 9z"/>
+          </svg>`
 ];
 
-const externatoBlocos = `
+function blocosNivel(c){
+  return `
     <!-- 2 · O que é -->
     <div class="about-grid ext-oque" id="ext-oque">
       <div class="about-text">
-        <span class="eyebrow">O Externato</span>
-        <h3>O que é o Externato?</h3>
-        <p>O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.</p>
-        <p>A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno.</p>
+        <span class="eyebrow">${c.oqueEyebrow}</span>
+        <h3>${c.oqueTitulo}</h3>
+        ${c.oque.map(t => `<p>${t}</p>`).join('')}
       </div>
     </div>
 
@@ -157,9 +240,10 @@ const externatoBlocos = `
     <div class="ext-fotos">
       <div class="section-head">
         <span class="eyebrow">Momentos</span>
+        <h2>${c.fotosTitulo}</h2>
       </div>
       <div class="ext-fotos-grid">
-        ${externatoFotos.map(f => `<div class="ext-foto"><img src="${f.src}" alt="${f.alt}"></div>`).join('')}
+        ${c.fotos.map((src, i) => `<div class="ext-foto"><img src="${src}" alt="${c.nome} — foto ${i+1}"></div>`).join('')}
       </div>
     </div>
 
@@ -167,39 +251,10 @@ const externatoBlocos = `
     <div class="diferenca-preview ext-beneficios">
       <div class="section-head">
         <span class="eyebrow">Benefícios</span>
-        <h2>O que o seu educando encontra no Externato?</h2>
+        <h2>${c.beneficiosTitulo}</h2>
       </div>
       <div class="acrostic-icons">
-        <div class="acrostic-icon-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3 2 8l10 5 10-5-10-5z"/>
-            <path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/>
-          </svg>
-          <h4>Ensino de qualidade</h4>
-          <p>Aprendizagem centrada no aluno e nas suas necessidades.</p>
-        </div>
-        <div class="acrostic-icon-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="12" rx="2"/>
-            <path d="M2 20h20M9 20l.7-4M15 20l-.7-4"/>
-          </svg>
-          <h4>Tecnologia e inovação</h4>
-          <p>Recursos que estimulam a pesquisa e a descoberta.</p>
-        </div>
-        <div class="acrostic-icon-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>
-          </svg>
-          <h4>Actividades complementares</h4>
-          <p>Desporto, cultura, arte e projectos educativos.</p>
-        </div>
-        <div class="acrostic-icon-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 21s-7-4.5-9.5-9C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4 19.5 4 21 8 21 12c-2.5 4.5-9.5 9-9.5 9z"/>
-          </svg>
-          <h4>Valores e cidadania</h4>
-          <p>Respeito, inclusão, solidariedade e responsabilidade.</p>
-        </div>
+        ${c.beneficios.map((b, i) => `<div class="acrostic-icon-item">${icones[i]}<h4>${b[0]}</h4><p>${b[1]}</p></div>`).join('')}
       </div>
     </div>
 
@@ -214,13 +269,32 @@ const externatoBlocos = `
             </svg>
           </span>
           <span class="eyebrow">Metodologia</span>
-          <h3>Aprender fazendo, crescer com confiança</h3>
+          <h3>${c.metodologiaTitulo}</h3>
         </div>
         <div class="ext-split-text">
-          <p>No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia.</p>
+          ${c.metodologia.map(t => `<p>${t}</p>`).join('')}
         </div>
       </div>
     </div>
+
+    <!-- Plano de estudos (só aparece se o nível tiver "plano") -->
+    ${c.plano ? `
+    <div class="ext-band ext-band-white">
+      <div class="ext-split">
+        <div class="ext-split-title">
+          <span class="ext-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6M9 11h6"/>
+            </svg>
+          </span>
+          <span class="eyebrow">Plano de estudos</span>
+          <h3>${c.planoTitulo}</h3>
+        </div>
+        <div class="ext-split-text">
+          <ul class="ext-plano">${c.plano.map(d => `<li>${d}</li>`).join('')}</ul>
+        </div>
+      </div>
+    </div>` : ''}
 
     <!-- 5 · Formação integral -->
     <div class="ext-band ext-band-white">
@@ -233,11 +307,10 @@ const externatoBlocos = `
             </svg>
           </span>
           <span class="eyebrow">Formação integral</span>
-          <h3>Preparados para os desafios do futuro</h3>
+          <h3>${c.formacaoTitulo}</h3>
         </div>
         <div class="ext-split-text">
-          <p>Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.</p>
-          <p>A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis.</p>
+          ${c.formacao.map(t => `<p>${t}</p>`).join('')}
         </div>
       </div>
     </div>
@@ -255,10 +328,10 @@ const externatoBlocos = `
             </svg>
           </span>
           <span class="eyebrow">Família</span>
-          <h3>Escola e família: uma parceria essencial</h3>
+          <h3>${c.familiaTitulo}</h3>
         </div>
         <div class="ext-split-text">
-          <p>Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso.</p>
+          ${c.familia.map(t => `<p>${t}</p>`).join('')}
         </div>
       </div>
     </div>
@@ -267,11 +340,12 @@ const externatoBlocos = `
     <div class="cta-banner ext-cta">
       <div>
         <h3>O futuro do seu educando começa aqui!</h3>
-        <p>Descubra a proposta educativa do Externato FERMAS e conheça as oportunidades que temos para o desenvolvimento do seu educando.</p>
+        <p>${c.fecho}</p>
       </div>
       <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
     </div>
 `;
+}
 
 // ---------- Dados de "Um Dia no Fermas" ----------
 // Um horário-tipo por nível. Substitua os horários e as descrições
@@ -420,7 +494,8 @@ function renderNivel(id){
   const gal = document.getElementById('nivel-galeria');
   gal.innerHTML = '';
   gal.style.display = ehExternato ? 'none' : '';
-  const fotosGaleria = ["Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png"];
+  // Foto grande (horizontal) do topo de cada nível. Troque o caminho pela sua foto.
+  const fotosGaleria = ["Imagens/fondo_fermas.png"];
   if(!ehExternato) fotosGaleria.forEach(src => {
     const fig = document.createElement('div');
     fig.className = 'gallery-photo';
@@ -428,7 +503,7 @@ function renderNivel(id){
     gal.appendChild(fig);
   });
   const blocos = document.getElementById('nivel-blocos');
-  blocos.innerHTML = ehExternato ? externatoBlocos : '';
+  blocos.innerHTML = conteudoNiveis[n.id] ? blocosNivel(conteudoNiveis[n.id]) : '';
   if(window.registerReveals) registerReveals(blocos);
   return true;
 }
