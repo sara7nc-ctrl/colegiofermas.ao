@@ -1984,3 +1984,11 @@
 .ext-oque{ grid-template-columns: 1fr; max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
 .ext-oque .about-text{ max-width: none; }
 .ext-oque .about-text p{ max-width: none; font-size: 1.08rem; }
+
+.ext-plano{ list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 28px; }
+.ext-plano li{ padding-left: 22px; position: relative; font-size: 1.05rem; }
+.ext-plano li::before{ content: ""; position: absolute; left: 0; top: .55em; width: 9px; height: 9px; border-radius: 2px; background: var(--logo-green); transform: rotate(45deg); }
+@media (max-width: 760px){ .ext-plano{ grid-template-columns: 1fr; } }
+.ext-oque{ grid-template-columns: 1fr; max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+.ext-oque .about-text{ max-width: none; }
+.ext-oque .about-text p{ max-width: none; font-size: 1.08rem; }
