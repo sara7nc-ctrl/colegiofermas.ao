@@ -164,38 +164,38 @@ const conteudoNiveis = {
     oqueEyebrow: "A Iniciação",
     oqueTitulo: "O que é a Iniciação?",
     oque: [
-      "No Colégio FERMAS, a Iniciação acontece num espaço seguro, acolhedor e cheio de descobertas, pensado para o ritmo de cada criança.",
-      "Através do brincar, da música, da arte e das histórias, desenvolvemos a linguagem, a motricidade, a autonomia e a confiança em si próprias."
+      "No Colégio FERMAS, a Iniciação é uma etapa fundamental no desenvolvimento e na preparação das crianças para o Ensino Primário. Através de experiências lúdicas, actividades pedagógicas e um ambiente acolhedor, estimulamos a curiosidade, a criatividade, a autonomia e a socialização, respeitando o ritmo de aprendizagem de cada criança e promovendo uma transição segura e confiante para a próxima etapa escolar."
     ],
     fotosTitulo: "O dia a dia na Iniciação",
     fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
     beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
     beneficios: [
-      ["Ambiente acolhedor", "Um espaço seguro e afectuoso, pensado para os primeiros passos."],
+      ["Descoberta da Leitura e da Escrita", "Contacto inicial com letras, sons, histórias, desenhos e atividades de pré-escrita que estimulam a linguagem e a comunicação."],
       ["Aprender a brincar", "Jogos, música e histórias que estimulam a linguagem e a imaginação."],
       ["Desenvolvimento motor", "Actividades que trabalham a coordenação e a autonomia."],
-      ["Valores desde cedo", "Partilha, respeito e boas maneiras no dia a dia."]
+      ["Autonomia e Preparação Escolar", "Desenvolvimento de hábitos de higiene, organização dos materiais, concentração e confiança para enfrentar os desafios da próxima etapa escolar."]
     ],
     metodologiaTitulo: "Aprender a brincar, brincar para aprender",
     metodologia: [
-      "Na Iniciação, a criança aprende a brincar e brinca para aprender. As actividades respeitam o ritmo de cada uma e promovem a descoberta, a linguagem e a confiança."
+      "Adoptamos uma metodologia lúdica e intencional, na qual o brincar é a principal ferramenta de aprendizagem. Através de jogos, histórias, canções, pintura, recorte, colagem e actividades práticas, estimulamos o desenvolvimento das capacidades da criança e a sua preparação para o Ensino Primário."
     ],
     planoTitulo: "As áreas que exploramos",
     plano: [
-      "Linguagem e comunicação",
-      "Descoberta de números e formas",
-      "Expressão plástica e musical",
-      "Motricidade e educação física",
-      "Formação pessoal e social"
+      "Pré-escrita e desenvolvimento da motricidade fina.",
+      "Consciência fonológica e iniciação à pré-leitura.",
+      "Noções lógico-matemáticas básicas.",
+      "Desenvolvimento da linguagem e ampliação do vocabulário.",
+      "Coordenação motora global, equilíbrio e ritmo.",
+      "Autonomia, higiene pessoal e organização dos materiais escolares.",
+      "Socialização, cooperação e cumprimento das regras de convivência."
     ],
-    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacaoTitulo: "Crescer em Todas as Dimensões",
     formacao: [
-      "Queremos crianças felizes, seguras e curiosas, capazes de se expressar, partilhar e conviver com os outros.",
-      "Valorizamos o bem-estar, as relações afectivas e os hábitos de vida saudáveis desde os primeiros anos."
+      "Promovemos o desenvolvimento integral da criança, estimulando as capacidades cognitivas, motoras, linguísticas e socioemocionais. Valorizamos a autonomia, a criatividade, a confiança, a capacidade de expressão e o respeito pelo próximo, preparando a criança para uma adaptação positiva à vida escolar."
     ],
     familiaTitulo: "Escola e família: uma parceria essencial",
     familia: [
-      "Os primeiros anos são vividos em conjunto com a família. Mantemos um diálogo próximo e diário com os encarregados de educação."
+      "Reconhecemos a família como parte fundamental do processo educativo. Incentivamos a colaboração entre os encarregados de educação e a escola, promovendo o acompanhamento do desenvolvimento infantil e a continuidade dos hábitos e valores trabalhados no ambiente escolar."
     ],
     fecho: "Conheça a Iniciação do Colégio FERMAS e os primeiros passos do seu educando."
   },
@@ -205,40 +205,38 @@ const conteudoNiveis = {
     oqueEyebrow: "O Ensino Primário",
     oqueTitulo: "O que é o Ensino Primário?",
     oque: [
-      "O Ensino Primário do Colégio FERMAS articula o currículo com actividades complementares, promovendo o sucesso académico e o crescimento pessoal e social dos alunos.",
-      "A nossa proposta valoriza a curiosidade, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."
+      "O Ensino Primário do Colégio FERMAS constitui a base da formação académica e cidadã do aluno. Da 1.ª à 6.ª Classe, consolidamos os conhecimentos essenciais de leitura, escrita, matemática e compreensão do mundo, desenvolvendo competências, valores e atitudes que preparam o aluno para os desafios das etapas seguintes."
     ],
     fotosTitulo: "O dia a dia no Ensino Primário",
     fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
     beneficiosTitulo: "O que o seu educando encontra no Ensino Primário?",
     beneficios: [
-      ["Bases sólidas", "Leitura, escrita e cálculo consolidados com acompanhamento próximo."],
-      ["Descoberta do mundo", "Ciências, história e geografia explicadas de forma prática."],
+      ["Domínio da Língua e Comunicação", "Desenvolvimento da leitura, escrita, interpretação de textos, expressão oral e capacidade de comunicar ideias com clareza e confiança."],
+      ["Conhecimento do Meio Social e Natural", "Exploração do mundo que os rodeia, compreendendo a natureza, a sociedade, a cidadania e a importância da preservação do ambiente."],
       ["Hábitos de estudo", "Organização, responsabilidade e gosto por aprender."],
-      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
+      ["Criatividade, Valores e Desenvolvimento Pessoal", "Participação em atividades artísticas e físicas, promovendo a criatividade, a cooperação, a disciplina, a autoestima e a formação moral e cívica."]
     ],
-    metodologiaTitulo: "Aprender fazendo, crescer com confiança",
+    metodologiaTitulo: "Aprendizagem Activa e Participativa",
     metodologia: [
-      "No Ensino Primário, o aluno participa activamente na aprendizagem, com actividades práticas, leitura orientada e acompanhamento pedagógico próximo."
+      "Promovemos uma aprendizagem organizada e progressiva, através de explicações orientadas, leitura, escrita, exercícios práticos, trabalhos individuais e em grupo e resolução de problemas. Estimulamos a participação activa dos alunos, o pensamento crítico e a construção de conhecimentos essenciais para o seu percurso académico."
     ],
-    planoTitulo: "Disciplinas do Ensino Primário",
+    planoTitulo: "Conhecimento para Desenvolver Competências",
     plano: [
-      "Língua Portuguesa",
-      "Matemática",
-      "Estudo do Meio",
-      "Educação Moral e Cívica",
-      "Educação Visual e Plástica",
+      "Língua e Comunicação",
+      "Raciocínio Lógico-Matemático",
+      "Meio Social e Natural",
+      "Expressões Artísticas",
+      "Formação Moral e Cívica:",
       "Educação Física",
       "Inglês"
     ],
-    formacaoTitulo: "Preparados para os desafios do futuro",
+    formacaoTitulo: "Formar Alunos com Conhecimento e Valores",
     formacao: [
-      "Queremos formar alunos capazes de comunicar, pensar e respeitar as diferenças, com gosto pelo conhecimento.",
-      "Valorizamos tanto os conhecimentos académicos como o bem-estar e as relações humanas."
+      "Valorizamos o desenvolvimento académico, pessoal e social dos alunos, promovendo a autonomia, a responsabilidade, a autoestima, o pensamento crítico e a capacidade de trabalhar em grupo. Procuramos formar cidadãos conscientes, participativos e preparados para os desafios das etapas seguintes da sua formação."
     ],
-    familiaTitulo: "Escola e família: uma parceria essencial",
+    familiaTitulo: "Um Compromisso com o Sucesso",
     familia: [
-      "O sucesso educativo constrói-se em conjunto. Acompanhamos o percurso de cada aluno em diálogo com os encarregados de educação."
+      "Acreditamos que a participação da família é essencial para o sucesso educativo. Incentivamos uma relação de proximidade entre a escola e os encarregados de educação, baseada no diálogo, na confiança e na cooperação, favorecendo o acompanhamento do progresso escolar e o desenvolvimento integral de cada aluno."
     ],
     fecho: "Conheça o Ensino Primário do Colégio FERMAS e as oportunidades que temos para o seu educando."
   },
