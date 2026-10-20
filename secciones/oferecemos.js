@@ -517,18 +517,19 @@ function blocosNivel(c){
 const horarios = {
   iniciacao: [
     { hora: "07:30", titulo: "Acolhimento", desc: "Chegada das crianças e momento de acolhimento com a educadora." },
-    { hora: "08:00", titulo: "Rotina e higiene", desc: "Hábitos de autonomia, casa de banho e pequeno lanche." },
-    { hora: "08:30", titulo: "Atividades pedagógicas", desc: "Exploração sensorial, motricidade fina e primeiras noções de linguagem e números." },
-    { hora: "10:00", titulo: "Recreio", desc: "Brincadeira livre e socialização no espaço exterior." },
+    { hora: "07:40", titulo: "Parada e Higiene", desc: "Momento de organização, higiene pessoal e preparação para as actividades." },
+    { hora: "08:00", titulo: "Atividades pedagógicas", desc: "Exploração sensorial, motricidade fina e primeiras noções de linguagem e números." },
+    { hora: "09:30", titulo: "Intervalo", desc: "Pausa para lanche, descanso e convívio entre as crianças." },
     { hora: "10:30", titulo: "Música, arte e histórias", desc: "Atividades de expressão plástica, musical e contação de histórias." },
-    { hora: "11:30", titulo: "Saída", desc: "Preparação e entrega das crianças aos encarregados de educação." }
+    { hora: "11:50", titulo: "Saída", desc: "Preparação e entrega das crianças aos encarregados de educação." }
   ],
   primario: [
     { hora: "07:00", titulo: "Entrada", desc: "Chegada dos alunos e formatura antes do início das aulas." },
-    { hora: "07:15", titulo: "1ª e 2ª aulas", desc: "Língua Portuguesa e Matemática, as disciplinas nucleares da manhã." },
-    { hora: "09:00", titulo: "Intervalo", desc: "Lanche e recreio no pátio do colégio." },
-    { hora: "09:30", titulo: "3ª e 4ª aulas", desc: "Estudo do Meio, Educação Física ou outras disciplinas do currículo." },
-    { hora: "11:15", titulo: "Almoço", desc: "Refeição no refeitório, sob supervisão dos professores." },
+    { hora: "07:40", titulo: "Entrada para a Sala de Aulas", desc: "Organização dos alunos e preparação do ambiente para o início das actividades." },
+    { hora: "07:50", titulo: "Actividades Motivacionais", desc: "Momentos de motivação através de canções, dinâmicas e pequenas conversas." },
+    { hora: "08:00", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
+    { hora: "09:30", titulo: "Intervalo", desc: "Pausa para lanche, descanso e convívio entre os alunos." },
+    { hora: "10:30", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
     { hora: "12:15", titulo: "Saída / Externato", desc: "Saída dos alunos ou continuidade no Externato para apoio ao estudo." }
   ],
   iciclo: [
