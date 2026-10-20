@@ -157,21 +157,21 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <div class="vida-preview-grid" id="vida-preview-grid"></div>
     </div>
 
-    <div class="paises-band">
+  <div class="paises-band">
       <span class="eyebrow">Um colégio internacional</span>
       <h2>Várias nações, uma só família.</h2>
       <p>No Fermas aprendem lado a lado alunos e famílias de diferentes países, numa comunidade que une culturas e línguas.</p>
       <div class="mapa-paises" id="mapa-paises" aria-label="Mapa-múndi com os países representados no Colégio Fermas"></div>
       <div class="paises-grid">
-        <div class="pais-item"><img src="https://flagcdn.com/w160/ao.png" alt="Bandeira de Angola"><span>Angola</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/cu.png" alt="Bandeira de Cuba"><span>Cuba</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/cn.png" alt="Bandeira da China"><span>China</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/pe.png" alt="Bandeira do Peru"><span>Perú</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/pt.png" alt="Bandeira de Portugal"><span>Portugal</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/br.png" alt="Bandeira do Brasil"><span>Brasil</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/za.png" alt="Bandeira da África do Sul"><span>África do Sul</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/cv.png" alt="Bandeira do Cabo Verde"><span>Cabo Verde</span></div>
-        <div class="pais-item"><img src="https://flagcdn.com/w160/gb.png" alt="Bandeira do Reino Unido"><span>Reino Unido</span></div>
+        <div class="pais-item" data-iso="024"><img src="https://flagcdn.com/w160/ao.png" alt="Bandeira de Angola"><span>Angola</span></div>
+        <div class="pais-item" data-iso="192"><img src="https://flagcdn.com/w160/cu.png" alt="Bandeira de Cuba"><span>Cuba</span></div>
+        <div class="pais-item" data-iso="156"><img src="https://flagcdn.com/w160/cn.png" alt="Bandeira da China"><span>China</span></div>
+        <div class="pais-item" data-iso="604"><img src="https://flagcdn.com/w160/pe.png" alt="Bandeira do Peru"><span>Perú</span></div>
+        <div class="pais-item" data-iso="620"><img src="https://flagcdn.com/w160/pt.png" alt="Bandeira de Portugal"><span>Portugal</span></div>
+        <div class="pais-item" data-iso="076"><img src="https://flagcdn.com/w160/br.png" alt="Bandeira do Brasil"><span>Brasil</span></div>
+        <div class="pais-item" data-iso="710"><img src="https://flagcdn.com/w160/za.png" alt="Bandeira da África do Sul"><span>África do Sul</span></div>
+        <div class="pais-item" data-iso="132"><img src="https://flagcdn.com/w160/cv.png" alt="Bandeira de Cabo Verde"><span>Cabo Verde</span></div>
+        <div class="pais-item" data-iso="826"><img src="https://flagcdn.com/w160/gb.png" alt="Bandeira do Reino Unido"><span>Reino Unido</span></div>
       </div>
     </div>
 
@@ -313,9 +313,10 @@ const paisesMapa = [
   { iso: 604, nome: "Perú",     cor: "#2AACAA" },
   { iso: 620, nome: "Portugal", cor: "#4A9511" },
   { iso: 76,  nome: "Brasil",   cor: "#0A9BE0" },
-  { iso: 76,  nome: "África do Sul",   cor: "#6b378a" },
-  { iso: 76,  nome: "Cabo Verde",   cor: "#fff36b" },
-  { iso: 76,  nome: "Reino Unido",   cor: "#a5b893" }
+  { iso: 710, nome: "África do Sul", cor: "#9FCB22" },
+  // Cabo Verde é pequeno demais para o mapa: usa-se só o ponto (coord = [longitude, latitude])
+  { iso: 132, nome: "Cabo Verde",    cor: "#D8203E", coord: [-23.6, 15.1] },
+  { iso: 826, nome: "Reino Unido",   cor: "#2A4FA8" }
 ];
 
 function carregarScript(src){
@@ -350,11 +351,12 @@ function desenharMapa(box, topo){
   const svg = d3.select(box).append('svg')
     .attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img');
 
-  svg.append('path').attr('class', 'mapa-esfera').attr('d', path({ type: 'Sphere' }));
   svg.append('g').selectAll('path').data(paises).join('path')
     .attr('class', d => 'mapa-pais' + (porIso[+d.id] ? ' destaque' : ''))
     .attr('data-iso', d => +d.id)
     .attr('d', path)
+    .attr('fill', d => porIso[+d.id] ? porIso[+d.id].cor : '#DCE9E4')
+    .attr('stroke', '#fff').attr('stroke-width', .6)
     .style('--cor', d => porIso[+d.id] ? porIso[+d.id].cor : null);
 
   // rotas curvas a partir de Luanda
@@ -362,22 +364,22 @@ function desenharMapa(box, topo){
   const pontos = svg.append('g');
   paisesMapa.forEach((p, i) => {
     const f = paises.find(d => +d.id === p.iso);
-    if(!f) return;
-    const c = d3.geoCentroid(f);
+    if(!f && !p.coord) return;
+    const c = p.coord || d3.geoCentroid(f);
     if(p.iso !== 24){
-      rotas.append('path').attr('class', 'mapa-rota')
+      rotas.append('path').attr('class', 'mapa-rota').attr('fill', 'none').attr('stroke', p.cor).attr('stroke-width', 1.6)
         .attr('d', path({ type: 'LineString', coordinates: [luanda, c] }))
         .style('--cor', p.cor).style('animation-delay', (i * 0.25) + 's');
     }
-    const [x, y] = proj(p.iso === 24 ? luanda : c);
+  const [x, y] = proj(p.iso === 24 ? luanda : c);
     const g = pontos.append('g').attr('class', 'mapa-ponto').attr('data-iso', p.iso)
       .attr('transform', `translate(${x},${y})`).style('--cor', p.cor);
-    g.append('circle').attr('class', 'mapa-pulso').attr('r', 7);
-    g.append('circle').attr('class', 'mapa-miolo').attr('r', 5);
-    const t = g.append('text').attr('class', 'mapa-nome').attr('y', -14).attr('text-anchor', 'middle').text(p.nome);
+    g.append('circle').attr('class', 'mapa-pulso').attr('r', 7).attr('fill', p.cor).attr('opacity', .35);
+    g.append('circle').attr('class', 'mapa-miolo').attr('r', 5).attr('fill', p.cor).attr('stroke', '#fff').attr('stroke-width', 2);
+    const t = g.append('text').attr('class', 'mapa-nome').attr('y', -14).attr('text-anchor', 'middle').attr('font-size', 13).attr('font-weight', 600).attr('fill', '#4d3211').text(p.nome);
     const bb = t.node().getBBox();
     g.insert('rect', 'text').attr('class', 'mapa-etiqueta')
-      .attr('x', bb.x - 8).attr('y', bb.y - 3).attr('width', bb.width + 16).attr('height', bb.height + 6).attr('rx', 10);
+      .attr('x', bb.x - 8).attr('y', bb.y - 3).attr('width', bb.width + 16).attr('height', bb.height + 6).attr('rx', 10).attr('fill', '#fff').attr('stroke', p.cor);
   });
 
   // passar o rato numa bandeira destaca o país no mapa
