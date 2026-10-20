@@ -76,7 +76,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 
     <div class="colegio-preview">
       <div class="colegio-preview-media">
-        <img src="Imagens/Aula.png" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
+        <img src="Imagens/fondo_fermas.png" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
       </div>
       <div class="colegio-preview-text">
         <span class="eyebrow">O Colégio</span>
@@ -161,6 +161,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <span class="eyebrow">Um colégio internacional</span>
       <h2>Várias nações, uma só família.</h2>
       <p>No Fermas aprendem lado a lado alunos e famílias de diferentes países, numa comunidade que une culturas e línguas.</p>
+      <div class="mapa-paises" id="mapa-paises" aria-label="Mapa-múndi com os países representados no Colégio Fermas"></div>
       <div class="paises-grid">
         <div class="pais-item"><img src="https://flagcdn.com/w160/ao.png" alt="Bandeira de Angola"><span>Angola</span></div>
         <div class="pais-item"><img src="https://flagcdn.com/w160/cu.png" alt="Bandeira de Cuba"><span>Cuba</span></div>
@@ -298,3 +299,94 @@ vidaPreviewItens.forEach(a => {
   `;
   vidaPreviewGridEl.appendChild(card);
 });
+
+
+// ---------- Mapa-múndi dos países representados ----------
+// Carrega o mapa da internet (d3 + dados dos países). Se não conseguir carregar,
+// o site continua a mostrar as bandeiras normalmente.
+// Para acrescentar um país: junte uma linha em "paisesMapa" (código numérico ISO
+// do país, nome e cor) e uma bandeira em cima, com o mesmo data-iso.
+const paisesMapa = [
+  { iso: 24,  nome: "Angola",   cor: "#F47B0B" },
+  { iso: 192, nome: "Cuba",     cor: "#D8203E" },
+  { iso: 156, nome: "China",    cor: "#E3B800" },
+  { iso: 604, nome: "Perú",     cor: "#2AACAA" },
+  { iso: 620, nome: "Portugal", cor: "#4A9511" },
+  { iso: 76,  nome: "Brasil",   cor: "#0A9BE0" },
+  { iso: 76,  nome: "África do Sul",   cor: "#6b378a" },
+  { iso: 76,  nome: "Cabo Verde",   cor: "#fff36b" },
+  { iso: 76,  nome: "Reino Unido",   cor: "#a5b893" }
+];
+
+function carregarScript(src){
+  return new Promise((ok, erro) => {
+    const el = document.createElement('script');
+    el.src = src; el.onload = ok; el.onerror = erro;
+    document.head.appendChild(el);
+  });
+}
+
+async function iniciarMapaPaises(){
+  const box = document.getElementById('mapa-paises');
+  if(!box) return;
+  try{
+    await carregarScript('https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js');
+    await carregarScript('https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js');
+    const topo = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(r => r.json());
+    desenharMapa(box, topo);
+  }catch(e){
+    box.style.display = 'none'; // sem mapa: ficam só as bandeiras
+  }
+}
+
+function desenharMapa(box, topo){
+  const W = 1000, H = 500;
+  const paises = topojson.feature(topo, topo.objects.countries).features;
+  const proj = d3.geoNaturalEarth1().fitExtent([[10, 10], [W - 10, H - 10]], { type: 'Sphere' });
+  const path = d3.geoPath(proj);
+  const luanda = [13.23, -8.84];
+  const porIso = {}; paisesMapa.forEach(p => porIso[p.iso] = p);
+
+  const svg = d3.select(box).append('svg')
+    .attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img');
+
+  svg.append('path').attr('class', 'mapa-esfera').attr('d', path({ type: 'Sphere' }));
+  svg.append('g').selectAll('path').data(paises).join('path')
+    .attr('class', d => 'mapa-pais' + (porIso[+d.id] ? ' destaque' : ''))
+    .attr('data-iso', d => +d.id)
+    .attr('d', path)
+    .style('--cor', d => porIso[+d.id] ? porIso[+d.id].cor : null);
+
+  // rotas curvas a partir de Luanda
+  const rotas = svg.append('g');
+  const pontos = svg.append('g');
+  paisesMapa.forEach((p, i) => {
+    const f = paises.find(d => +d.id === p.iso);
+    if(!f) return;
+    const c = d3.geoCentroid(f);
+    if(p.iso !== 24){
+      rotas.append('path').attr('class', 'mapa-rota')
+        .attr('d', path({ type: 'LineString', coordinates: [luanda, c] }))
+        .style('--cor', p.cor).style('animation-delay', (i * 0.25) + 's');
+    }
+    const [x, y] = proj(p.iso === 24 ? luanda : c);
+    const g = pontos.append('g').attr('class', 'mapa-ponto').attr('data-iso', p.iso)
+      .attr('transform', `translate(${x},${y})`).style('--cor', p.cor);
+    g.append('circle').attr('class', 'mapa-pulso').attr('r', 7);
+    g.append('circle').attr('class', 'mapa-miolo').attr('r', 5);
+    const t = g.append('text').attr('class', 'mapa-nome').attr('y', -14).attr('text-anchor', 'middle').text(p.nome);
+    const bb = t.node().getBBox();
+    g.insert('rect', 'text').attr('class', 'mapa-etiqueta')
+      .attr('x', bb.x - 8).attr('y', bb.y - 3).attr('width', bb.width + 16).attr('height', bb.height + 6).attr('rx', 10);
+  });
+
+  // passar o rato numa bandeira destaca o país no mapa
+  document.querySelectorAll('.pais-item[data-iso]').forEach(el => {
+    const iso = +el.dataset.iso;
+    const lig = on => box.querySelectorAll(`[data-iso="${iso}"]`).forEach(n => n.classList.toggle('ativo', on));
+    el.addEventListener('mouseenter', () => lig(true));
+    el.addEventListener('mouseleave', () => lig(false));
+  });
+}
+
+iniciarMapaPaises();
