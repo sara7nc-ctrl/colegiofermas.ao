@@ -2017,7 +2017,6 @@
 /* ---------- Mapa-múndi dos países ---------- */
 .mapa-paises{ max-width: 1000px; margin: 0 auto 28px; }
 .mapa-paises svg{ width: 100%; height: auto; display: block; overflow: visible; }
-.mapa-esfera{ fill: #F3FAF8; stroke: rgba(42,172,170,.18); stroke-width: 1; }
 .mapa-pais{ fill: #DCE9E4; stroke: #fff; stroke-width: .6; transition: fill .3s, filter .3s; }
 .mapa-pais.destaque{ fill: var(--cor); stroke: #fff; stroke-width: 1; }
 .mapa-pais.destaque.ativo{ filter: brightness(1.12) drop-shadow(0 2px 6px rgba(0,0,0,.25)); }
@@ -2032,3 +2031,12 @@
 .mapa-ponto.ativo .mapa-nome{ fill: #fff; }
 @media (max-width: 760px){ .mapa-nome{ font-size: 17px; } .mapa-pulso{ display: none; } .mapa-rota{ animation: none; } }
 @media (prefers-reduced-motion: reduce){ .mapa-rota, .mapa-pulso{ animation: none; } }
+/* 9 países: bandeiras pequenas numa só linha */
+.paises-grid{ display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px; max-width: 1000px; margin: 0 auto; }
+.paises-grid .pais-item{ flex: 1 1 0; min-width: 0; padding: 12px 4px 10px; gap: 8px; }
+.paises-grid .pais-item img{ width: 40px; height: 40px; }
+.paises-grid .pais-item span{ font-size: .78rem; text-align: center; line-height: 1.2; }
+@media (max-width: 760px){
+  .paises-grid{ flex-wrap: wrap; }
+  .paises-grid .pais-item{ flex: 0 1 calc(33.33% - 8px); }
+}
