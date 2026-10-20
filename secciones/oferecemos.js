@@ -548,12 +548,13 @@ const horarios = {
     { hora: "13:00", titulo: "Orientação vocacional / Saída", desc: "Sessões de apoio à escolha do percurso pós-secundário ou saída dos alunos." }
   ],
   externato: [
-    { hora: "12:15", titulo: "Acolhimento", desc: "Chegada dos alunos ao Externato após o horário lectivo normal." },
-    { hora: "12:30", titulo: "Almoço", desc: "Refeição servida no refeitório do colégio." },
-    { hora: "13:30", titulo: "Apoio ao estudo", desc: "Realização de trabalhos de casa com acompanhamento próximo." },
-    { hora: "15:00", titulo: "Lanche", desc: "Pausa para lanche da tarde." },
-    { hora: "15:30", titulo: "Actividades complementares", desc: "Leitura, jogos pedagógicos ou reforço em disciplinas específicas." },
-    { hora: "17:00", titulo: "Saída", desc: "Entrega dos alunos aos encarregados de educação." }
+    { hora: "07:30", titulo: "Acolhimento", desc: "Chegada dos alunos ao Externato." },
+    { hora: "07:40", titulo: "Atividades", desc: "Atividades de aula." },
+    { hora: "12:10", titulo: "Higiene/Almoço", desc: "Momento destinado à higiene pessoal e ao almoço dos alunos." },
+    { hora: "13:10", titulo: "Atividades", desc: "Atividades varias." },
+    { hora: "15:05", titulo: "Lanche", desc: "Pausa para lanche da tarde." },
+    { hora: "15:35", titulo: "Atividades", desc: "Atividades de reforço" },
+    { hora: "16:30", titulo: "Saída", desc: "Entrega dos alunos aos encarregados de educação." }
   ]
 };
 
