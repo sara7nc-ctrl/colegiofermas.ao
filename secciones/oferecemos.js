@@ -170,7 +170,7 @@ const conteudoNiveis = {
     fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
     beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
     beneficios: [
-      ["Descoberta da Leitura e da Escrita", "Contacto inicial com letras, sons, histórias, desenhos e atividades de pré-escrita que estimulam a linguagem e a comunicação."],
+      ["Descoberta da Leitura e da Escrita", "Contacto inicial com letras, sons, histórias, desenhos e actividades de pré-escrita que estimulam a linguagem e a comunicação."],
       ["Aprender a brincar", "Jogos, música e histórias que estimulam a linguagem e a imaginação."],
       ["Desenvolvimento motor", "Actividades que trabalham a coordenação e a autonomia."],
       ["Autonomia e Preparação Escolar", "Desenvolvimento de hábitos de higiene, organização dos materiais, concentração e confiança para enfrentar os desafios da próxima etapa escolar."]
@@ -214,7 +214,7 @@ const conteudoNiveis = {
       ["Domínio da Língua e Comunicação", "Desenvolvimento da leitura, escrita, interpretação de textos, expressão oral e capacidade de comunicar ideias com clareza e confiança."],
       ["Conhecimento do Meio Social e Natural", "Exploração do mundo que os rodeia, compreendendo a natureza, a sociedade, a cidadania e a importância da preservação do ambiente."],
       ["Hábitos de estudo", "Organização, responsabilidade e gosto por aprender."],
-      ["Criatividade, Valores e Desenvolvimento Pessoal", "Participação em atividades artísticas e físicas, promovendo a criatividade, a cooperação, a disciplina, a autoestima e a formação moral e cívica."]
+      ["Criatividade, Valores e Desenvolvimento Pessoal", "Participação em actividades artísticas e físicas, promovendo a criatividade, a cooperação, a disciplina, a autoestima e a formação moral e cívica."]
     ],
     metodologiaTitulo: "Aprendizagem Activa e Participativa",
     metodologia: [
