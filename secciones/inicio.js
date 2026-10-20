@@ -76,7 +76,7 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
 
     <div class="colegio-preview">
       <div class="colegio-preview-media">
-        <img src="Imagens/fondo_fermas.png" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
+        <img src="Imagens/Aula.png" alt="Campus do Colégio Fermas, no Lar do Patriota, Talatona">
       </div>
       <div class="colegio-preview-text">
         <span class="eyebrow">O Colégio</span>
