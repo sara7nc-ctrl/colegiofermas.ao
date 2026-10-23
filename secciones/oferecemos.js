@@ -600,8 +600,7 @@ const horarios = {
     { hora: "08:00", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
     { hora: "09:30", titulo: "Intervalo", desc: "Pausa para lanche, descanso e convívio entre os alunos." },
     { hora: "10:30", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
-    { hora: "12:15", titulo: "Saída / Externato", desc: "Saída dos alunos ou continuidade no Externato para apoio ao estudo." }
-    { hora: "12:15", titulo: "Saída", desc: "Encerramento das actividades lectivas e saída organizada dos alunos." }
+    { hora: "12:30", titulo: "Saída", desc: "Encerramento das actividades lectivas e saída organizada dos alunos." }
   ],
   iciclo: [
     { hora: "07:00", titulo: "Entrada", desc: "Chegada dos alunos e início das aulas do I Ciclo." },
