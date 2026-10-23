@@ -587,19 +587,21 @@ function blocosNivel(c){
 const horarios = {
   iniciacao: [
     { hora: "07:30", titulo: "Acolhimento", desc: "Chegada das crianças e momento de acolhimento com a educadora." },
-    { hora: "08:00", titulo: "Rotina e higiene", desc: "Hábitos de autonomia, casa de banho e pequeno lanche." },
-    { hora: "08:30", titulo: "Atividades pedagógicas", desc: "Exploração sensorial, motricidade fina e primeiras noções de linguagem e números." },
-    { hora: "10:00", titulo: "Recreio", desc: "Brincadeira livre e socialização no espaço exterior." },
+    { hora: "07:40", titulo: "Parada e Higiene", desc: "Momento de organização, higiene pessoal e preparação para as actividades." },
+    { hora: "08:00", titulo: "Atividades pedagógicas", desc: "Exploração sensorial, motricidade fina e primeiras noções de linguagem e números." },
+    { hora: "09:30", titulo: "Intervalo", desc: "Pausa para lanche, descanso e convívio entre as crianças." },
     { hora: "10:30", titulo: "Música, arte e histórias", desc: "Atividades de expressão plástica, musical e contação de histórias." },
-    { hora: "11:30", titulo: "Saída", desc: "Preparação e entrega das crianças aos encarregados de educação." }
+    { hora: "11:50", titulo: "Saída", desc: "Preparação e entrega das crianças aos encarregados de educação." }
   ],
   primario: [
     { hora: "07:00", titulo: "Entrada", desc: "Chegada dos alunos e formatura antes do início das aulas." },
-    { hora: "07:15", titulo: "1ª e 2ª aulas", desc: "Língua Portuguesa e Matemática, as disciplinas nucleares da manhã." },
-    { hora: "09:00", titulo: "Intervalo", desc: "Lanche e recreio no pátio do colégio." },
-    { hora: "09:30", titulo: "3ª e 4ª aulas", desc: "Estudo do Meio, Educação Física ou outras disciplinas do currículo." },
-    { hora: "11:15", titulo: "Almoço", desc: "Refeição no refeitório, sob supervisão dos professores." },
+    { hora: "07:40", titulo: "Entrada para a Sala de Aulas", desc: "Organização dos alunos e preparação do ambiente para o início das actividades." },
+    { hora: "07:50", titulo: "Actividades Motivacionais", desc: "Momentos de motivação através de canções, dinâmicas e pequenas conversas." },
+    { hora: "08:00", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
+    { hora: "09:30", titulo: "Intervalo", desc: "Pausa para lanche, descanso e convívio entre os alunos." },
+    { hora: "10:30", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
     { hora: "12:15", titulo: "Saída / Externato", desc: "Saída dos alunos ou continuidade no Externato para apoio ao estudo." }
+    { hora: "12:15", titulo: "Saída", desc: "Encerramento das actividades lectivas e saída organizada dos alunos." }
   ],
   iciclo: [
     { hora: "07:00", titulo: "Entrada", desc: "Chegada dos alunos e início das aulas do I Ciclo." },
@@ -617,13 +619,14 @@ const horarios = {
     { hora: "12:00", titulo: "Almoço", desc: "Refeição no refeitório." },
     { hora: "13:00", titulo: "Orientação vocacional / Saída", desc: "Sessões de apoio à escolha do percurso pós-secundário ou saída dos alunos." }
   ],
-  externato: [
-    { hora: "12:15", titulo: "Acolhimento", desc: "Chegada dos alunos ao Externato após o horário lectivo normal." },
-    { hora: "12:30", titulo: "Almoço", desc: "Refeição servida no refeitório do colégio." },
-    { hora: "13:30", titulo: "Apoio ao estudo", desc: "Realização de trabalhos de casa com acompanhamento próximo." },
-    { hora: "15:00", titulo: "Lanche", desc: "Pausa para lanche da tarde." },
-    { hora: "15:30", titulo: "Actividades complementares", desc: "Leitura, jogos pedagógicos ou reforço em disciplinas específicas." },
-    { hora: "17:00", titulo: "Saída", desc: "Entrega dos alunos aos encarregados de educação." }
+    externato: [
+    { hora: "07:30", titulo: "Acolhimento", desc: "Chegada dos alunos ao Externato." },
+    { hora: "07:40", titulo: "Atividades", desc: "Atividades de aula." },
+    { hora: "12:10", titulo: "Higiene/Almoço", desc: "Momento destinado à higiene pessoal e ao almoço dos alunos." },
+    { hora: "13:10", titulo: "Atividades", desc: "Atividades varias." },
+    { hora: "15:05", titulo: "Lanche", desc: "Pausa para lanche da tarde." },
+    { hora: "15:35", titulo: "Atividades", desc: "Atividades de reforço" },
+    { hora: "16:30", titulo: "Saída", desc: "Entrega dos alunos aos encarregados de educação." }
   ]
 };
 
@@ -666,17 +669,18 @@ renderDay(niveis[0].id);
 // ---------- Dados das Instalações ----------
 // Substitua "foto" pelo caminho real de cada fotografia.
 const instalacoes = [
-  { nome:"Cantina", foto:"Imagens/fondo_fermas.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
-  { nome:"Cozinhas", foto:"Imagens/Fermas_fondo2.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
-  { nome:"Refeitórios", foto:"Imagens/fondo_fermas.png", desc:"Dois refeitórios amplos e confortáveis." },
-  { nome:"Papelaria", foto:"Imagens/Fermas_fondo2.png", desc:"Material escolar disponível dentro do colégio." },
-  { nome:"Piscinas", foto:"Imagens/fondo_fermas.png", desc:"Duas piscinas — uma para as crianças e outra para os adultos." },
-  { nome:"Música e Dança", foto:"Imagens/Fermas_fondo2.png", desc:"Salas dedicadas às artes performativas." },
-  { nome:"Campos Desportivos", foto:"Imagens/fondo_fermas.png", desc:"Três campos para a prática de diferentes desportos." },
-  { nome:"Anfiteatro", foto:"Imagens/Fermas_fondo2.png", desc:"Espaço para eventos, apresentações e celebrações." },
-  { nome:"Laboratórios", foto:"Imagens/fondo_fermas.png", desc:"Laboratórios de química, física e biologia." },
-  { nome:"Informática e Artes", foto:"Imagens/Fermas_fondo2.png", desc:"Salas equipadas para tecnologia e expressão artística." },
-  { nome:"Biblioteca", foto:"Imagens/fondo_fermas.png", desc:"Um espaço de leitura e pesquisa para os alunos." }
+ { nome:"Cantina", foto:"Imagens/Cantina.png", desc:"Espaço equipado para as refeições diárias dos alunos." },
+  { nome:"Cozinhas", foto:"Imagens/Cozinha.png", desc:"Duas cozinhas preparadas para a confecção das refeições." },
+  { nome:"Refeitórios", foto:"Imagens/Refeitorio.png", desc:"Dois refeitórios amplos e confortáveis." },
+  { nome:"Papelaria", foto:"Imagens/Papelaria.jpeg", desc:"Material escolar disponível dentro do colégio." },
+  { nome:"Piscinas", foto:"Imagens/Piscina.png", desc:"Duas piscinas — Piscina para crianças iniciantes e piscina para crianças avançadas e adolescentes." },
+  { nome:"Artes Marciais", foto:"Imagens/Marciais.png", desc:"Sala destinada à prática de artes marciais." },
+  { nome:"Campos Desportivos", foto:"Imagens/campo.jpeg", desc:"Três campos para a prática de diferentes desportos." },
+  { nome:"Anfiteatro", foto:"Imagens/anfiteatro.jpeg", desc:"Espaço para eventos, apresentações e celebrações." },
+  { nome:"Laboratórios", foto:"Imagens/Lab_Biologia.png", desc:"Laboratórios de química, física e biologia." },
+  { nome:"Informática e Artes", foto:"Imagens/Lab_Informatica.png", desc:"Salas equipadas para tecnologia e robótica" },
+  { nome:"Biblioteca", foto:"Imagens/Biblioteca.png", desc:"Um espaço de leitura e pesquisa para os alunos." },
+  { nome:"Pronto Socorro", foto:"Imagens/Socorro.png", desc:"Sala destinada ao atendimento imediato em situações de urgência." }
 ];
 
 const facilityCardsEl = document.getElementById('facility-cards');
