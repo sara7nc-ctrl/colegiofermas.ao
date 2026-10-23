@@ -58,10 +58,8 @@ document.getElementById('app-sections').insertAdjacentHTML('beforeend', `
       <span class="level-tag" id="nivel-tag"></span>
       <h2 id="nivel-titulo"></h2>
     </div>
-    <div class="level-top" id="nivel-topo">
-      <div class="level-detail-text" id="nivel-texto"></div>
-      <div class="gallery" id="nivel-galeria"></div>
-    </div>
+    <div class="level-detail-text" id="nivel-texto"></div>
+    <div class="gallery" id="nivel-galeria"></div>
 
     <!-- Informação extra de cada nível (o Externato usa este espaço) -->
     <div id="nivel-blocos"></div>
@@ -133,270 +131,28 @@ const niveis = [
 // Aparecem na página do nível "Externato" (#nivel-externato), por baixo
 // do texto de apresentação. Edite aqui os textos.
 
-// ---------- Conteúdo de cada nível (por baixo da galeria) ----------
-// Edite aqui os textos, os benefícios, o plano de estudos e as fotografias.
-// "fotos": acrescente ou apague linhas (ex: "Imagens/primario-1.jpg").
-const fotosPadrao = [
-  "Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png",
-  "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png"
-];
-const beneficiosPadrao = [
-  ["Ensino de qualidade", "Aprendizagem centrada no aluno e nas suas necessidades."],
-  ["Tecnologia e inovação", "Recursos que estimulam a pesquisa e a descoberta."],
-  ["Actividades complementares", "Desporto, cultura, arte e projectos educativos."],
-  ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
-];
-const metodologiaPadrao = ["No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia."];
-const formacaoPadrao = [
-  "Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.",
-  "A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis."
-];
-const familiaPadrao = ["Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso."];
-
-const conteudoNiveis = {
-  // ======= Cada nível tem a sua própria informação. Edite à vontade =======
-  // Campos: oque (parágrafos), fotos (caminhos), beneficios ([título, texto] x4),
-  // metodologia, plano (lista de disciplinas; apague a linha "plano" para esconder o bloco),
-  // formacao, familia (parágrafos), fecho (frase do banner final).
-  // ---------- Iniciação ----------
-  iniciacao: {
-    nome: "Iniciação",
-    oqueEyebrow: "A Iniciação",
-    oqueTitulo: "O que é a Iniciação?",
-    oque: [
-      "No Colégio FERMAS, a Iniciação é uma etapa fundamental no desenvolvimento e na preparação das crianças para o Ensino Primário. Através de experiências lúdicas, actividades pedagógicas e um ambiente acolhedor, estimulamos a curiosidade, a criatividade, a autonomia e a socialização, respeitando o ritmo de aprendizagem de cada criança e promovendo uma transição segura e confiante para a próxima etapa escolar."
-    ],
-    fotosTitulo: "O dia a dia na Iniciação",
-    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
-    beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
-    beneficios: [
-      ["Descoberta da Leitura e da Escrita", "Contacto inicial com letras, sons, histórias, desenhos e actividades de pré-escrita que estimulam a linguagem e a comunicação."],
-      ["Aprender a brincar", "Jogos, música e histórias que estimulam a linguagem e a imaginação."],
-      ["Desenvolvimento motor", "Actividades que trabalham a coordenação e a autonomia."],
-      ["Autonomia e Preparação Escolar", "Desenvolvimento de hábitos de higiene, organização dos materiais, concentração e confiança para enfrentar os desafios da próxima etapa escolar."]
-    ],
-    metodologiaTitulo: "Aprender a brincar, brincar para aprender",
-    metodologia: [
-      "Adoptamos uma metodologia lúdica e intencional, na qual o brincar é a principal ferramenta de aprendizagem. Através de jogos, histórias, canções, pintura, recorte, colagem e actividades práticas, estimulamos o desenvolvimento das capacidades da criança e a sua preparação para o Ensino Primário."
-    ],
-    planoTitulo: "As áreas que exploramos",
-    plano: [
-      "Pré-escrita e desenvolvimento da motricidade fina.",
-      "Consciência fonológica e iniciação à pré-leitura.",
-      "Noções lógico-matemáticas básicas.",
-      "Desenvolvimento da linguagem e ampliação do vocabulário.",
-      "Coordenação motora global, equilíbrio e ritmo.",
-      "Autonomia, higiene pessoal e organização dos materiais escolares.",
-      "Socialização, cooperação e cumprimento das regras de convivência."
-    ],
-    formacaoTitulo: "Crescer em Todas as Dimensões",
-    formacao: [
-      "Promovemos o desenvolvimento integral da criança, estimulando as capacidades cognitivas, motoras, linguísticas e socioemocionais. Valorizamos a autonomia, a criatividade, a confiança, a capacidade de expressão e o respeito pelo próximo, preparando a criança para uma adaptação positiva à vida escolar."
-    ],
-    familiaTitulo: "Escola e família: uma parceria essencial",
-    familia: [
-      "Reconhecemos a família como parte fundamental do processo educativo. Incentivamos a colaboração entre os encarregados de educação e a escola, promovendo o acompanhamento do desenvolvimento infantil e a continuidade dos hábitos e valores trabalhados no ambiente escolar."
-    ],
-    fecho: "Conheça a Iniciação do Colégio FERMAS e os primeiros passos do seu educando."
-  },
-  // ---------- Ensino Primário ----------
-  primario: {
-    nome: "Ensino Primário",
-    oqueEyebrow: "O Ensino Primário",
-    oqueTitulo: "O que é o Ensino Primário?",
-    oque: [
-      "O Ensino Primário do Colégio FERMAS constitui a base da formação académica e cidadã do aluno. Da 1.ª à 6.ª Classe, consolidamos os conhecimentos essenciais de leitura, escrita, matemática e compreensão do mundo, desenvolvendo competências, valores e atitudes que preparam o aluno para os desafios das etapas seguintes."
-    ],
-    fotosTitulo: "O dia a dia no Ensino Primário",
-    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
-    beneficiosTitulo: "O que o seu educando encontra no Ensino Primário?",
-    beneficios: [
-      ["Domínio da Língua e Comunicação", "Desenvolvimento da leitura, escrita, interpretação de textos, expressão oral e capacidade de comunicar ideias com clareza e confiança."],
-      ["Conhecimento do Meio Social e Natural", "Exploração do mundo que os rodeia, compreendendo a natureza, a sociedade, a cidadania e a importância da preservação do ambiente."],
-      ["Hábitos de estudo", "Organização, responsabilidade e gosto por aprender."],
-      ["Criatividade, Valores e Desenvolvimento Pessoal", "Participação em actividades artísticas e físicas, promovendo a criatividade, a cooperação, a disciplina, a autoestima e a formação moral e cívica."]
-    ],
-    metodologiaTitulo: "Aprendizagem Activa e Participativa",
-    metodologia: [
-      "Promovemos uma aprendizagem organizada e progressiva, através de explicações orientadas, leitura, escrita, exercícios práticos, trabalhos individuais e em grupo e resolução de problemas. Estimulamos a participação activa dos alunos, o pensamento crítico e a construção de conhecimentos essenciais para o seu percurso académico."
-    ],
-    planoTitulo: "Conhecimento para Desenvolver Competências",
-    plano: [
-      "Língua e Comunicação",
-      "Raciocínio Lógico-Matemático",
-      "Meio Social e Natural",
-      "Expressões Artísticas",
-      "Formação Moral e Cívica:",
-      "Educação Física",
-      "Inglês"
-    ],
-    formacaoTitulo: "Formar Alunos com Conhecimento e Valores",
-    formacao: [
-      "Valorizamos o desenvolvimento académico, pessoal e social dos alunos, promovendo a autonomia, a responsabilidade, a autoestima, o pensamento crítico e a capacidade de trabalhar em grupo. Procuramos formar cidadãos conscientes, participativos e preparados para os desafios das etapas seguintes da sua formação."
-    ],
-    familiaTitulo: "Um Compromisso com o Sucesso",
-    familia: [
-      "Acreditamos que a participação da família é essencial para o sucesso educativo. Incentivamos uma relação de proximidade entre a escola e os encarregados de educação, baseada no diálogo, na confiança e na cooperação, favorecendo o acompanhamento do progresso escolar e o desenvolvimento integral de cada aluno."
-    ],
-    fecho: "Conheça o Ensino Primário do Colégio FERMAS e as oportunidades que temos para o seu educando."
-  },
-  // ---------- I Ciclo do Ensino Secundário ----------
-  iciclo: {
-    nome: "I Ciclo do Ensino Secundário",
-    oqueEyebrow: "O I Ciclo",
-    oqueTitulo: "O que é o I Ciclo do Ensino Secundário?",
-    oque: [
-      "No I Ciclo, os alunos ganham autonomia, aprendem a organizar o estudo e desenvolvem o pensamento crítico, num ambiente de exigência e acompanhamento.",
-      "Projectos, trabalhos em grupo e actividades extracurriculares ajudam-nos a descobrir interesses e talentos."
-    ],
-    fotosTitulo: "O dia a dia no I Ciclo",
-    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
-    beneficiosTitulo: "O que o seu educando encontra no I Ciclo?",
-    beneficios: [
-      ["Estudo mais exigente", "Disciplinas fundamentais aprofundadas com rigor."],
-      ["Orientação vocacional", "Apoio para descobrir interesses, talentos e caminhos."],
-      ["Pensamento crítico", "Projectos, debates e trabalho em equipa."],
-      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
-    ],
-    metodologiaTitulo: "Pensar, investigar e participar",
-    metodologia: [
-      "No I Ciclo, o aluno aprende a investigar, argumentar e trabalhar em equipa, com projectos e acompanhamento que desenvolvem o pensamento crítico."
-    ],
-    planoTitulo: "Disciplinas do I Ciclo",
-    plano: [
-      "Língua Portuguesa",
-      "Matemática",
-      "Inglês",
-      "Física e Química",
-      "Biologia",
-      "História e Geografia",
-      "Educação Física"
-    ],
-    formacaoTitulo: "Preparados para os desafios do futuro",
-    formacao: [
-      "Queremos formar alunos capazes de comunicar, pensar de forma crítica e utilizar a tecnologia com responsabilidade.",
-      "Valorizamos tanto os conhecimentos académicos como o bem-estar e os hábitos de vida saudáveis."
-    ],
-    familiaTitulo: "Escola e família: uma parceria essencial",
-    familia: [
-      "Nesta fase, a parceria com a família é essencial. Acompanhamos o percurso escolar com reuniões e comunicação regular."
-    ],
-    fecho: "Conheça o I Ciclo do Colégio FERMAS e prepare o futuro do seu educando."
-  },
-  // ---------- II Ciclo do Ensino Secundário ----------
-  iiciclo: {
-    nome: "II Ciclo do Ensino Secundário",
-    oqueEyebrow: "O II Ciclo",
-    oqueTitulo: "O que é o II Ciclo do Ensino Secundário?",
-    oque: [
-      "O II Ciclo consolida os conhecimentos e desenvolve competências de investigação, comunicação e trabalho em equipa, essenciais para o futuro académico e profissional.",
-      "Com preparação para os exames e orientação para o ensino superior, acompanhamos cada aluno até à conclusão do percurso."
-    ],
-    fotosTitulo: "O dia a dia no II Ciclo",
-    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
-    beneficiosTitulo: "O que o seu educando encontra no II Ciclo?",
-    beneficios: [
-      ["Preparação para exames", "Revisões e acompanhamento para as provas finais."],
-      ["Rumo ao superior", "Orientação para a escolha do curso e da universidade."],
-      ["Autonomia e investigação", "Pesquisa, comunicação e trabalho de projecto."],
-      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
-    ],
-    metodologiaTitulo: "Rumo ao ensino superior",
-    metodologia: [
-      "No II Ciclo, a metodologia combina estudo aprofundado, trabalho de projecto e preparação para exames, para que o aluno chegue ao ensino superior com confiança."
-    ],
-    planoTitulo: "Disciplinas do II Ciclo",
-    plano: [
-      "Língua Portuguesa",
-      "Matemática",
-      "Inglês",
-      "Física",
-      "Química",
-      "Biologia",
-      "História e Geografia",
-      "Filosofia"
-    ],
-    formacaoTitulo: "Preparados para os desafios do futuro",
-    formacao: [
-      "Queremos formar jovens preparados para o ensino superior e para a vida profissional, com sentido crítico e responsabilidade.",
-      "Valorizamos a ética, a cidadania e o contributo positivo de cada aluno para a sociedade."
-    ],
-    familiaTitulo: "Escola e família: uma parceria essencial",
-    familia: [
-      "Família e colégio caminham juntos até à conclusão do ciclo, apoiando as decisões importantes de cada aluno."
-    ],
-    fecho: "Conheça o II Ciclo do Colégio FERMAS e o caminho do seu educando até ao ensino superior."
-  },
-  // ---------- Externato ----------
-  externato: {
-    nome: "Externato",
-    oqueEyebrow: "O Externato",
-    oqueTitulo: "O que é o Externato?",
-    oque: [
-      "O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.",
-      "A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."
-    ],
-    fotosTitulo: "O dia a dia no Externato",
-    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
-    beneficiosTitulo: "O que o seu educando encontra no Externato?",
-    beneficios: [
-      ["Ensino de qualidade", "Aprendizagem centrada no aluno e nas suas necessidades."],
-      ["Tecnologia e inovação", "Recursos que estimulam a pesquisa e a descoberta."],
-      ["Actividades complementares", "Desporto, cultura, arte e projectos educativos."],
-      ["Valores e cidadania", "Respeito, inclusão, solidariedade e responsabilidade."]
-    ],
-    metodologiaTitulo: "Aprender fazendo, crescer com confiança",
-    metodologia: [
-      "No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia."
-    ],
-    formacaoTitulo: "Preparados para os desafios do futuro",
-    formacao: [
-      "Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.",
-      "A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis."
-    ],
-    familiaTitulo: "Escola e família: uma parceria essencial",
-    familia: [
-      "Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso."
-    ],
-    fecho: "Descubra a proposta educativa do Externato FERMAS e conheça as oportunidades que temos para o desenvolvimento do seu educando."
-  }
-};
-// valores por omissão (o que não estiver acima usa estes)
-Object.values(conteudoNiveis).forEach(c => {
-  c.fotos = c.fotos || fotosPadrao;
-  c.beneficios = c.beneficios || beneficiosPadrao;
-  c.metodologia = c.metodologia || metodologiaPadrao;
-  c.formacao = c.formacao || formacaoPadrao;
-  c.familia = c.familia || familiaPadrao;
-  c.formacaoTitulo = c.formacaoTitulo || "Preparados para os desafios do futuro";
-  c.familiaTitulo = c.familiaTitulo || "Escola e família: uma parceria essencial";
-});
-
-const icones = [
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3 2 8l10 5 10-5-10-5z"/>
-            <path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/>
-          </svg>`,
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="12" rx="2"/>
-            <path d="M2 20h20M9 20l.7-4M15 20l-.7-4"/>
-          </svg>`,
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>
-          </svg>`,
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 21s-7-4.5-9.5-9C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4 19.5 4 21 8 21 12c-2.5 4.5-9.5 9-9.5 9z"/>
-          </svg>`
+// Fotografias do Externato: acrescente ou apague linhas à vontade
+// (ex: "Imagens/externato-1.jpg"). A grelha adapta-se ao número de fotos.
+const externatoFotos = [
+  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 1" },
+  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 2" },
+  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 3" },
+  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 4" },
+  { src: "Imagens/fondo_fermas.png",  alt: "Alunos do Externato — actividade 5" },
+  { src: "Imagens/Fermas_fondo2.png", alt: "Alunos do Externato — actividade 6" }
 ];
 
-function blocosNivel(c){
-  return `
+const externatoBlocos = `
     <!-- 2 · O que é -->
     <div class="about-grid ext-oque" id="ext-oque">
       <div class="about-text">
-        <span class="eyebrow">${c.oqueEyebrow}</span>
-        <h3>${c.oqueTitulo}</h3>
-        ${c.oque.map(t => `<p>${t}</p>`).join('')}
+        <span class="eyebrow">O Externato</span>
+        <h3>O que é o Externato?</h3>
+        <p>O Externato do Colégio FERMAS oferece uma experiência educativa que articula o currículo escolar com actividades complementares, promovendo não só o sucesso académico, mas também o crescimento pessoal e social das crianças.</p>
+        <p>A nossa proposta valoriza a autonomia, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno.</p>
+      </div>
+      <div class="about-photo">
+        <img src="Imagens/fondo_fermas.png" alt="Alunos do Externato do Colégio Fermas">
       </div>
     </div>
 
@@ -404,10 +160,10 @@ function blocosNivel(c){
     <div class="ext-fotos">
       <div class="section-head">
         <span class="eyebrow">Momentos</span>
-        <h2>${c.fotosTitulo}</h2>
+        <h2>O dia a dia no Externato</h2>
       </div>
       <div class="ext-fotos-grid">
-        ${c.fotos.map((src, i) => `<div class="ext-foto"><img src="${src}" alt="${c.nome} — foto ${i+1}"></div>`).join('')}
+        ${externatoFotos.map(f => `<div class="ext-foto"><img src="${f.src}" alt="${f.alt}"></div>`).join('')}
       </div>
     </div>
 
@@ -415,10 +171,39 @@ function blocosNivel(c){
     <div class="diferenca-preview ext-beneficios">
       <div class="section-head">
         <span class="eyebrow">Benefícios</span>
-        <h2>${c.beneficiosTitulo}</h2>
+        <h2>O que o seu educando encontra no Externato?</h2>
       </div>
       <div class="acrostic-icons">
-        ${c.beneficios.map((b, i) => `<div class="acrostic-icon-item">${icones[i]}<h4>${b[0]}</h4><p>${b[1]}</p></div>`).join('')}
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 2 8l10 5 10-5-10-5z"/>
+            <path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/>
+          </svg>
+          <h4>Ensino de qualidade</h4>
+          <p>Aprendizagem centrada no aluno e nas suas necessidades.</p>
+        </div>
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="2"/>
+            <path d="M2 20h20M9 20l.7-4M15 20l-.7-4"/>
+          </svg>
+          <h4>Tecnologia e inovação</h4>
+          <p>Recursos que estimulam a pesquisa e a descoberta.</p>
+        </div>
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>
+          </svg>
+          <h4>Actividades complementares</h4>
+          <p>Desporto, cultura, arte e projectos educativos.</p>
+        </div>
+        <div class="acrostic-icon-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-4.5-9.5-9C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4 19.5 4 21 8 21 12c-2.5 4.5-9.5 9-9.5 9z"/>
+          </svg>
+          <h4>Valores e cidadania</h4>
+          <p>Respeito, inclusão, solidariedade e responsabilidade.</p>
+        </div>
       </div>
     </div>
 
@@ -433,35 +218,16 @@ function blocosNivel(c){
             </svg>
           </span>
           <span class="eyebrow">Metodologia</span>
-          <h3>${c.metodologiaTitulo}</h3>
+          <h3>Aprender fazendo, crescer com confiança</h3>
         </div>
         <div class="ext-split-text">
-          ${c.metodologia.map(t => `<p>${t}</p>`).join('')}
+          <p>No FERMAS, o aluno participa activamente no processo de aprendizagem. Através de actividades práticas, investigação, trabalho em equipa e acompanhamento pedagógico, incentivamos o pensamento crítico, a resolução de problemas e a capacidade de aprender com autonomia.</p>
         </div>
       </div>
     </div>
 
-    <!-- Plano de estudos (só aparece se o nível tiver "plano") -->
-    ${c.plano ? `
-    <div class="ext-band ext-band-white">
-      <div class="ext-split">
-        <div class="ext-split-title">
-          <span class="ext-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6M9 11h6"/>
-            </svg>
-          </span>
-          <span class="eyebrow">Plano de estudos</span>
-          <h3>${c.planoTitulo}</h3>
-        </div>
-        <div class="ext-split-text">
-          <ul class="ext-plano">${c.plano.map(d => `<li>${d}</li>`).join('')}</ul>
-        </div>
-      </div>
-    </div>` : ''}
-
     <!-- 5 · Formação integral -->
-    <div class="ext-band ${c.plano ? 'ext-band-peach' : 'ext-band-white'}">
+    <div class="ext-band ext-band-white">
       <div class="ext-split">
         <div class="ext-split-title">
           <span class="ext-icon">
@@ -471,10 +237,11 @@ function blocosNivel(c){
             </svg>
           </span>
           <span class="eyebrow">Formação integral</span>
-          <h3>${c.formacaoTitulo}</h3>
+          <h3>Preparados para os desafios do futuro</h3>
         </div>
         <div class="ext-split-text">
-          ${c.formacao.map(t => `<p>${t}</p>`).join('')}
+          <p>Queremos formar alunos capazes de comunicar, pensar de forma crítica, utilizar a tecnologia com responsabilidade, respeitar as diferenças e contribuir positivamente para a sociedade.</p>
+          <p>A nossa educação valoriza tanto os conhecimentos académicos como o bem-estar, as relações humanas e os hábitos de vida saudáveis.</p>
         </div>
       </div>
     </div>
@@ -492,10 +259,10 @@ function blocosNivel(c){
             </svg>
           </span>
           <span class="eyebrow">Família</span>
-          <h3>${c.familiaTitulo}</h3>
+          <h3>Escola e família: uma parceria essencial</h3>
         </div>
         <div class="ext-split-text">
-          ${c.familia.map(t => `<p>${t}</p>`).join('')}
+          <p>Acreditamos que o sucesso educativo se constrói em conjunto. Valorizamos o diálogo e a colaboração com os encarregados de educação, acompanhando o percurso escolar dos alunos com responsabilidade e compromisso.</p>
         </div>
       </div>
     </div>
@@ -504,18 +271,17 @@ function blocosNivel(c){
     <div class="cta-banner ext-cta">
       <div>
         <h3>O futuro do seu educando começa aqui!</h3>
-        <p>${c.fecho}</p>
+        <p>Descubra a proposta educativa do Externato FERMAS e conheça as oportunidades que temos para o desenvolvimento do seu educando.</p>
       </div>
       <a href="#matricula" class="btn btn-enroll">Quero Matricular</a>
     </div>
 `;
-}
 
 // ---------- Dados de "Um Dia no Fermas" ----------
 // Um horário-tipo por nível. Substitua os horários e as descrições
 // pelos horários reais de cada etapa.
 const horarios = {
-  iniciacao: [
+   iniciacao: [
     { hora: "07:30", titulo: "Acolhimento", desc: "Chegada das crianças e momento de acolhimento com a educadora." },
     { hora: "07:40", titulo: "Parada e Higiene", desc: "Momento de organização, higiene pessoal e preparação para as actividades." },
     { hora: "08:00", titulo: "Atividades pedagógicas", desc: "Exploração sensorial, motricidade fina e primeiras noções de linguagem e números." },
@@ -523,14 +289,14 @@ const horarios = {
     { hora: "10:30", titulo: "Música, arte e histórias", desc: "Atividades de expressão plástica, musical e contação de histórias." },
     { hora: "11:50", titulo: "Saída", desc: "Preparação e entrega das crianças aos encarregados de educação." }
   ],
-  primario: [
+   primario: [
     { hora: "07:00", titulo: "Entrada", desc: "Chegada dos alunos e formatura antes do início das aulas." },
     { hora: "07:40", titulo: "Entrada para a Sala de Aulas", desc: "Organização dos alunos e preparação do ambiente para o início das actividades." },
     { hora: "07:50", titulo: "Actividades Motivacionais", desc: "Momentos de motivação através de canções, dinâmicas e pequenas conversas." },
     { hora: "08:00", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
     { hora: "09:30", titulo: "Intervalo", desc: "Pausa para lanche, descanso e convívio entre os alunos." },
     { hora: "10:30", titulo: "Actividades Pedagógicas", desc: "Desenvolvimento dos conteúdos curriculares e das competências dos alunos." },
-    { hora: "12:15", titulo: "Saída", desc: "Encerramento das actividades lectivas e saída organizada dos alunos." }
+    { hora: "12:30", titulo: "Saída", desc: "Encerramento das actividades lectivas e saída organizada dos alunos." }
   ],
   iciclo: [
     { hora: "07:00", titulo: "Entrada", desc: "Chegada dos alunos e início das aulas do I Ciclo." },
@@ -659,10 +425,8 @@ function renderNivel(id){
     n.texto.map(p => `<p>${p}</p>`).join('');
   const gal = document.getElementById('nivel-galeria');
   gal.innerHTML = '';
-  gal.style.display = 'none';
-  document.getElementById('nivel-topo').classList.add('so-texto');
-  // Foto grande (horizontal) do topo de cada nível. Troque o caminho pela sua foto.
-  const fotosGaleria = ["Imagens/fondo_fermas.png"];
+  gal.style.display = ehExternato ? 'none' : '';
+  const fotosGaleria = ["Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png"];
   if(!ehExternato) fotosGaleria.forEach(src => {
     const fig = document.createElement('div');
     fig.className = 'gallery-photo';
@@ -670,7 +434,7 @@ function renderNivel(id){
     gal.appendChild(fig);
   });
   const blocos = document.getElementById('nivel-blocos');
-  blocos.innerHTML = conteudoNiveis[n.id] ? blocosNivel(conteudoNiveis[n.id]) : '';
+  blocos.innerHTML = ehExternato ? externatoBlocos : '';
   if(window.registerReveals) registerReveals(blocos);
   return true;
 }
