@@ -216,12 +216,14 @@ const conteudoNiveis = {
       "A nossa proposta valoriza a curiosidade, a criatividade, a responsabilidade e o respeito pelo ritmo de aprendizagem de cada aluno."
     ],
     fotosTitulo: "O dia a dia no Ensino Primário",
-    "Imagens/primario-1.png",
+       fotos: [
+      "Imagens/primario-1.png",
       "Imagens/primario-2.png",
       "Imagens/primario-3.jpeg",
       "Imagens/primario-4.jpeg",
       "Imagens/primario-5.png",
       "Imagens/primario-6.png"
+    ],
     beneficiosTitulo: "O que o seu educando encontra no Ensino Primário?",
     beneficios: [
       ["Bases sólidas", "Leitura, escrita e cálculo consolidados com acompanhamento próximo."],
