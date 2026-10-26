@@ -137,7 +137,7 @@ const niveis = [
 // Edite aqui os textos, os benefícios, o plano de estudos e as fotografias.
 // "fotos": acrescente ou apague linhas (ex: "Imagens/primario-1.jpg").
 const fotosPadrao = [
-  "Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png",
+  "Imagens/primario-1.png", "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png",
   "Imagens/Fermas_fondo2.png", "Imagens/fondo_fermas.png", "Imagens/Fermas_fondo2.png"
 ];
 const beneficiosPadrao = [
