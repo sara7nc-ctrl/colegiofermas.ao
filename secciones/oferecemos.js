@@ -168,7 +168,14 @@ const conteudoNiveis = {
       "Através do brincar, da música, da arte e das histórias, desenvolvemos a linguagem, a motricidade, a autonomia e a confiança em si próprias."
     ],
     fotosTitulo: "O dia a dia na Iniciação",
-    fotos: fotosPadrao,   // troque por ["Imagens/xxx.jpg", ...] para fotos só deste nível
+      fotos: [
+      "Imagens/primario-1.png",
+      "Imagens/primario-2.png",
+      "Imagens/primario-3.png",
+      "Imagens/primario-4.png",
+      "Imagens/primario-5.png",
+      "Imagens/primario-6.png"
+    ],
     beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
     beneficios: [
       ["Ambiente acolhedor", "Um espaço seguro e afectuoso, pensado para os primeiros passos."],
