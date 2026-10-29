@@ -219,7 +219,7 @@ const conteudoNiveis = {
        fotos: [
       "Imagens/primario-1.png",
       "Imagens/primario-2.png",
-      "Imagens/primario-3.jpeg",
+      "Imagens/primario-3.png",
       "Imagens/primario-4.jpeg",
       "Imagens/primario-5.png",
       "Imagens/primario-6.png"
