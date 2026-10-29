@@ -169,7 +169,7 @@ const conteudoNiveis = {
     ],
     fotosTitulo: "O dia a dia na Iniciação",
       fotos: [
-      "Imagens/iniciacao-1.png",
+      "Imagens/Iniciacao-1.png",
       "Imagens/iniciacao-2.png",
       "Imagens/iniciacao-3.png",
       "Imagens/iniciacao-4.png",
