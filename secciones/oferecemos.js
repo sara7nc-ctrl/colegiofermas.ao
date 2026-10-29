@@ -169,12 +169,12 @@ const conteudoNiveis = {
     ],
     fotosTitulo: "O dia a dia na Iniciação",
       fotos: [
-      "Imagens/primario-1.png",
-      "Imagens/primario-2.png",
-      "Imagens/primario-3.png",
-      "Imagens/primario-4.png",
-      "Imagens/primario-5.png",
-      "Imagens/primario-6.png"
+      "Imagens/iniciacao-1.png",
+      "Imagens/iniciacao-2.png",
+      "Imagens/iniciacao-3.png",
+      "Imagens/iniciacao-4.png",
+      "Imagens/iniciacao-5.png",
+      "Imagens/iniciacao-6.png"
     ],
     beneficiosTitulo: "O que o seu educando encontra na Iniciação?",
     beneficios: [
